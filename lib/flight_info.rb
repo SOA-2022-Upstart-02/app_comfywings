@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'http'
 require 'yaml'
 require 'json'
@@ -48,21 +50,7 @@ serach = {
   currencyCode: 'USD',
   originDestinations: [origin_destinations_to, origin_destinations_from],
   travelers: [{ id: '1', travelerType: 'ADULT' }],
-  sources: ['GDS'],
-  searchCriteria: {
-    maxFlightOffers: 2,
-    flightFilters: {
-      cabinRestrictions: [
-        {
-          cabin: 'BUSINESS',
-          coverage: 'MOST_SEGMENTS',
-          originDestinationIds: [
-            '1'
-          ]
-        }
-      ]
-    }
-  }
+  sources: ['GDS']
 }
 
 token = request_amadeus_auth_token(config)
@@ -80,8 +68,8 @@ flight_results['flights'] = matched_flights.map do |flight|
   flight_info = {}
 
   flight_info['seats_num'] = flight['numberOfBookableSeats']
-  flight_info['to_duration'] = flight['itineraries'][0]['duration']
-  flight_info['from_duration'] = flight['itineraries'][1]['duration']
+  flight_info['outbound_duration'] = flight['itineraries'][0]['duration']
+  flight_info['inbound_duration'] = flight['itineraries'][1]['duration']
   flight_info['total_price'] = flight['price']['total']
   flight_info
 end

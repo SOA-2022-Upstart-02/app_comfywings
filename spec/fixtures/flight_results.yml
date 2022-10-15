@@ -1,11 +1,11 @@
 ---
 flight_num: 2
 flights:
-- seats_num: 1
-  to_duration: PT19H15M
-  from_duration: PT16H35M
-  total_price: '2665.00'
-- seats_num: 1
-  to_duration: PT25H5M
-  from_duration: PT16H35M
-  total_price: '2665.00'
+- seats_num: 9
+  outbound_duration: PT19H15M
+  inbound_duration: PT16H35M
+  total_price: '1798.00'
+- seats_num: 9
+  outbound_duration: PT25H5M
+  inbound_duration: PT16H35M
+  total_price: '1996.00'
