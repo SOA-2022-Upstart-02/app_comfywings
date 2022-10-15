@@ -1,7 +1,13 @@
-# API Client <!-- please rename the title about which API you're explored  -->
+# AMADEUS API Client
 
 ## Resources
+* Flight
 
 ## Elements
+* Flight
+    * Number Of Bookable Seats
+    * Pirce Of Flight
+    * Duration Of Flight
 
 ## Entities
+* Flight
