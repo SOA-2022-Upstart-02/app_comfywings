@@ -5,6 +5,9 @@ AllCops:
   NewCops: enable
   Exclude:
     - '_snippets/*'
+  Include:
+    - 'Gemfile'
+    - 'Rakefile'
 
 # ignore block length in test code only
 Metrics/BlockLength:
@@ -17,3 +20,4 @@ Security/YAMLLoad:
   Enabled: true
   Exclude:
   - 'spec/**/*'
+
