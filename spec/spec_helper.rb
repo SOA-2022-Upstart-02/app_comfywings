@@ -14,5 +14,6 @@ require_relative '../lib/amadeus_api'
 CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 ANADEUS_TOKEN = CONFIG['AMADEUS_KEY']
 ANADEUS_SECRET = CONFIG['AMADEUS_SECRET']
-
 CORRECT = YAML.safe_load(File.read('spec/fixtures/flight_results.yml'))
+
+# cassets for vcr 
