@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/java/Desktop/SOA/soa_project/lib/amadeus_api.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/amadeus_api.rb": {
         "lines": [
           null,
           null,
@@ -101,7 +101,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/lib/candidate_flight.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/candidate_flight.rb": {
         "lines": [
           null,
           null,
@@ -127,7 +127,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/lib/flight.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/flight.rb": {
         "lines": [
           null,
           null,
@@ -158,6 +158,6 @@
         ]
       }
     },
-    "timestamp": 1666283312
+    "timestamp": 1666372616
   }
 }
