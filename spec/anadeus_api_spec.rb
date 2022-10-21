@@ -1,13 +1,6 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
-require 'yaml'
-require_relative '../lib/amadeus_api'
-
-CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
-ANADEUS_TOKEN = CONFIG['AMADEUS_KEY']
-ANADEUS_SECRET = CONFIG['AMADEUS_SECRET']
-CORRECT = YAML.safe_load(File.read('spec/fixtures/flight_results.yml'))
+require_relative 'spec_helper'
 
 describe 'Tests ANADEUS API library' do
   describe 'Flight information' do
