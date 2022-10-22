@@ -8,7 +8,7 @@ require_relative 'candidate_flight'
 module Amadeus
   # Library for AMADEUS API
   class AmadeusApi
-    AMSDEUS_API_ROOT = 'https://test.api.amadeus.com/'
+    AMADEUS_API_ROOT = 'https://test.api.amadeus.com'
 
     def initialize(token, secret)
       @token = token
@@ -24,17 +24,17 @@ module Amadeus
     def flight(from, to, from_date, to_date)
       destinations_to = create_destinations(1, from, to, from_date, '10:00:00')
       destinations_from = create_destinations(2, to, from, to_date, '17:00:00')
-      serach = create_filter(destinations_to, destinations_from)
+      search = create_filter(destinations_to, destinations_from)
       project_req_url = version2_url_path('shopping/flight-offers')
-      obtain_candidate(project_req_url, serach)
+      obtain_candidate(project_req_url, search)
     end
 
     def version1_url_path(path)
-      "#{AMSDEUS_API_ROOT}/v1/#{path}"
+      "#{AMADEUS_API_ROOT}/v1/#{path}"
     end
 
     def version2_url_path(path)
-      "#{AMSDEUS_API_ROOT}/v2/#{path}"
+      "#{AMADEUS_API_ROOT}/v2/#{path}"
     end
 
     def call_post_url(url, content)

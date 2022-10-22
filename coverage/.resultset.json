@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/amadeus_api.rb": {
+      "/home/drainvers/SOA_2022/soa_project/lib/amadeus_api.rb": {
         "lines": [
           null,
           null,
@@ -114,7 +114,7 @@
           null
         ]
       },
-      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/candidate_flight.rb": {
+      "/home/drainvers/SOA_2022/soa_project/lib/candidate_flight.rb": {
         "lines": [
           null,
           null,
@@ -140,7 +140,7 @@
           null
         ]
       },
-      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/flight.rb": {
+      "/home/drainvers/SOA_2022/soa_project/lib/flight.rb": {
         "lines": [
           null,
           null,
@@ -170,7 +170,7 @@
           null
         ]
       },
-      "/Users/chiuzuchilumbu/Documents/project/soa_project/lib/flight_info.rb": {
+      "/home/drainvers/SOA_2022/soa_project/lib/flight_info.rb": {
         "lines": [
           null,
           null,
@@ -259,6 +259,6 @@
         ]
       }
     },
-    "timestamp": 1666444847
+    "timestamp": 1666447332
   }
 }

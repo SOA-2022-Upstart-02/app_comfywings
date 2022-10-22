@@ -2,32 +2,41 @@
 
 require 'rake/testtask'
 
-CODE = 'lib'
+CODE = 'lib/'
 
 task :default do
   puts `rake -T`
 end
 
-desc 'run test'
+desc 'Run tests'
 task :spec do
-  sh 'ruby spec/anadeus_api_spec.rb'
+  sh 'ruby spec/amadeus_api_spec.rb'
+end
+
+namespace :vcr do
+  desc 'Delete cassette fixtures'
+  task :wipe do
+    sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
+      puts(ok ? 'Cassettes deleted successfully.' : 'Cassettes not found.')
+    end
+  end
 end
 
 namespace :quality do
-  desc 'run all static-analysis quality checks'
+  desc 'Run all quality checks'
   task all: %i[rubocop reek flog]
 
-  desc 'code style linter'
+  desc 'Only check for unidiomatic code'
   task :rubocop do
     sh 'rubocop'
   end
 
-  desc 'code smell detector'
+  desc 'Only check for code smells'
   task :reek do
     sh 'reek'
   end
 
-  desc 'complexity analysis'
+  desc 'Only check for code complexity'
   task :flog do
     sh "flog #{CODE}"
   end
