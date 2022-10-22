@@ -36,14 +36,14 @@ describe 'Tests AMADEUS API library' do
       _(proc do
           Amadeus::AmadeusApi.new('BAD_TOKEN', 'BAD_SECRET')
                              .flight('AIRPORT_NOT_EXIST', 'AIRPORT_NOT_EXIST', '2022-11-01', '2022-11-05')
-        end).must_raise Amadeus::AmadeusApi::Errors::Unauthorized
+        end).must_raise Amadeus::AmadeusApi::Response::Unauthorized
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
         Amadeus::AmadeusApi.new('BAD_TOKEN', 'BAD_SECRET')
                            .flight('TPE', 'MAD', '2022-11-01', '2022-11-05')
-      end).must_raise Amadeus::AmadeusApi::Errors::Unauthorized
+      end).must_raise Amadeus::AmadeusApi::Response::Unauthorized
     end
   end
 
@@ -59,6 +59,15 @@ describe 'Tests AMADEUS API library' do
 
     it 'HAPPY: should identify flight' do
       _(@matched_flights.flights[0].total_price).must_equal CORRECT['flights'][0]['total_price']
+    end
+  end
+
+  describe 'Token generator' do
+    before do
+      @token = AuthToken.new('config/secrets.yml')
+    end
+    it 'It should create a new auth token' do
+      _(@token.obtain_token).wont_be_nil
     end
   end
 end

@@ -4,25 +4,32 @@ require 'http'
 require 'yaml'
 require 'json'
 
-config = YAML.safe_load(File.read('config/secrets.yml'))
+# create auth token class
+class AuthToken
+  # open secret yaml file
+  def initialize(secret_yml_file)
+    @config = YAML.safe_load(File.read(secret_yml_file))
+  end
 
-def amadeus_api_path_v1(path)
+  # return the auth token
+  def obtain_token
+    postform = {
+      grant_type: 'client_credentials',
+      client_id: @config['AMADEUS_KEY'],
+      client_secret: @config['AMADEUS_SECRET']
+    }
+    response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
+                   .post(version1_url_path('security/oauth2/token'), form: postform)
+    response.parse['access_token']
+  end
+end
+
+def version1_url_path(path)
   "https://test.api.amadeus.com/v1/#{path}"
 end
 
-def amadeus_api_path_v2(path)
+def version2_url_path(path)
   "https://test.api.amadeus.com/v2/#{path}"
-end
-
-def request_amadeus_auth_token(config)
-  postform = {
-    grant_type: 'client_credentials',
-    client_id: config['AMADEUS_KEY'],
-    client_secret: config['AMADEUS_SECRET']
-  }
-  response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
-                 .post(amadeus_api_path_v1('security/oauth2/token'), form: postform)
-  response.parse['access_token']
 end
 
 origin_destinations_to =
@@ -53,13 +60,13 @@ serach = {
   sources: ['GDS']
 }
 
-token = request_amadeus_auth_token(config)
+token = AuthToken.new('config/secrets.yml')
 
 flight_results = {}
 
 flight_results['count']
 
-response = HTTP.auth("Bearer #{token}").post(amadeus_api_path_v2('shopping/flight-offers'), json: serach)
+response = HTTP.auth("Bearer #{token.obtain_token}").post(version2_url_path('shopping/flight-offers'), json: serach)
 flight_info = JSON.parse(response)
 
 flight_results['flight_num'] = flight_info['meta']['count']
