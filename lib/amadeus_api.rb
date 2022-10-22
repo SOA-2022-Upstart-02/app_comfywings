@@ -7,7 +7,7 @@ require_relative 'candidate_flight'
 module Amadeus
   # Library for AMADEUS API
   class AmadeusApi
-    AMSDEUS_API_ROOT = 'https://test.api.amadeus.com/'
+    AMADEUS_API_ROOT = 'https://test.api.amadeus.com'
 
     module Errors
       class BadRequest < StandardError; end
@@ -29,9 +29,9 @@ module Amadeus
     def flight(from, to, from_date, to_date)
       destinations_to = create_destinations(1, from, to, from_date, '10:00:00')
       destinations_from = create_destinations(2, to, from, to_date, '17:00:00')
-      serach = create_filter(destinations_to, destinations_from)
+      search = create_filter(destinations_to, destinations_from)
       project_req_url = amadeus_api_path_v2('shopping/flight-offers')
-      response = call_post_url(project_req_url, serach)
+      response = call_post_url(project_req_url, search)
       flight_data = JSON.parse(response)
       CandidateFlight.new(flight_data)
     end
@@ -39,11 +39,11 @@ module Amadeus
     private
 
     def amadeus_api_path_v1(path)
-      "#{AMSDEUS_API_ROOT}/v1/#{path}"
+      "#{AMADEUS_API_ROOT}/v1/#{path}"
     end
 
     def amadeus_api_path_v2(path)
-      "#{AMSDEUS_API_ROOT}/v2/#{path}"
+      "#{AMADEUS_API_ROOT}/v2/#{path}"
     end
 
     def call_post_url(url, content)
