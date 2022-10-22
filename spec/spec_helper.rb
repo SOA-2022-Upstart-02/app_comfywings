@@ -6,8 +6,10 @@ SimpleCov.start
 require 'yaml'
 
 require 'minitest/autorun'
+require 'minitest/rg'
 
 require_relative '../lib/amadeus_api'
+require_relative '../lib/flight_info'
 
 # TODO: add/move required libraries, constants, and files required for tests
 #       when you write or create a new test

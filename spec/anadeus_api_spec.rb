@@ -39,4 +39,13 @@ describe 'Tests ANADEUS API library' do
       _(@matched_flights.flights[0].total_price).must_equal CORRECT['flights'][0]['total_price']
     end
   end
+
+  describe 'Token generator' do
+    before do 
+      @token = AuthToken.new('config/secrets.yml')
+    end
+    it 'It should create a new auth token' do
+      _(@token.obtain_token).wont_be_nil
+    end
+  end
 end
