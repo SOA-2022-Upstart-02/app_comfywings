@@ -10,22 +10,6 @@ module Amadeus
   class AmadeusApi
     AMSDEUS_API_ROOT = 'https://test.api.amadeus.com/'
 
-    # This module is responsible for creating classed that raise http errors
-    module Errors
-      # a class to raise the bad request http error
-      class BadRequest < StandardError; end
-      # a class that raises the unauthorized http error
-      class Unauthorized < StandardError; end
-      # a class that raises the unexpected error
-      class Unexpected < StandardError; end
-    end
-
-    HTTP_ERROR = {
-      400 => Errors::BadRequest,
-      401 => Errors::Unauthorized,
-      500 => Errors::Unexpected
-    }.freeze
-
     def initialize(token, secret)
       @token = token
       @secret = secret
@@ -45,8 +29,6 @@ module Amadeus
       obtain_candidate(project_req_url, serach)
     end
 
-    private
-
     def version1_url_path(path)
       "#{AMSDEUS_API_ROOT}/v1/#{path}"
     end
@@ -61,8 +43,34 @@ module Amadeus
         HTTP.headers(accept: 'application/vnd.amadeus+json')
             .auth("Bearer #{token}")
             .post(url, json: content)
+      # Tap is used to create object instances from classes and we can call their methods after initialisation
+      Response.new(result).tap do |response|
+        raise(response.error) unless response.successful?
+      end
+    end
 
-      successful?(result) ? result : raise(HTTP_ERROR[result.code])
+    # class delegator to show errors or success responses
+    class Response < SimpleDelegator
+      # a class to raise the bad request http error
+      BadRequest = Class.new(StandardError)
+      # a class that raises the unauthorized http error
+      Unauthorized = Class.new(StandardError)
+      # a class that raises the unexpected error
+      Unexpected = Class.new(StandardError)
+
+      HTTP_ERROR = {
+        400 => BadRequest,
+        401 => Unauthorized,
+        500 => Unexpected
+      }.freeze
+
+      def successful?
+        !HTTP_ERROR.keys.include?(code)
+      end
+
+      def error
+        HTTP_ERROR[code]
+      end
     end
 
     def request_amadeus_auth_token
@@ -96,10 +104,6 @@ module Amadeus
         travelers: [{ id: '1', travelerType: 'ADULT' }],
         sources: ['GDS']
       }
-    end
-
-    def successful?(result)
-      !HTTP_ERROR.keys.include?(result.code)
     end
   end
 end

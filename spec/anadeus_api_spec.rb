@@ -14,14 +14,14 @@ describe 'Tests ANADEUS API library' do
       _(proc do
           Amadeus::AmadeusApi.new('BAD_TOKEN', 'BAD_SECRET')
                              .flight('AIRPORT_NOT_EXIST', 'AIRPORT_NOT_EXIST', '2022-11-01', '2022-11-05')
-        end).must_raise Amadeus::AmadeusApi::Errors::Unauthorized
+        end).must_raise Amadeus::AmadeusApi::Response::Unauthorized
     end
 
     it 'SAD: should raise exception when unauthorized' do
       _(proc do
         Amadeus::AmadeusApi.new('BAD_TOKEN', 'BAD_SECRET')
                            .flight('TPE', 'MAD', '2022-11-01', '2022-11-05')
-      end).must_raise Amadeus::AmadeusApi::Errors::Unauthorized
+      end).must_raise Amadeus::AmadeusApi::Response::Unauthorized
     end
   end
 
