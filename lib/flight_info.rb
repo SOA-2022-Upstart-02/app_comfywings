@@ -6,11 +6,11 @@ require 'json'
 
 config = YAML.safe_load(File.read('config/secrets.yml'))
 
-def amadeus_api_path_v1(path)
+def version1_url_path(path)
   "https://test.api.amadeus.com/v1/#{path}"
 end
 
-def amadeus_api_path_v2(path)
+def version2_url_path(path)
   "https://test.api.amadeus.com/v2/#{path}"
 end
 
@@ -21,7 +21,7 @@ def request_amadeus_auth_token(config)
     client_secret: config['AMADEUS_SECRET']
   }
   response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
-                 .post(amadeus_api_path_v1('security/oauth2/token'), form: postform)
+                 .post(version1_url_path('security/oauth2/token'), form: postform)
   response.parse['access_token']
 end
 
@@ -59,7 +59,7 @@ flight_results = {}
 
 flight_results['count']
 
-response = HTTP.auth("Bearer #{token}").post(amadeus_api_path_v2('shopping/flight-offers'), json: serach)
+response = HTTP.auth("Bearer #{token}").post(version2_url_path('shopping/flight-offers'), json: serach)
 flight_info = JSON.parse(response)
 
 flight_results['flight_num'] = flight_info['meta']['count']
