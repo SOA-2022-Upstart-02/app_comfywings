@@ -10,7 +10,7 @@ end
 
 desc 'Run tests'
 task :spec do
-  sh 'bundle exec ruby spec/amadeus_api_spec.rb'
+  sh 'ruby spec/amadeus_api_spec.rb'
 end
 
 namespace :vcr do
