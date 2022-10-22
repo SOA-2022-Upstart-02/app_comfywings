@@ -41,7 +41,7 @@ describe 'Tests ANADEUS API library' do
   end
 
   describe 'Token generator' do
-    before do 
+    before do
       @token = AuthToken.new('config/secrets.yml')
     end
     it 'It should create a new auth token' do
