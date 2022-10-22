@@ -31,14 +31,18 @@ module Amadeus
       @secret = secret
     end
 
+    def obtain_candidate(request_url, search)
+      response = call_post_url(request_url, search)
+      flight_data = JSON.parse(response)
+      CandidateFlight.new(flight_data)
+    end
+
     def flight(from, to, from_date, to_date)
       destinations_to = create_destinations(1, from, to, from_date, '10:00:00')
       destinations_from = create_destinations(2, to, from, to_date, '17:00:00')
       serach = create_filter(destinations_to, destinations_from)
-      project_req_url = amadeus_api_path_v2('shopping/flight-offers')
-      response = call_post_url(project_req_url, serach)
-      flight_data = JSON.parse(response)
-      CandidateFlight.new(flight_data)
+      project_req_url = version2_url_path('shopping/flight-offers')
+      obtain_candidate(project_req_url, serach)
     end
 
     private

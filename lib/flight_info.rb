@@ -11,6 +11,7 @@ class AuthToken
     @config = YAML.safe_load(File.read(secret_yml_file))
   end
 
+  # return the auth token
   def obtain_token
     postform = {
       grant_type: 'client_credentials',
