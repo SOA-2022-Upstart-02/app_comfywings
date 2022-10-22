@@ -16,4 +16,4 @@ ANADEUS_TOKEN = CONFIG['AMADEUS_KEY']
 ANADEUS_SECRET = CONFIG['AMADEUS_SECRET']
 CORRECT = YAML.safe_load(File.read('spec/fixtures/flight_results.yml'))
 
-# cassets for vcr 
+# cassets for vcr
