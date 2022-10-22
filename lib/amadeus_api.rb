@@ -4,14 +4,19 @@ require 'http'
 require 'json'
 require_relative 'candidate_flight'
 
+# This module is responsible for retaining flight origin and destination information
 module Amadeus
   # Library for AMADEUS API
   class AmadeusApi
     AMSDEUS_API_ROOT = 'https://test.api.amadeus.com/'
 
+    # This module is responsible for creating classed that raise http errors
     module Errors
+      # a class to raise the bad request http error
       class BadRequest < StandardError; end
+      # a class that raises the unauthorized http error
       class Unauthorized < StandardError; end
+      # a class that raises the unexpected error
       class Unexpected < StandardError; end
     end
 
@@ -38,11 +43,11 @@ module Amadeus
 
     private
 
-    def amadeus_api_path_v1(path)
+    def version1_url_path(path)
       "#{AMSDEUS_API_ROOT}/v1/#{path}"
     end
 
-    def amadeus_api_path_v2(path)
+    def version2_url_path(path)
       "#{AMSDEUS_API_ROOT}/v2/#{path}"
     end
 
@@ -64,7 +69,7 @@ module Amadeus
       }
 
       response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
-                     .post(amadeus_api_path_v1('security/oauth2/token'), form: postform)
+                     .post(version1_url_path('security/oauth2/token'), form: postform)
       response.parse['access_token']
     end
 

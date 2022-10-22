@@ -23,8 +23,6 @@ class AuthToken
   end
 end
 
-# config = YAML.safe_load(File.read('config/secrets.yml'))
-
 def version1_url_path(path)
   "https://test.api.amadeus.com/v1/#{path}"
 end
