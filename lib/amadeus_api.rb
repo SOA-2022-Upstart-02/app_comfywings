@@ -29,9 +29,29 @@ module Amadeus
       obtain_candidate(project_req_url, search)
     end
 
+    def create_destinations(id, from, to, date, time)
+      {
+        id:,
+        originLocationCode: from,
+        destinationLocationCode: to,
+        departureDateTimeRange: {
+          date:,
+          time:
+        }
+      }
+    end
+
+    def create_filter(origin_destinations_to, origin_destinations_from)
+      {
+        currencyCode: 'USD',
+        originDestinations: [origin_destinations_to, origin_destinations_from],
+        travelers: [{ id: '1', travelerType: 'ADULT' }],
+        sources: ['GDS']
+      }
+    end
+
     def call_post_url(url, content)
       responses = Request.new(AMADEUS_API_ROOT, @token, @secret)
-
       result =
         HTTP.headers(accept: 'application/vnd.amadeus+json')
             .auth("Bearer #{responses.request_amadeus_auth_token}")
@@ -41,7 +61,7 @@ module Amadeus
         raise(response.error) unless response.successful?
       end
     end
-    
+
     # class to make HTTP request
     class Request
       def initialize(root, token, secret)
@@ -53,7 +73,7 @@ module Amadeus
       def version1_url_path(path)
         "#{AMADEUS_API_ROOT}/v1/#{path}"
       end
-  
+
       def version2_url_path(path)
         "#{AMADEUS_API_ROOT}/v2/#{path}"
       end
@@ -64,7 +84,6 @@ module Amadeus
           client_id: @token,
           client_secret: @new_secret
         }
-  
         response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
                        .post(version1_url_path('security/oauth2/token'), form: postform)
         response.parse['access_token']
@@ -93,27 +112,6 @@ module Amadeus
       def error
         HTTP_ERROR[code]
       end
-    end
-
-    def create_destinations(id, from, to, date, time)
-      {
-        id:,
-        originLocationCode: from,
-        destinationLocationCode: to,
-        departureDateTimeRange: {
-          date:,
-          time:
-        }
-      }
-    end
-
-    def create_filter(origin_destinations_to, origin_destinations_from)
-      {
-        currencyCode: 'USD',
-        originDestinations: [origin_destinations_to, origin_destinations_from],
-        travelers: [{ id: '1', travelerType: 'ADULT' }],
-        sources: ['GDS']
-      }
     end
   end
 end
