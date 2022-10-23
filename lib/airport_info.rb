@@ -4,6 +4,7 @@ require 'http'
 require 'json'
 require 'yaml'
 require_relative 'flight_info'
+require_relative 'amadeus_api'
 
 # airport token
 AuthToken.new('config/secrets.yml')
