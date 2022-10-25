@@ -5,7 +5,7 @@ http_interactions:
     uri: https://test.api.amadeus.com/v1/security/oauth2/token
     body:
       encoding: UTF-8
-      string: grant_type=client_credentials&client_id=<AMADEUS_TOKEN>&client_secret=<AMADEUS_SECRET>
+      string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
     headers:
       Accept:
       - application/x-www-form-urlencoded
@@ -58,7 +58,7 @@ http_interactions:
       encoding: UTF-8
       string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
         \"xjiang@gapp.nthu.edu.tw\",\n            \"application_name\": \"SOA_Project\",\n
-        \           \"client_id\": \"<AMADEUS_TOKEN>\",\n            \"token_type\":
+        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
         \"Bearer\",\n            \"access_token\": \"mAzGRuGTuAyo3SjJl84ry1wyziSP\",\n
         \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
         \           \"scope\": \"\"\n        }\n        "
