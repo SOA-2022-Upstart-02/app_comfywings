@@ -1,6 +1,9 @@
 require 'roda'
 require 'slim'
 
+# Remove this line once integrated with api
+require 'yaml'
+
 module ComfyWings
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views'
@@ -18,6 +21,8 @@ module ComfyWings
 
       # Get /flight
       routing.on 'flight' do
+        # flight_results = YAML.safe_load_file('../../spec/fixtures/flight_results.yml')
+
         view 'flight'
       end
     end
