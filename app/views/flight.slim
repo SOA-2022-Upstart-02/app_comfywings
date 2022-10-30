@@ -2,18 +2,26 @@
   h2 Flights between 2022-11-01 and 2022-11-14
   table.table.table-dark 
     tr 
-      th Airline 
-      th Flight code 
       th Origin 
       th Destination 
+      th Duration
       th Price 
+      th Flights
       th Amenities
-    tr
-      td EVA Air 
-      td QZ XXX 
-      td TPE
-      td CGK
-      td NT$5000
-      th
-        / TODO: Display available amenities as icons
-        a id="more-info" href="#" Hover for more details
+    - trips.each do |res|
+      tr
+        td
+          = res[:origin]
+        td
+          = res[:destination]
+        td
+          = res[:duration]
+        td
+          = res[:price]
+        td
+          - res[:flights].each do |flight|
+            = "#{flight[:code]}, #{flight[:airline]}"
+            br
+        td
+          / TODO: Display available amenities as icons
+          a id="more-info" href="#" Hover for more details
