@@ -31,3 +31,7 @@ gem 'pry'
 gem 'flog'
 gem 'reek'
 gem 'rubocop'
+
+# validation
+gem 'dry-struct'
+gem 'dry-types'

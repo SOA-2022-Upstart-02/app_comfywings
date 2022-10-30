@@ -4,8 +4,8 @@ flights:
 - seats_num: 9
   outbound_duration: PT19H15M
   inbound_duration: PT16H35M
-  total_price: '1798.00'
+  total_price: '1790.00'
 - seats_num: 9
   outbound_duration: PT25H5M
   inbound_duration: PT16H35M
-  total_price: '1996.00'
+  total_price: '1987.00'
