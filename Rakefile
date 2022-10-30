@@ -10,7 +10,7 @@ end
 
 desc 'Run tests'
 task :spec do
-  sh 'ruby spec/gateway_amadeus_api_spec.rb'
+  sh 'ruby spec/*_spec.rb'
 end
 
 namespace :vcr do

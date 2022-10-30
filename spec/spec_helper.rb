@@ -19,6 +19,7 @@ CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
 AMADEUS_KEY = CONFIG['AMADEUS_KEY']
 AMADEUS_SECRET = CONFIG['AMADEUS_SECRET']
 CORRECT = YAML.safe_load(File.read('spec/fixtures/flight_results.yml'))
+CORRECT_AIRPORT = YAML.safe_load(File.read('spec/fixtures/airport_results.yml'))
 
 CASSETTES_FOLDER = 'spec/fixtures/cassettes'
 CASSETTE_FILE = 'amadeus_api'
