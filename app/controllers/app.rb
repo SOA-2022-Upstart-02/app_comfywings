@@ -20,6 +20,20 @@ module ComfyWings
         view 'home'
       end
 
+      routing.on 'airport' do
+        routing.is do
+          routing.post do
+            view 'airport'
+          end
+        end
+
+        routing.on String do
+          routing.get do
+            amadeus_airport = Amadeus::AirportMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+          end
+        end
+      end
+
       routing.on 'flight' do
         # routing.is do
         #   # POST /flight/

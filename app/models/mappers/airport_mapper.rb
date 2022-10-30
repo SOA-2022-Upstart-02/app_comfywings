@@ -34,7 +34,7 @@ module ComfyWings
     end
 
     def self.build_entity(data)
-      DataMapper.new(data)
+      DataMapper.new(data).build_entity
     end
 
     # obtain aiport infomation from hash
@@ -61,7 +61,7 @@ module ComfyWings
       end
   
       def iata_code
-        @data['iata_code']
+        @data['iataCode']
       end
     end
   end
