@@ -16,7 +16,3 @@ We hope to ease the process of booking flights by avoiding manual searches regar
 ## Plan your trip
 * Collect airport details. Are considering a long period layover? not to worry, we will provide you with everything you will need to know to make your layover worthwhile.
 * An itinerary will be provided after your booking is completed.
-
-## Plan your trip
-* Collect airport details. Are considering a long period layover? not to worry, we will provide you with everything you will need to know to make your layover worthwhile.
-* An itinerary will be provided after your booking is completed.
