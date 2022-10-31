@@ -8,15 +8,20 @@
       th Price 
       th Flights
       th Amenities
-
-    - trips.each do |trip|    
-    tr
-      td
-        #{trip}
-      td QZ XXX 
-      td TPE
-      td CGK
-      td NT$5000
-      th
-        / TODO: Display available amenities as icons
-        a id="more-info" href="#" Hover for more details
+    - trips.each do |res|
+      tr
+        td
+          = res[:origin]
+        td
+          = res[:destination]
+        td
+          = res[:duration]
+        td
+          = res[:price]
+        td
+          - res[:flights].each do |flight|
+            = "#{flight[:origin]} -> #{flight[:destination]}"
+            br
+        td
+          / TODO: Display available amenities as icons
+          a id="more-info" href="#" Hover for more details
