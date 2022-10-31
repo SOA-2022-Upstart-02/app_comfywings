@@ -2,12 +2,13 @@
   h2 Flights between 2022-11-01 and 2022-11-14
   table.table.table-dark 
     tr 
-      th Airline 
-      th Flight code 
       th Origin 
       th Destination 
+      th Duration
       th Price 
+      th Flights
       th Amenities
+
     - trips.each do |trip|    
     tr
       td

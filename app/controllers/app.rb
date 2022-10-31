@@ -60,8 +60,27 @@ module ComfyWings
                                                  .search(from, to, from_date, to_date)
           print trips
 
-          view 'flight', locals: { trips: }
-        end
+        trip_results = [
+          {
+            origin: "TPE",
+            destination: "CGK",
+            duration: "1H15M",
+            price: "NT$5000",
+            flights: [{id: 1, code: "BR XXX", airline: "EVA Air"}]
+          },
+          {
+            origin: "CGK",
+            destination: "AKL",
+            duration: "1H15M",
+            price: "NT$8000",
+            flights: [
+              {id: 1, code: "QF XXX", airline: "Qantas"},
+              {id: 2, code: "NZ XXX", airline: "Air New Zealand"}
+            ]
+          }
+        ]
+
+        view 'flight', locals: { trips: trip_results }
       end
     end
   end
