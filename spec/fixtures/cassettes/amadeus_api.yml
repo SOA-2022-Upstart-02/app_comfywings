@@ -23,17 +23,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:43:53 GMT
+      - Sun, 30 Oct 2022 16:45:36 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '415'
+      - '403'
       Connection:
       - close
       Host:
       - test.api.amadeus.com
       X-Forwarded-For:
-      - 140.114.233.105
+      - 140.114.233.152
       X-Forwarded-Port:
       - '443'
       X-Forwarded-Proto:
@@ -43,7 +43,7 @@ http_interactions:
       User-Agent:
       - http.rb/5.1.0
       Ama-Gateway-Request-Id:
-      - rrt-091df4bafd3a7536f-b-eu-32539-651795888-1
+      - rrt-0ccf8e5d584802658-b-de-16436-140813712-1
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -57,23 +57,26 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
-        \"xjiang@gapp.nthu.edu.tw\",\n            \"application_name\": \"SOA_Project\",\n
-        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
-        \"Bearer\",\n            \"access_token\": \"frag2To9AHmfY1c0aLN0U2ffBSCJ\",\n
-        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
-        \           \"scope\": \"\"\n        }\n        "
-  recorded_at: Sun, 30 Oct 2022 11:43:52 GMT
+        \"smog3719@gmail.com\",\n            \"application_name\": \"Test\",\n            \"client_id\":
+        \"<AMADEUS_KEY>\",\n            \"token_type\": \"Bearer\",\n            \"access_token\":
+        \"94yyKLXra1D9twKbBczGggGA9IAy\",\n            \"expires_in\": 1799,\n            \"state\":
+        \"approved\",\n            \"scope\": \"\"\n        }\n        "
+  recorded_at: Sun, 30 Oct 2022 16:45:36 GMT
 - request:
     method: post
-    uri: https://test.api.amadeus.com/v1/security/oauth2/token
+    uri: https://test.api.amadeus.com/v2/shopping/flight-offers
     body:
       encoding: UTF-8
-      string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
+      string: '{"currencyCode":"USD","originDestinations":[{"id":1,"originLocationCode":"TPE","destinationLocationCode":"MAD","departureDateTimeRange":{"date":"2022-11-01","time":"10:00:00"}},{"id":2,"originLocationCode":"MAD","destinationLocationCode":"TPE","departureDateTimeRange":{"date":"2022-11-05","time":"17:00:00"}}],"travelers":[{"id":"1","travelerType":"ADULT"}],"sources":["GDS"]}'
     headers:
+      Accept:
+      - application/vnd.amadeus+json
+      Authorization:
+      - Bearer 94yyKLXra1D9twKbBczGggGA9IAy
       Connection:
       - close
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json; charset=UTF-8
       Host:
       - test.api.amadeus.com
       User-Agent:
@@ -84,25 +87,67 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:43:54 GMT
+      - Sun, 30 Oct 2022 16:45:42 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '5291'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001TL81JKKRW1
+      Ama-Gateway-Request-Id:
+      - rrt-0ccf8e5d584802658-b-de-16436-140813738-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"count":2},"data":[{"type":"flight-offer","id":"1","source":"GDS","instantTicketingRequired":false,"nonHomogeneous":false,"oneWay":false,"lastTicketingDate":"2022-11-01","numberOfBookableSeats":9,"itineraries":[{"duration":"PT19H15M","segments":[{"departure":{"iataCode":"TPE","terminal":"2","at":"2022-11-01T22:25:00"},"arrival":{"iataCode":"IST","at":"2022-11-02T06:05:00"},"carrierCode":"TK","number":"25","aircraft":{"code":"77W"},"operating":{"carrierCode":"TK"},"duration":"PT12H40M","id":"3","numberOfStops":0,"blacklistedInEU":false},{"departure":{"iataCode":"IST","at":"2022-11-02T08:10:00"},"arrival":{"iataCode":"MAD","terminal":"1","at":"2022-11-02T10:40:00"},"carrierCode":"TK","number":"1857","aircraft":{"code":"333"},"operating":{"carrierCode":"TK"},"duration":"PT4H30M","id":"4","numberOfStops":0,"blacklistedInEU":false}]},{"duration":"PT16H35M","segments":[{"departure":{"iataCode":"MAD","terminal":"1","at":"2022-11-05T18:00:00"},"arrival":{"iataCode":"IST","at":"2022-11-06T00:10:00"},"carrierCode":"TK","number":"1860","aircraft":{"code":"321"},"operating":{"carrierCode":"TK"},"duration":"PT4H10M","id":"5","numberOfStops":0,"blacklistedInEU":false},{"departure":{"iataCode":"IST","at":"2022-11-06T02:10:00"},"arrival":{"iataCode":"TPE","terminal":"2","at":"2022-11-06T17:35:00"},"carrierCode":"TK","number":"24","aircraft":{"code":"77W"},"operating":{"carrierCode":"TK"},"duration":"PT10H25M","id":"6","numberOfStops":0,"blacklistedInEU":false}]}],"price":{"currency":"USD","total":"1790.00","base":"1265.00","fees":[{"amount":"0.00","type":"SUPPLIER"},{"amount":"0.00","type":"TICKETING"}],"grandTotal":"1790.00"},"pricingOptions":{"fareType":["PUBLISHED"],"includedCheckedBagsOnly":true},"validatingAirlineCodes":["TK"],"travelerPricings":[{"travelerId":"1","fareOption":"STANDARD","travelerType":"ADULT","price":{"currency":"USD","total":"1790.00","base":"1265.00"},"fareDetailsBySegment":[{"segmentId":"3","cabin":"ECONOMY","fareBasis":"OLF2XPX","brandedFare":"RS","class":"O","includedCheckedBags":{"weight":30,"weightUnit":"KG"}},{"segmentId":"4","cabin":"ECONOMY","fareBasis":"OLF2XPX","brandedFare":"RS","class":"O","includedCheckedBags":{"weight":30,"weightUnit":"KG"}},{"segmentId":"5","cabin":"ECONOMY","fareBasis":"HLF2XEX","brandedFare":"FX","class":"H","includedCheckedBags":{"weight":30,"weightUnit":"KG"}},{"segmentId":"6","cabin":"ECONOMY","fareBasis":"HLF2XEX","brandedFare":"FX","class":"H","includedCheckedBags":{"weight":30,"weightUnit":"KG"}}]}]},{"type":"flight-offer","id":"2","source":"GDS","instantTicketingRequired":false,"nonHomogeneous":false,"oneWay":false,"lastTicketingDate":"2022-11-01","numberOfBookableSeats":9,"itineraries":[{"duration":"PT25H5M","segments":[{"departure":{"iataCode":"TPE","terminal":"2","at":"2022-11-01T22:25:00"},"arrival":{"iataCode":"IST","at":"2022-11-02T06:05:00"},"carrierCode":"TK","number":"25","aircraft":{"code":"77W"},"operating":{"carrierCode":"TK"},"duration":"PT12H40M","id":"1","numberOfStops":0,"blacklistedInEU":false},{"departure":{"iataCode":"IST","at":"2022-11-02T14:10:00"},"arrival":{"iataCode":"MAD","terminal":"1","at":"2022-11-02T16:30:00"},"carrierCode":"TK","number":"1859","aircraft":{"code":"321"},"operating":{"carrierCode":"TK"},"duration":"PT4H20M","id":"2","numberOfStops":0,"blacklistedInEU":false}]},{"duration":"PT16H35M","segments":[{"departure":{"iataCode":"MAD","terminal":"1","at":"2022-11-05T18:00:00"},"arrival":{"iataCode":"IST","at":"2022-11-06T00:10:00"},"carrierCode":"TK","number":"1860","aircraft":{"code":"321"},"operating":{"carrierCode":"TK"},"duration":"PT4H10M","id":"5","numberOfStops":0,"blacklistedInEU":false},{"departure":{"iataCode":"IST","at":"2022-11-06T02:10:00"},"arrival":{"iataCode":"TPE","terminal":"2","at":"2022-11-06T17:35:00"},"carrierCode":"TK","number":"24","aircraft":{"code":"77W"},"operating":{"carrierCode":"TK"},"duration":"PT10H25M","id":"6","numberOfStops":0,"blacklistedInEU":false}]}],"price":{"currency":"USD","total":"1987.00","base":"1462.00","fees":[{"amount":"0.00","type":"SUPPLIER"},{"amount":"0.00","type":"TICKETING"}],"grandTotal":"1987.00"},"pricingOptions":{"fareType":["PUBLISHED"],"includedCheckedBagsOnly":true},"validatingAirlineCodes":["TK"],"travelerPricings":[{"travelerId":"1","fareOption":"STANDARD","travelerType":"ADULT","price":{"currency":"USD","total":"1987.00","base":"1462.00"},"fareDetailsBySegment":[{"segmentId":"1","cabin":"ECONOMY","fareBasis":"HLF2XEX","brandedFare":"FX","class":"H","includedCheckedBags":{"weight":30,"weightUnit":"KG"}},{"segmentId":"2","cabin":"ECONOMY","fareBasis":"HLF2XEX","brandedFare":"FX","class":"H","includedCheckedBags":{"weight":30,"weightUnit":"KG"}},{"segmentId":"5","cabin":"ECONOMY","fareBasis":"HLF2XEX","brandedFare":"FX","class":"H","includedCheckedBags":{"weight":30,"weightUnit":"KG"}},{"segmentId":"6","cabin":"ECONOMY","fareBasis":"HLF2XEX","brandedFare":"FX","class":"H","includedCheckedBags":{"weight":30,"weightUnit":"KG"}}]}]}],"dictionaries":{"locations":{"MAD":{"cityCode":"MAD","countryCode":"ES"},"TPE":{"cityCode":"TPE","countryCode":"TW"},"IST":{"cityCode":"IST","countryCode":"TR"}},"aircraft":{"321":"AIRBUS
+        A321","333":"AIRBUS A330-300","77W":"BOEING 777-300ER"},"currencies":{"USD":"US
+        DOLLAR"},"carriers":{"TK":"TURKISH AIRLINES"}}}'
+  recorded_at: Sun, 30 Oct 2022 16:45:43 GMT
+- request:
+    method: post
+    uri: https://test.api.amadeus.com/v1/security/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=BAD_TOKEN&client_secret=BAD_SECRET
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sun, 30 Oct 2022 16:45:44 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '415'
+      - '255'
       Connection:
       - close
-      Host:
-      - test.api.amadeus.com
-      X-Forwarded-For:
-      - 140.114.233.105
-      X-Forwarded-Port:
-      - '443'
-      X-Forwarded-Proto:
-      - https
-      User-Agent:
-      - http.rb/5.1.0
       Ama-Gateway-Request-Id:
-      - rrt-091df4bafd3a7536f-b-eu-32539-651796107-1
+      - rrt-0d916d8001ff5bb68-a-de-4346-139921128-1
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -115,13 +160,11 @@ http_interactions:
       - Amadeus
     body:
       encoding: UTF-8
-      string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
-        \"xjiang@gapp.nthu.edu.tw\",\n            \"application_name\": \"SOA_Project\",\n
-        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
-        \"Bearer\",\n            \"access_token\": \"bV1AcaoRsCsnDFVvtm7OGFmflhzv\",\n
-        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
-        \           \"scope\": \"\"\n        }\n        "
-  recorded_at: Sun, 30 Oct 2022 11:43:54 GMT
+      string: "\n                {\n                    \"error\":\"invalid_client\",\n
+        \                   \"error_description\": \"Client credentials are invalid\",\n
+        \                   \"code\": 38187,\n                    \"title\": \"Invalid
+        parameters\"\n                }\n            "
+  recorded_at: Sun, 30 Oct 2022 16:45:44 GMT
 - request:
     method: get
     uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
@@ -132,7 +175,60 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Bearer bV1AcaoRsCsnDFVvtm7OGFmflhzv
+      - 'Bearer '
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sun, 30 Oct 2022 16:45:45 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '382'
+      Connection:
+      - close
+      Www-Authenticate:
+      - 'Bearer realm="null",error="invalid_token",error_description="oauth.v2.InvalidAccessToken:
+        Invalid access token"'
+      Ama-Gateway-Request-Id:
+      - rrt-0d916d8001ff5bb68-a-de-4346-139921213-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: "\n            {\n                \"errors\": [\n                        {\n
+        \                           \"code\": 38191,\n                            \"title\":
+        \"Invalid HTTP header\",\n                            \"detail\": \"Missing
+        or invalid format for mandatory Authorization header\",\n                            \"status\":
+        401\n                        }\n                ]\n            }\n        "
+  recorded_at: Sun, 30 Oct 2022 16:45:45 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer 94yyKLXra1D9twKbBczGggGA9IAy
       Connection:
       - close
       Host:
@@ -145,7 +241,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:43:56 GMT
+      - Sun, 30 Oct 2022 16:45:46 GMT
       Content-Type:
       - application/vnd.amadeus+json
       Content-Length:
@@ -155,9 +251,9 @@ http_interactions:
       Ama-Internal-Message-Version:
       - '14.1'
       Ama-Request-Id:
-      - 0001DZDOKKKDX8
+      - 0001E0NXJKKRWA
       Ama-Gateway-Request-Id:
-      - rrt-091df4bafd3a7536f-b-eu-32540-651796311-1
+      - rrt-0d916d8001ff5bb68-a-de-4346-139921274-1
       Access-Control-Allow-Headers:
       - origin, x-requested-with, accept, Content-Type, Authorization
       Access-Control-Max-Age:
@@ -665,7 +761,7 @@ http_interactions:
             "iataCode" : "YVR"
           } ]
         }
-  recorded_at: Sun, 30 Oct 2022 11:43:55 GMT
+  recorded_at: Sun, 30 Oct 2022 16:45:47 GMT
 - request:
     method: post
     uri: https://test.api.amadeus.com/v1/security/oauth2/token
@@ -673,6 +769,8 @@ http_interactions:
       encoding: UTF-8
       string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
     headers:
+      Accept:
+      - application/x-www-form-urlencoded
       Connection:
       - close
       Content-Type:
@@ -687,25 +785,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:43:57 GMT
+      - Sun, 30 Oct 2022 16:45:48 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '415'
+      - '403'
       Connection:
       - close
       Host:
       - test.api.amadeus.com
       X-Forwarded-For:
-      - 140.114.233.105
+      - 140.114.233.152
       X-Forwarded-Port:
       - '443'
       X-Forwarded-Proto:
       - https
+      Accept:
+      - application/x-www-form-urlencoded
       User-Agent:
       - http.rb/5.1.0
       Ama-Gateway-Request-Id:
-      - rrt-091df4bafd3a7536f-b-eu-32539-651796510-1
+      - rrt-0d916d8001ff5bb68-a-de-4346-139921354-1
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -719,12 +819,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
-        \"xjiang@gapp.nthu.edu.tw\",\n            \"application_name\": \"SOA_Project\",\n
-        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
-        \"Bearer\",\n            \"access_token\": \"d1JPDH90eUNR1EXaXAqOKB4izhiv\",\n
-        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
-        \           \"scope\": \"\"\n        }\n        "
-  recorded_at: Sun, 30 Oct 2022 11:43:56 GMT
+        \"smog3719@gmail.com\",\n            \"application_name\": \"Test\",\n            \"client_id\":
+        \"<AMADEUS_KEY>\",\n            \"token_type\": \"Bearer\",\n            \"access_token\":
+        \"uF1hd4sfK8ynGaj15sjmQqUJvE5d\",\n            \"expires_in\": 1799,\n            \"state\":
+        \"approved\",\n            \"scope\": \"\"\n        }\n        "
+  recorded_at: Sun, 30 Oct 2022 16:45:48 GMT
 - request:
     method: get
     uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
@@ -735,7 +834,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Bearer d1JPDH90eUNR1EXaXAqOKB4izhiv
+      - Bearer uF1hd4sfK8ynGaj15sjmQqUJvE5d
       Connection:
       - close
       Host:
@@ -748,7 +847,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:43:59 GMT
+      - Sun, 30 Oct 2022 16:45:49 GMT
       Content-Type:
       - application/vnd.amadeus+json
       Content-Length:
@@ -758,9 +857,9 @@ http_interactions:
       Ama-Internal-Message-Version:
       - '14.1'
       Ama-Request-Id:
-      - 0001TJQA5KKDXB
+      - 0001TL82BKKRWD
       Ama-Gateway-Request-Id:
-      - rrt-0d916d8001ff5bb68-a-de-4346-139039912-1
+      - rrt-015ec44d4b88b073f-c-eu-24081-643686254-1
       Access-Control-Allow-Headers:
       - origin, x-requested-with, accept, Content-Type, Authorization
       Access-Control-Max-Age:
@@ -1268,7 +1367,7 @@ http_interactions:
             "iataCode" : "YVR"
           } ]
         }
-  recorded_at: Sun, 30 Oct 2022 11:43:58 GMT
+  recorded_at: Sun, 30 Oct 2022 16:45:49 GMT
 - request:
     method: post
     uri: https://test.api.amadeus.com/v1/security/oauth2/token
@@ -1276,6 +1375,8 @@ http_interactions:
       encoding: UTF-8
       string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
     headers:
+      Accept:
+      - application/x-www-form-urlencoded
       Connection:
       - close
       Content-Type:
@@ -1290,25 +1391,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:44:00 GMT
+      - Sun, 30 Oct 2022 16:45:51 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '415'
+      - '403'
       Connection:
       - close
       Host:
       - test.api.amadeus.com
       X-Forwarded-For:
-      - 140.114.233.105
+      - 140.114.233.152
       X-Forwarded-Port:
       - '443'
       X-Forwarded-Proto:
       - https
+      Accept:
+      - application/x-www-form-urlencoded
       User-Agent:
       - http.rb/5.1.0
       Ama-Gateway-Request-Id:
-      - rrt-0d916d8001ff5bb68-a-de-4345-139040033-1
+      - rrt-015ec44d4b88b073f-c-eu-24084-643686319-1
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -1322,12 +1425,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
-        \"xjiang@gapp.nthu.edu.tw\",\n            \"application_name\": \"SOA_Project\",\n
-        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
-        \"Bearer\",\n            \"access_token\": \"QbYpJyNtDndRyWcRXw44oFtizkqO\",\n
-        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
-        \           \"scope\": \"\"\n        }\n        "
-  recorded_at: Sun, 30 Oct 2022 11:43:59 GMT
+        \"smog3719@gmail.com\",\n            \"application_name\": \"Test\",\n            \"client_id\":
+        \"<AMADEUS_KEY>\",\n            \"token_type\": \"Bearer\",\n            \"access_token\":
+        \"n7NbxxJEBkloPED6GM62OmoORdAN\",\n            \"expires_in\": 1799,\n            \"state\":
+        \"approved\",\n            \"scope\": \"\"\n        }\n        "
+  recorded_at: Sun, 30 Oct 2022 16:45:51 GMT
 - request:
     method: get
     uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
@@ -1338,7 +1440,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Bearer QbYpJyNtDndRyWcRXw44oFtizkqO
+      - Bearer n7NbxxJEBkloPED6GM62OmoORdAN
       Connection:
       - close
       Host:
@@ -1351,7 +1453,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:44:01 GMT
+      - Sun, 30 Oct 2022 16:45:52 GMT
       Content-Type:
       - application/vnd.amadeus+json
       Content-Length:
@@ -1361,9 +1463,9 @@ http_interactions:
       Ama-Internal-Message-Version:
       - '14.1'
       Ama-Request-Id:
-      - 0001DZDPDKKDXD
+      - 0001E0NXWKKRWG
       Ama-Gateway-Request-Id:
-      - rrt-0d916d8001ff5bb68-a-de-4346-139040091-1
+      - rrt-015ec44d4b88b073f-c-eu-24081-643686446-1
       Access-Control-Allow-Headers:
       - origin, x-requested-with, accept, Content-Type, Authorization
       Access-Control-Max-Age:
@@ -1871,7 +1973,7 @@ http_interactions:
             "iataCode" : "YVR"
           } ]
         }
-  recorded_at: Sun, 30 Oct 2022 11:44:01 GMT
+  recorded_at: Sun, 30 Oct 2022 16:45:52 GMT
 - request:
     method: post
     uri: https://test.api.amadeus.com/v1/security/oauth2/token
@@ -1879,6 +1981,8 @@ http_interactions:
       encoding: UTF-8
       string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
     headers:
+      Accept:
+      - application/x-www-form-urlencoded
       Connection:
       - close
       Content-Type:
@@ -1893,25 +1997,27 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:44:03 GMT
+      - Sun, 30 Oct 2022 16:45:54 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '415'
+      - '403'
       Connection:
       - close
       Host:
       - test.api.amadeus.com
       X-Forwarded-For:
-      - 140.114.233.105
+      - 140.114.233.152
       X-Forwarded-Port:
       - '443'
       X-Forwarded-Proto:
       - https
+      Accept:
+      - application/x-www-form-urlencoded
       User-Agent:
       - http.rb/5.1.0
       Ama-Gateway-Request-Id:
-      - rrt-0d916d8001ff5bb68-a-de-4346-139040181-1
+      - rrt-015ec44d4b88b073f-c-eu-24081-643686726-1
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -1925,12 +2031,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
-        \"xjiang@gapp.nthu.edu.tw\",\n            \"application_name\": \"SOA_Project\",\n
-        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
-        \"Bearer\",\n            \"access_token\": \"HKiGzDt8IcBHAMMZsQsVq4BK3IjE\",\n
-        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
-        \           \"scope\": \"\"\n        }\n        "
-  recorded_at: Sun, 30 Oct 2022 11:44:02 GMT
+        \"smog3719@gmail.com\",\n            \"application_name\": \"Test\",\n            \"client_id\":
+        \"<AMADEUS_KEY>\",\n            \"token_type\": \"Bearer\",\n            \"access_token\":
+        \"dvmMXgVU6IwEFmdPLkChpZ3BpbH4\",\n            \"expires_in\": 1799,\n            \"state\":
+        \"approved\",\n            \"scope\": \"\"\n        }\n        "
+  recorded_at: Sun, 30 Oct 2022 16:45:54 GMT
 - request:
     method: get
     uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
@@ -1941,7 +2046,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Bearer HKiGzDt8IcBHAMMZsQsVq4BK3IjE
+      - Bearer dvmMXgVU6IwEFmdPLkChpZ3BpbH4
       Connection:
       - close
       Host:
@@ -1954,7 +2059,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 30 Oct 2022 11:44:04 GMT
+      - Sun, 30 Oct 2022 16:45:55 GMT
       Content-Type:
       - application/vnd.amadeus+json
       Content-Length:
@@ -1964,9 +2069,9 @@ http_interactions:
       Ama-Internal-Message-Version:
       - '14.1'
       Ama-Request-Id:
-      - 0001TJQB0KKDXG
+      - 0001E0NY0KKRWJ
       Ama-Gateway-Request-Id:
-      - rrt-0170fc2a6759bb6e9-b-eu-16931-645154951-1
+      - rrt-00918b8092f796037-a-eu-6960-647466524-1
       Access-Control-Allow-Headers:
       - origin, x-requested-with, accept, Content-Type, Authorization
       Access-Control-Max-Age:
@@ -2474,5 +2579,72 @@ http_interactions:
             "iataCode" : "YVR"
           } ]
         }
-  recorded_at: Sun, 30 Oct 2022 11:44:03 GMT
+  recorded_at: Sun, 30 Oct 2022 16:45:56 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=LSK
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer 94yyKLXra1D9twKbBczGggGA9IAy
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 30 Oct 2022 16:55:26 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '370'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001TL9CEKKSCE
+      Ama-Gateway-Request-Id:
+      - rrt-0160a27b14faae615-a-de-28702-140986563-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "warnings" : [ {
+            "code" : 1797,
+            "title" : "DATA NOT FOUND",
+            "detail" : "No destination is available",
+            "source" : {
+              "parameter" : "departureAirportCode"
+            },
+            "status" : 200
+          } ],
+          "meta" : {
+            "count" : 0,
+            "links" : {
+              "self" : "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=LSK"
+            }
+          }
+        }
+  recorded_at: Sun, 30 Oct 2022 16:55:26 GMT
 recorded_with: VCR 6.1.0

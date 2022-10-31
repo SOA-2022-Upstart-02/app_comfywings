@@ -20,7 +20,7 @@
           = res[:price]
         td
           - res[:flights].each do |flight|
-            = "#{flight[:code]}, #{flight[:airline]}"
+            = "#{flight[:origin]} -> #{flight[:destination]}"
             br
         td
           / TODO: Display available amenities as icons

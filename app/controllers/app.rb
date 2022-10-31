@@ -34,45 +34,20 @@ module ComfyWings
         end
       end
 
-      routing.on 'flight' do
-        # routing.is do
-        #   # POST /flight/
-        #   routing.post do
-            
-        #   end
-        # end
-
-        # routing.on String, String do |orig, dest|
-        #   # GET /flight/{origin}/{destination}
-        #   routing.get do
-        #     candidate_flights = Amadeus::
-        #   end
-        # end
+      routing.is 'flight' do
+        print routing.params
 
         # flight_results = YAML.safe_load_file('../../spec/fixtures/flight_results.yml')
-        trip_results = [
-          {
-            origin: "TPE",
-            destination: "CGK",
-            duration: "1H15M",
-            price: "NT$5000",
-            flights: [{id: 1, code: "BR XXX", airline: "EVA Air"}]
-          },
-          {
-            origin: "CGK",
-            destination: "AKL",
-            duration: "1H15M",
-            price: "NT$8000",
-            flights: [
-              {id: 1, code: "QF XXX", airline: "Qantas"},
-              {id: 2, code: "NZ XXX", airline: "Air New Zealand"}
-            ]
-          }
-        ]
-
-        view 'flight', locals: { trips: trip_results }
+        routing.post do
+          from = routing.params['airport-origin']
+          to = routing.params['airport-destination']
+          from_date = routing.params['date-start']
+          to_date = routing.params['date-end']
+          trip_results = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+                                                        .search(from, to, from_date, to_date)
+          view 'flight', locals: { trips: trip_results }
+        end
       end
-
     end
   end
 end
