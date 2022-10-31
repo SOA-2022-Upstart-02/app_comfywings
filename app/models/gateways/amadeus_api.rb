@@ -83,7 +83,7 @@ module ComfyWings
         def airport(departure)
           url = version1_url_path("airport/direct-destinations?departureAirportCode=#{departure}")        
           result = HTTP.headers(accept: 'application/json')
-                       .auth("Bearer #{responses.request_amadeus_auth_token}")
+                       .auth("Bearer #{request_amadeus_auth_token}")
                        .get(url)
 
           # Tap is used to create object instances from classes and we can call their methods after initialisation

@@ -18,7 +18,7 @@ describe 'Tests AMADEUS API library' do
     # Check request body as token and secret are not included in headers
     VCR.insert_cassette CASSETTE_FILE,
                         record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+                        match_requests_on: %i[method uri body headers]
   end
 
   after do
@@ -27,9 +27,12 @@ describe 'Tests AMADEUS API library' do
 
   describe 'Flight information' do
     it 'HAPPY: should provide correct flight attributes' do
-      matched_flights = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-                                                       .search('TPE', 'MAD', '2022-11-01', '2022-11-05')
-      _(matched_flights.size).must_equal CORRECT['flight_num']
+      trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+                                             .search('TPE', 'MAD', '2022-11-01', '2022-11-05')
+      trip = trips[0]
+      _(trips.size).must_equal CORRECT['flight_num']
+      _(trip.price).must_equal CORRECT['flight_num']
+      _(trip.origin).must_equal CORRECT['flight_num']
     end
   end
 
@@ -67,7 +70,6 @@ describe 'Tests AMADEUS API library' do
       end).must_raise ComfyWings::Amadeus::Api::Response::Unauthorized
     end
 
-    # TODO: 
     # it 'Bad: Should raise exception incorrect data' do
     #   _(proc do
     #     ComfyWings::Amadeus::Api

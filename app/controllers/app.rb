@@ -34,11 +34,11 @@ module ComfyWings
         end
       end
 
-      routing.on 'flight' do
+      routing.is 'flight' do
         # routing.is do
         #   # POST /flight/
         #   routing.post do
-            
+
         #   end
         # end
 
@@ -48,12 +48,21 @@ module ComfyWings
         #     candidate_flights = Amadeus::
         #   end
         # end
+        print routing.params
 
         # flight_results = YAML.safe_load_file('../../spec/fixtures/flight_results.yml')
+        routing.post do
+          from = routing.params['airport-origin']
+          to = routing.params['airport-destination']
+          from_date = routing.params['date-start']
+          to_date = routing.params['date-end']
+          trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+                                                 .search(from, to, from_date, to_date)
+          print trips
 
-        view 'flight'
+          view 'flight', locals: { trips: }
+        end
       end
-
     end
   end
 end
