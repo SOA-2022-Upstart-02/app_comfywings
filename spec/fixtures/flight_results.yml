@@ -5,7 +5,9 @@ flights:
   outbound_duration: PT19H15M
   inbound_duration: PT16H35M
   total_price: '1790.00'
+  origin: TPE
 - seats_num: 9
   outbound_duration: PT25H5M
   inbound_duration: PT16H35M
   total_price: '1987.00'
+  origin: TPE

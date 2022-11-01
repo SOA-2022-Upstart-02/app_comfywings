@@ -31,6 +31,11 @@ namespace :quality do
     sh 'rubocop'
   end
 
+  desc 'Check for unidiomatic code and safely autocorrect violations.'
+  task :rubocop_autocorrect do
+    sh 'rubocop --autocorrect'
+  end
+
   desc 'Only check for code smells'
   task :reek do
     sh 'reek'

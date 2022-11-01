@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'roda'
 require 'slim'
 
@@ -5,6 +7,7 @@ require 'slim'
 require 'yaml'
 
 module ComfyWings
+  # Main controller class for ComfyWings
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
@@ -20,24 +23,8 @@ module ComfyWings
         view 'home'
       end
 
-      routing.on 'airport' do
-        routing.is do
-          routing.post do
-            view 'airport'
-          end
-        end
-
-        routing.on String do
-          routing.get do
-            amadeus_airport = Amadeus::AirportMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-          end
-        end
-      end
-
       routing.is 'flight' do
-        print routing.params
-
-        # flight_results = YAML.safe_load_file('../../spec/fixtures/flight_results.yml')
+        # POST /flight
         routing.post do
           from = routing.params['airport-origin']
           to = routing.params['airport-destination']
@@ -45,7 +32,7 @@ module ComfyWings
           to_date = routing.params['date-end']
           trip_results = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
                                                         .search(from, to, from_date, to_date)
-          view 'flight', locals: { trips: trip_results }
+          view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date } }
         end
       end
     end

@@ -10,7 +10,7 @@ NEW_TOKEN = AuthToken.new('config/secrets.yml')
 DEPATURE = 'TPE'
 
 module ComfyWings
-  #obtains data from the amadeus api 
+  # obtains data from the amadeus api
   class AirportMapper
     def initialize(api_key, api_secret, gateway_class = Amadeus::Api)
       @api_key = api_key
@@ -19,11 +19,11 @@ module ComfyWings
       @gateway = @gateway_class.new(@api_key, @api_secret)
     end
 
-    def airport_data(departure)
-      @gateway.airport_data(departure).map do |data|
-        AirportMapper.build_entity(data)
-      end
-    end
+    # def airport_data(departure)
+    #   @gateway.airport_data(departure).map do |data|
+    #     AirportMapper.build_entity(data)
+    #   end
+    # end
 
     def airport_size(departure)
       @gateway.airport_size(departure)
@@ -47,7 +47,7 @@ module ComfyWings
         Entity::Airport.new(
           type: nil,
           subtype:,
-          name:, 
+          name:,
           iata_code:
         )
       end
@@ -55,11 +55,11 @@ module ComfyWings
       def subtype
         @data['subtype']
       end
-  
+
       def name
         @data['name']
       end
-  
+
       def iata_code
         @data['iataCode']
       end
@@ -67,4 +67,4 @@ module ComfyWings
   end
 end
 
-#File.write('spec/fixtures/airport_results.yml', airport_results.to_yaml)
+# File.write('spec/fixtures/airport_results.yml', airport_results.to_yaml)

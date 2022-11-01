@@ -30,9 +30,10 @@ describe 'Tests AMADEUS API library' do
       trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
                                              .search('TPE', 'MAD', '2022-11-01', '2022-11-05')
       trip = trips[0]
+
       _(trips.size).must_equal CORRECT['flight_num']
-      _(trip.price).must_equal CORRECT['flight_num']
-      _(trip.origin).must_equal CORRECT['flight_num']
+      _(trip.price).must_equal CORRECT_TRIP['total_price']
+      _(trip.origin).must_equal CORRECT_TRIP['origin']
     end
   end
 

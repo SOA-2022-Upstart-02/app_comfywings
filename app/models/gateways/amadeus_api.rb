@@ -81,7 +81,7 @@ module ComfyWings
         end
 
         def airport(departure)
-          url = version1_url_path("airport/direct-destinations?departureAirportCode=#{departure}")        
+          url = version1_url_path("airport/direct-destinations?departureAirportCode=#{departure}")
           result = HTTP.headers(accept: 'application/json')
                        .auth("Bearer #{request_amadeus_auth_token}")
                        .get(url)

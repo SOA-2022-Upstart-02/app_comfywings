@@ -1,5 +1,6 @@
 .container
-  h2 Flights between 2022-11-01 and 2022-11-14
+  h2
+    = "Flights between #{date_range[:from]} and #{date_range[:to]}"
   table.table.table-dark 
     tr 
       th Origin 

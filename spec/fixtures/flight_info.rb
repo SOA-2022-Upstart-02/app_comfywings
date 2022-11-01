@@ -71,6 +71,7 @@ flight_info = JSON.parse(response)
 
 flight_results['flight_num'] = flight_info['meta']['count']
 matched_flights = flight_info['data']
+# puts matched_flights
 flight_results['flights'] = matched_flights.map do |flight|
   flight_info = {}
 
@@ -78,6 +79,7 @@ flight_results['flights'] = matched_flights.map do |flight|
   flight_info['outbound_duration'] = flight['itineraries'][0]['duration']
   flight_info['inbound_duration'] = flight['itineraries'][1]['duration']
   flight_info['total_price'] = flight['price']['total']
+  flight_info['origin'] = flight['itineraries'][0]['segments'][0]['departure']['iataCode']
   flight_info
 end
 
