@@ -3,9 +3,19 @@
 source 'https://rubygems.org'
 
 # Web Application
+gem 'figaro'
 gem 'puma', '~> 5'
 gem 'roda', '~> 3'
 gem 'slim', '~> 4'
+
+# Database
+gem 'hirb'
+gem 'hirb-unicode', '~> 0'
+gem 'sequel'
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 # Networking
 gem 'http', '~> 5'
