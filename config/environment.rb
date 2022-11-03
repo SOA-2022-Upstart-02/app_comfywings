@@ -2,12 +2,22 @@
 
 require 'roda'
 require 'yaml'
+require 'figaro'
 
 module ComfyWings
   # App configuration
   class App < Roda
-    CONFIG = YAML.safe_load_file('config/secrets.yml')
-    AMADEUS_KEY = CONFIG['AMADEUS_KEY']
-    AMADEUS_SECRET = CONFIG['AMADEUS_SECRET']
+    plugin :environments
+
+    configure do
+      Figaro.application = Figaro::Application.new(
+        environment: environment,
+        path: File.expand_path('config/secrets.yml')
+      )
+      Figaro.load
+
+      # Make env variables accessible
+      def self.config = Figaro.env
+    end
   end
 end
