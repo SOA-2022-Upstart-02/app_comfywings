@@ -15,8 +15,6 @@ require 'webmock'
 require_relative '../require_app'
 require_app
 
-# TODO: add/move required libraries, constants, and files required for tests
-#       when you write or create a new test
 AMADEUS_KEY = ComfyWings::App.config.AMADEUS_KEY
 AMADEUS_SECRET = ComfyWings::App.config.AMADEUS_SECRET
 

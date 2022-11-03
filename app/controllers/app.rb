@@ -31,7 +31,7 @@ module ComfyWings
           from_date = routing.params['date-start']
           to_date = routing.params['date-end']
           trip_results = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-                                                        .search(from, to, from_date, to_date)
+            .search(from, to, from_date, to_date)
           view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date } }
         end
       end

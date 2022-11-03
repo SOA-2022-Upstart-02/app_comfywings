@@ -19,7 +19,7 @@ class AuthToken
       client_secret: @config['AMADEUS_SECRET']
     }
     response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
-                   .post(version1_url_path('security/oauth2/token'), form: postform)
+      .post(version1_url_path('security/oauth2/token'), form: postform)
     response.parse['access_token']
   end
 end
@@ -60,7 +60,7 @@ serach = {
   sources: ['GDS']
 }
 
-token = AuthToken.new('config/secrets.yml')
+token = AuthToken.new
 
 flight_results = {}
 

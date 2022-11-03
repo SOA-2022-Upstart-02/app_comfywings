@@ -28,7 +28,7 @@ describe 'Tests AMADEUS API library' do
   describe 'Flight information' do
     it 'HAPPY: should provide correct flight attributes' do
       trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-                                             .search('TPE', 'MAD', '2022-11-01', '2022-11-05')
+        .search('TPE', 'MAD', '2022-11-01', '2022-11-05')
       trip = trips[0]
 
       _(trips.size).must_equal CORRECT['flight_num']
@@ -39,7 +39,7 @@ describe 'Tests AMADEUS API library' do
 
   describe 'Token generator' do
     before do
-      @token = AuthToken.new('config/secrets.yml')
+      @token = AuthToken.new
     end
     it 'It should create a new auth token' do
       _(@token.obtain_token).wont_be_nil
