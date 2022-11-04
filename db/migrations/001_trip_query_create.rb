@@ -8,7 +8,7 @@ Sequel.migration do
       primary_key :id
       String      :code, unique: true, null: false # generate by 8 bit uuid
       String      :origin
-      String      :destionation
+      String      :destination
       Date        :departure_date
       Date        :arrival_date
       String      :currency_code
