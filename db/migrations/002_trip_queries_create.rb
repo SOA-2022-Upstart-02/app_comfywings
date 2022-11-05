@@ -4,9 +4,10 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:trip_query) do
+    create_table(:trip_queries) do
       primary_key :id
-      foreign_key :currency_id, :currency
+      foreign_key :currency_id, :currencies
+      String      :code, unique: true, null: false # generate by 8 bit uuid
       String      :origin
       String      :destination
       Date        :departure_date
@@ -14,7 +15,6 @@ Sequel.migration do
       Integer     :adult_qty
       Integer     :children_qty
       TrueClass   :is_one_way
-      String      :code, unique: true, null: false # generate by 8 bit uuid
     end
   end
 end
