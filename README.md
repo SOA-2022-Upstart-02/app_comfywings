@@ -16,3 +16,23 @@ We hope to ease the process of booking flights by avoiding manual searches regar
 ## Plan your trip
 * Collect airport details. Are considering a long period layover? not to worry, we will provide you with everything you will need to know to make your layover worthwhile.
 * An itinerary will be provided after your booking is completed.
+
+
+## Database
+
+![](/assets/images/ComfyWings_DB.png)
+
+* TripQuery
+Store users' search parameters, allowing users to share information through code.
+
+* Currency
+Representation of currencies which followed the ISO 4217.
+
+* Trip
+Core entity for ComfyWings, store the result of TripQuery.
+
+* Flight
+Store information for individual flights in one trip
+
+* Airport
+Airport information includes airport name, IATA code, city, country.
