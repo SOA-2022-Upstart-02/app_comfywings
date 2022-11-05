@@ -12,7 +12,7 @@ Sequel.migration do
       Date        :departure_date
       Date        :arrival_date
       String      :currency_code
-      TrueClass   :is_two_way
+      TrueClass   :is_one_way
     end
   end
 end
