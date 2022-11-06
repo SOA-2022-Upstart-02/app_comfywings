@@ -3,54 +3,29 @@
 require 'rake/testtask'
 require_relative 'require_app'
 
-CODE = 'lib/'
-
 task :default do
   puts `rake -T`
 end
 
-desc 'Run tests'
-task :spec do
-  sh 'ruby spec/*_spec.rb'
+desc 'Run tests once'
+Rake::TestTask.new(:spec) do |t|
+  t.pattern = 'spec/*_spec.rb'
+  t.warning = false
 end
 
-namespace :vcr do
-  desc 'Delete cassette fixtures'
-  task :wipe do
-    sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
-      puts(ok ? 'Cassettes deleted successfully.' : 'Cassettes not found.')
-    end
-  end
-end
-
-namespace :quality do
-  desc 'Run all quality checks'
-  task all: %i[rubocop reek flog]
-
-  desc 'Only check for unidiomatic code'
-  task :rubocop do
-    sh 'rubocop'
-  end
-
-  desc 'Check for unidiomatic code and safely autocorrect violations.'
-  task :rubocop_autocorrect do
-    sh 'rubocop --autocorrect'
-  end
-
-  desc 'Only check for code smells'
-  task :reek do
-    sh 'reek'
-  end
-
-  desc 'Only check for code complexity'
-  task :flog do
-    sh "flog #{CODE}"
-  end
+desc 'Keep rerunning tests upon changes'
+task :respec do
+  sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
 desc 'Starts web app'
 task :run do
   sh 'bundle exec puma'
+end
+
+desc 'Reruns web app upon changes'
+task :rerun do
+  sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
 end
 
 namespace :db do
@@ -89,5 +64,46 @@ namespace :db do
 
     FileUtils.rm(ComfyWings::App.config.DB_FILENAME)
     puts "Deleted #{ComfyWings::App.config.DB_FILENAME}"
+  end
+end
+
+desc 'Run application console'
+task :console do
+  sh 'pry -r ./load_all'
+end
+
+namespace :vcr do
+  desc 'Delete cassette fixtures'
+  task :wipe do
+    sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
+      puts(ok ? 'Cassettes deleted successfully.' : 'Cassettes not found.')
+    end
+  end
+end
+
+namespace :quality do
+  only_app = 'config/ app/'
+
+  desc 'Run all static-analysis quality checks'
+  task all: %i[rubocop reek flog]
+
+  desc 'Only check for unidiomatic code'
+  task :rubocop do
+    sh 'rubocop'
+  end
+
+  desc 'Check for unidiomatic code and safely autocorrect violations.'
+  task :rubocop_autocorrect do
+    sh 'rubocop --autocorrect'
+  end
+
+  desc 'Only check for code smells'
+  task :reek do
+    sh 'reek'
+  end
+
+  desc 'Only analyze code complexity'
+  task :flog do
+    sh "flog -m #{only_app}"
   end
 end

@@ -9,10 +9,11 @@ module ComfyWings
       one_to_many :trip_queries,
                   class: :'ComfyWings::Database::TripQueryOrm',
                   key: :currency_id
-
-      plugin :timestamps, update_on_create: true
       
       # TODO: Method to convert Ruby Date object into SQL DATE format
+      def self.find_or_create(currency_info)
+        first(code: currency_info[:code]) || create(currency_info)
+      end
     end
   end
 end
