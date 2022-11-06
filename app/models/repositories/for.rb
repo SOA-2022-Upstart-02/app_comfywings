@@ -5,9 +5,11 @@ require_relative 'trip_queries'
 
 module ComfyWings
   module Repository
+    # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::TripQuery => TripQueries
+        # TODO: Troubleshoot name error
+        # Entity::TripQuery => TripQueries
       }.freeze
 
       def self.klass(entity_klass)

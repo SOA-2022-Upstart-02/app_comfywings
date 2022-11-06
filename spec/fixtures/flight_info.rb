@@ -15,8 +15,8 @@ class AuthToken
   def obtain_token
     postform = {
       grant_type: 'client_credentials',
-      client_id: @config['AMADEUS_KEY'],
-      client_secret: @config['AMADEUS_SECRET']
+      client_id: @config['development']['AMADEUS_KEY'],
+      client_secret: @config['development']['AMADEUS_SECRET']
     }
     response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
       .post(version1_url_path('security/oauth2/token'), form: postform)
@@ -38,7 +38,7 @@ origin_destinations_to =
     originLocationCode: 'TPE',
     destinationLocationCode: 'MAD',
     departureDateTimeRange: {
-      date: '2022-11-01',
+      date: '2022-11-21',
       time: '10:00:00'
     }
   }
@@ -48,7 +48,7 @@ origin_destinations_from =
     originLocationCode: 'MAD',
     destinationLocationCode: 'TPE',
     departureDateTimeRange: {
-      date: '2022-11-05',
+      date: '2022-11-28',
       time: '17:00:00'
     }
   }
@@ -60,7 +60,7 @@ serach = {
   sources: ['GDS']
 }
 
-token = AuthToken.new
+token = AuthToken.new('config/secrets.yml')
 
 flight_results = {}
 
@@ -68,6 +68,8 @@ flight_results['count']
 
 response = HTTP.auth("Bearer #{token.obtain_token}").post(version2_url_path('shopping/flight-offers'), json: serach)
 flight_info = JSON.parse(response)
+
+puts flight_info
 
 flight_results['flight_num'] = flight_info['meta']['count']
 matched_flights = flight_info['data']
