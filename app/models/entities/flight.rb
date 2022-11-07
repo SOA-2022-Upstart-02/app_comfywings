@@ -8,9 +8,10 @@ module ComfyWings
     class Flight < Dry::Struct
       include Dry.Types
 
-      attribute :origin,        Strict::String
-      attribute :destination,   Strict::String
-      attribute :duration,      Strict::String
+      attribute :id,          Integer.optional
+      attribute :origin,      Strict::String
+      attribute :destination, Strict::String
+      attribute :duration,    Strict::String
     end
   end
 end

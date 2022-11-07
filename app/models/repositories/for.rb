@@ -8,8 +8,8 @@ module ComfyWings
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        # TODO: Troubleshoot name error
-        # Entity::TripQuery => TripQueries
+        Entity::TripQuery => TripQueries,
+        Entity::Currency => Currencies
       }.freeze
 
       def self.klass(entity_klass)

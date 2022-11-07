@@ -2,7 +2,7 @@
 
 require 'date'
 
-module CodePraise
+module ComfyWings
   module Repository
     # Repository for Trip Queries
     class TripQueries
@@ -17,11 +17,13 @@ module CodePraise
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
+        currency_repository = Repository::For.entity(Entity::Currencies)
+        currency_obj = currency_repository.find_id(db_record.currency_id)
+
         Entity::TripQuery.new(
           id: db_record.id,
           code: db_record.code,
-          currency_code: db_record.currency_id, # TODO: find a way to convert to code and name
-          currency_name: db_record.currency_id,
+          currency: currency_obj,
           origin: db_record.origin,
           destination: db_record.destination,
           departure_date: Date.parse(db_record.departure_date),
@@ -39,6 +41,7 @@ module CodePraise
       end
 
       def self.db_find_or_create(entity)
+        Database::CurrencyOrm.find_or_create(entity.currency.to_attr_hash)
         Database::TripQueryOrm.find_or_create(entity.to_attr_hash)
       end
     end

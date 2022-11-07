@@ -16,7 +16,7 @@
           1,
           null,
           1,
-          16,
+          17,
           null,
           null
         ]
@@ -269,6 +269,27 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/drainvers/SOA_2022/soa_project/app/models/entities/currency.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -286,6 +307,7 @@
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -308,6 +330,7 @@
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -490,6 +513,7 @@
           null,
           null,
           null,
+          null,
           1,
           null,
           1,
@@ -557,6 +581,7 @@
           null,
           null,
           null,
+          null,
           1,
           86,
           null,
@@ -588,7 +613,44 @@
       },
       "/home/drainvers/SOA_2022/soa_project/app/models/repositories/currencies.rb": {
         "lines": [
-
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
         ]
       },
       "/home/drainvers/SOA_2022/soa_project/app/models/repositories/for.rb": {
@@ -602,8 +664,8 @@
           1,
           null,
           1,
-          1,
           null,
+          1,
           null,
           null,
           null,
@@ -641,7 +703,10 @@
           0,
           null,
           0,
+          0,
+          0,
           null,
+          0,
           null,
           null,
           null,
@@ -662,6 +727,7 @@
           null,
           null,
           1,
+          0,
           0,
           null,
           null,
@@ -754,6 +820,6 @@
         ]
       }
     },
-    "timestamp": 1667715729
+    "timestamp": 1667785573
   }
 }

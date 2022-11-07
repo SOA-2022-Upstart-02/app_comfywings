@@ -10,6 +10,7 @@ module ComfyWings
     class Trip < Dry::Struct
       include Dry.Types
 
+      attribute :id,            Integer.optional
       attribute :origin,        Strict::String
       attribute :destination,   Strict::String
       attribute :duration,      Strict::String

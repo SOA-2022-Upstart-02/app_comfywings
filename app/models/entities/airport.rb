@@ -9,6 +9,7 @@ module ComfyWings
     class Airport < Dry::Struct
       include Dry.Types
 
+      attribute :id,        Integer.optional
       attribute :type,      String.optional
       attribute :subtype,   Strict::String
       attribute :name,      Strict::String
