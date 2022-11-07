@@ -2,16 +2,19 @@
 
 source 'https://rubygems.org'
 
+# configuration and utilities 
+gem 'figaro', '~> 1.2'
+gem 'rake'
+
 # Web Application
-gem 'figaro'
 gem 'puma', '~> 5'
 gem 'roda', '~> 3'
 gem 'slim', '~> 4'
 
 # Database
-gem 'hirb'
+gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
-gem 'sequel'
+gem 'sequel', '~> 5.49'
 
 group :development, :test do
   gem 'sqlite3'
@@ -30,9 +33,6 @@ gem 'webmock', '~> 3'
 # Validation
 gem 'dry-struct', '~> 1'
 gem 'dry-types', '~> 1'
-
-# Utility Tools
-gem 'rake'
 
 # Debugging
 gem 'pry'
