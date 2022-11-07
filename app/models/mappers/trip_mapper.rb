@@ -72,4 +72,3 @@ module ComfyWings
     end
   end
 end
-

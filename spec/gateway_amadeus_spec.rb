@@ -57,22 +57,22 @@ describe 'Tests AMADEUS API library' do
     it 'Bad: should raise exception when unauthorised' do
       _(proc do
         ComfyWings::Amadeus::Api
-          .new('BAD_TOKEN', 'BAD_SECRET').airport_data(DEPATURE)
+        .new('BAD_TOKEN', 'BAD_SECRET').airport_data(DEPATURE)
       end).must_raise ComfyWings::Amadeus::Api::Response::Unauthorized
     end
 
     it 'Bad: Should raise exception incorrect data' do
-       _(proc do
-         ComfyWings::Amadeus::Api
-           .new(AMADEUS_KEY, AMADEUS_SECRET).airport_data('XYZ')
-       end).must_raise ComfyWings::Amadeus::Api::Response::BadRequest
-     end
-
-     it 'Bad: Should raise exception when data is longer than 3 charactaers' do
       _(proc do
         ComfyWings::Amadeus::Api
-          .new(AMADEUS_KEY, AMADEUS_SECRET).airport_data('Invalid_Length')
+        .new(AMADEUS_KEY, AMADEUS_SECRET).airport_data('XYZ')
       end).must_raise ComfyWings::Amadeus::Api::Response::BadRequest
+    end
+
+    it 'Bad: Should raise exception when data is longer than 3 charactaers' do
+      _(proc do
+          ComfyWings::Amadeus::Api
+          .new(AMADEUS_KEY, AMADEUS_SECRET).airport_data('Invalid_Length')
+        end).must_raise ComfyWings::Amadeus::Api::Response::BadRequest
     end
   end
 end

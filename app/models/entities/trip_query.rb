@@ -11,15 +11,15 @@ module ComfyWings
       include Dry.Types
 
       attribute :id,             Integer.optional
-      #attribute :code,           Strict::String
-      #attribute :currency,       Currency
+      # attribute :code,           Strict::String
+      # attribute :currency,       Currency
       attribute :origin,         Strict::String
       attribute :destination,    Strict::String
-      #attribute :departure_date, Strict::DateTime
-      #attribute :arrival_date,   Strict::DateTime
-      #attribute :adult_qty,      Strict::Integer
-      #attribute :children_qty,   Strict::Integer
-      #attribute :is_one_way,     Strict::Bool
+      # attribute :departure_date, Strict::DateTime
+      # attribute :arrival_date,   Strict::DateTime
+      # attribute :adult_qty,      Strict::Integer
+      # attribute :children_qty,   Strict::Integer
+      # attribute :is_one_way,     Strict::Bool
     end
   end
 end

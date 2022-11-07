@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# configuration and utilities 
+# configuration and utilities
 gem 'figaro', '~> 1.2'
 gem 'rake'
 

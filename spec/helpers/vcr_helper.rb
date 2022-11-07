@@ -18,15 +18,12 @@ module VcrHelper
     VCR.configure do |c|
       c.filter_sensitive_data('<AMADEUS_KEY>') { AMADEUS_KEY }
       c.filter_sensitive_data('<AMADEUS_KEY_ESC>') { CGI.escape(AMADEUS_KEY) }
-  
       c.filter_sensitive_data('<AMADEUS_SECRET>') { AMADEUS_SECRET }
       c.filter_sensitive_data('<AMADEUS_SECRET_ESC>') { CGI.escape(AMADEUS_SECRET) }
     end
-
     VCR.insert_cassette(
       AMADEUS_CASSETTE,
-      record: :new_episodes,
-      match_requests_on: %i[method uri body headers]
+      record: :new_episodes, match_requests_on: %i[method uri body headers]
     )
   end
 
