@@ -15,8 +15,9 @@ require 'webmock'
 require_relative '../require_app'
 require_app
 
-AMADEUS_KEY = ComfyWings::App.config.AMADEUS_KEY
-AMADEUS_SECRET = ComfyWings::App.config.AMADEUS_SECRET
+CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
+AMADEUS_KEY = CONFIG['AMADEUS_KEY']
+AMADEUS_SECRET = CONFIG['AMADEUS_SECRET']
 
 CORRECT = YAML.safe_load(File.read('spec/fixtures/flight_results.yml'))
 CORRECT_TRIP = CORRECT['flights'][0]
