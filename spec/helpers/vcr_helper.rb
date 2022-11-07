@@ -3,6 +3,7 @@
 require 'vcr'
 require 'webmock'
 
+# vcr helper module
 module VcrHelper
   CASSETTES_FOLDER = 'spec/fixtures/cassettes'
   AMADEUS_CASSETTE = 'amadeus_api'

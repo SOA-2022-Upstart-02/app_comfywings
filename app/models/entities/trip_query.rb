@@ -7,6 +7,7 @@ require_relative 'flight'
 
 module ComfyWings
   module Entity
+    # class for trip queries
     class TripQuery < Dry::Struct
       include Dry.Types
 

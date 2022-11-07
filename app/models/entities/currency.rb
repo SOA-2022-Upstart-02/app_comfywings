@@ -5,6 +5,7 @@ require 'dry-types'
 
 module ComfyWings
   module Entity
+    # class for currency entity
     class Currency < Dry::Struct
       include Dry.Types
 

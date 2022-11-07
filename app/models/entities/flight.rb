@@ -5,6 +5,7 @@ require 'dry-types'
 
 module ComfyWings
   module Entity
+    # class for flight entitity
     class Flight < Dry::Struct
       include Dry.Types
 
