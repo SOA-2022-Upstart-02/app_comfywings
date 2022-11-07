@@ -40,7 +40,7 @@ module ComfyWings
             destination:,
             duration:,
             price:,
-            type:,
+            currency:,
             flights:
           )
         end
@@ -61,8 +61,8 @@ module ComfyWings
           @data['price']['total']
         end
 
-        def type
-          @data['git_url']
+        def currency
+          @data['price']['currency']
         end
 
         def flights

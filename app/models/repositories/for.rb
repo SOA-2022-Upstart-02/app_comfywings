@@ -8,7 +8,7 @@ module ComfyWings
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::TripQuery => TripQueries,
+        Entity::Trip => TripQueries,
         Entity::Currency => Currencies
       }.freeze
 

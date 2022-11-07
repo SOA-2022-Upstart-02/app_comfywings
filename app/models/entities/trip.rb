@@ -15,6 +15,7 @@ module ComfyWings
       attribute :destination,   Strict::String
       attribute :duration,      Strict::String
       attribute :price,         Strict::String
+      attribute :currency,      Strict::String
       attribute :flights,       Strict::Array.of(Flight)
     end
   end

@@ -18,6 +18,7 @@ module ComfyWings
         path: File.expand_path('config/secrets.yml')
       )
       Figaro.load
+      
       def self.config = Figaro.env
 
       configure :development, :test do
