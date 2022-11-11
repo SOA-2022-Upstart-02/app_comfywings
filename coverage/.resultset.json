@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/drainvers/SOA_2022/soa_project/require_app.rb": {
+      "/home/java/workspace/soa_project/require_app.rb": {
         "lines": [
           null,
           null,
@@ -21,7 +21,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/config/environment.rb": {
+      "/home/java/workspace/soa_project/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -58,7 +58,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/currency_orm.rb": {
+      "/home/java/workspace/soa_project/app/infrastructure/database/currency_orm.rb": {
         "lines": [
           null,
           null,
@@ -81,7 +81,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/trip_query_orm.rb": {
+      "/home/java/workspace/soa_project/app/infrastructure/database/trip_query_orm.rb": {
         "lines": [
           null,
           null,
@@ -105,7 +105,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
+      "/home/java/workspace/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
         "lines": [
           null,
           null,
@@ -252,7 +252,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/entities/airport.rb": {
+      "/home/java/workspace/soa_project/app/models/entities/airport.rb": {
         "lines": [
           null,
           null,
@@ -275,7 +275,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/entities/currency.rb": {
+      "/home/java/workspace/soa_project/app/models/entities/currency.rb": {
         "lines": [
           null,
           null,
@@ -295,7 +295,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/entities/flight.rb": {
+      "/home/java/workspace/soa_project/app/models/entities/flight.rb": {
         "lines": [
           null,
           null,
@@ -316,7 +316,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/entities/trip.rb": {
+      "/home/java/workspace/soa_project/app/models/entities/trip.rb": {
         "lines": [
           null,
           null,
@@ -341,7 +341,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/entities/trip_query.rb": {
+      "/home/java/workspace/soa_project/app/models/entities/trip_query.rb": {
         "lines": [
           null,
           null,
@@ -370,7 +370,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/airport_mapper.rb": {
+      "/home/java/workspace/soa_project/app/models/mappers/airport_mapper.rb": {
         "lines": [
           null,
           null,
@@ -444,7 +444,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/auth_token.rb": {
+      "/home/java/workspace/soa_project/app/models/mappers/auth_token.rb": {
         "lines": [
           null,
           null,
@@ -481,7 +481,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/flight_mapper.rb": {
+      "/home/java/workspace/soa_project/app/models/mappers/flight_mapper.rb": {
         "lines": [
           null,
           null,
@@ -533,7 +533,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/trip_mapper.rb": {
+      "/home/java/workspace/soa_project/app/models/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -611,7 +611,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/repositories/currencies.rb": {
+      "/home/java/workspace/soa_project/app/models/repositories/currencies.rb": {
         "lines": [
           null,
           null,
@@ -653,7 +653,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/repositories/for.rb": {
+      "/home/java/workspace/soa_project/app/models/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -681,7 +681,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/models/repositories/trip_queries.rb": {
+      "/home/java/workspace/soa_project/app/models/repositories/trip_queries.rb": {
         "lines": [
           null,
           null,
@@ -702,7 +702,6 @@
           1,
           0,
           null,
-          0,
           0,
           0,
           null,
@@ -735,7 +734,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/controllers/app.rb": {
+      "/home/java/workspace/soa_project/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -779,7 +778,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/spec/helpers/vcr_helper.rb": {
+      "/home/java/workspace/soa_project/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -820,6 +819,6 @@
         ]
       }
     },
-    "timestamp": 1667785573
+    "timestamp": 1668167775
   }
 }

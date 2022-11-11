@@ -109,6 +109,6 @@ namespace :quality do
 end
 
 desc 'Update fixtures and wipe VCR cassettes'
-task :update_fixtures => "vcr:wipe" do
+task :update_fixtures => 'vcr:wipe' do
   sh 'ruby spec/fixtures/flight_info.rb'
 end

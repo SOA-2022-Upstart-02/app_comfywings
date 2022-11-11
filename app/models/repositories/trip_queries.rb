@@ -30,7 +30,7 @@ module ComfyWings
           arrival_date: Date.parse(db_record.arrival_date),
           adult_qty: db_record.adult_qty,
           children_qty: db_record.children_qty,
-          is_one_way: db_record.is_one_way,
+          is_one_way: db_record.is_one_way
         )
       end
 

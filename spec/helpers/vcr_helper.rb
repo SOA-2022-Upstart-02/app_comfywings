@@ -14,11 +14,10 @@ module VcrHelper
     end
   end
 
-  def self.configure_vcr_for_amadeus
+  def self.configure_vcr_for_amadeus # rubocop:disable Metrics/MethodLength
     VCR.configure do |c|
       c.filter_sensitive_data('<AMADEUS_KEY>') { AMADEUS_KEY }
       c.filter_sensitive_data('<AMADEUS_KEY_ESC>') { CGI.escape(AMADEUS_KEY) }
-  
       c.filter_sensitive_data('<AMADEUS_SECRET>') { AMADEUS_SECRET }
       c.filter_sensitive_data('<AMADEUS_SECRET_ESC>') { CGI.escape(AMADEUS_SECRET) }
     end

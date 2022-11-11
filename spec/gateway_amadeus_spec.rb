@@ -3,6 +3,8 @@
 require_relative 'spec_helper'
 require_relative 'helpers/vcr_helper'
 
+CORRECT_TRIP = CORRECT['flights'][0]
+
 describe 'Tests AMADEUS API library' do
   VcrHelper.setup_vcr
 
@@ -15,12 +17,11 @@ describe 'Tests AMADEUS API library' do
     VcrHelper.eject_vcr
   end
 
-  describe 'Flight information' do
-    it 'HAPPY: should provide correct flight attributes' do
+  describe 'Trip information' do
+    it 'HAPPY: should provide correct trip attributes' do
       trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
         .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
       trip = trips[0]
-
       _(trips.size).must_equal CORRECT['flight_num']
       _(trip.price).must_equal CORRECT_TRIP['total_price']
       _(trip.origin).must_equal CORRECT_TRIP['origin']
