@@ -14,6 +14,10 @@ module ComfyWings
         rebuild_entity Database::CurrencyOrm.first(code:)
       end
 
+      def self.all
+        rebuild_many Database::CurrencyOrm.all
+      end
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
@@ -30,8 +34,8 @@ module ComfyWings
         end
       end
 
-      def self.db_find_or_create(entity)
-        Database::Currencies.find_or_create(entity.to_attr_hash)
+      def self.db_find(entity)
+        Database::Currencies.find(entity.to_attr_hash)
       end
     end
   end

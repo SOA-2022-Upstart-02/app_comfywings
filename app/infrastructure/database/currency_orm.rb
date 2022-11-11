@@ -10,9 +10,8 @@ module ComfyWings
                   class: :'ComfyWings::Database::TripQueryOrm',
                   key: :currency_id
 
-      # TODO: Method to convert Ruby Date object into SQL DATE format
-      def self.find_or_create(currency_info)
-        first(code: currency_info[:code]) || create(currency_info)
+      def self.find(currency_info)
+        first(code: currency_info[:code])
       end
     end
   end

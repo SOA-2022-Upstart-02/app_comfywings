@@ -23,10 +23,19 @@ describe 'Integration Tests of AMADEUS API and Database' do
   end
 
   describe 'Retrieve Currency By Currency Code' do
-    before do
-      DatabaseHelper.wipe_database
+
+    it 'HAPPY: should be able to save project from Github to database' do
+      currency = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency).find_code('TWD')
+
+      puts currency
+      _(currency.code).must_equal('TWD')
+      _(currency.name).must_equal('New Taiwan dollar')
     end
 
-    # TODO: Write Your Test There
+    it 'HAPPY: there should be 3 currencies: TWD USD EUR' do
+      reposit = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency)
+      currencies = reposit.all
+      _(currencies.size).must_equal(3)
+    end
   end
 end
