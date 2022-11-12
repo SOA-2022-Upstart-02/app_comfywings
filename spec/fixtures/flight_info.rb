@@ -73,7 +73,10 @@ flight_info = JSON.parse(response)
 
 flight_results['flight_num'] = flight_info['meta']['count']
 matched_flights = flight_info['data']
+dict_flights = flight_info['dictionaries']['currencies']
+puts dict_flights
 
+=begin
 flight_results['flights'] = matched_flights.map do |flight|
   flight_info = {}
 
@@ -91,3 +94,4 @@ flight_results['flights'] = matched_flights.map do |flight|
 end
 
 File.write('spec/fixtures/flight_results.yml', flight_results.to_yaml)
+=end

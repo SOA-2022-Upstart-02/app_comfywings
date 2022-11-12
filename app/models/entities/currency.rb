@@ -10,8 +10,12 @@ module ComfyWings
       include Dry.Types
 
       attribute :id,   Integer.optional
-      attribute :code, Strict::String
-      attribute :name, Strict::String
+      attribute :name, Coercible::Array#Strict::String
+      attribute :code, Coercible::Array#Strict::String
+
+      def to_attr_hash
+        to_hash.except(:id) 
+      end
     end
   end
 end

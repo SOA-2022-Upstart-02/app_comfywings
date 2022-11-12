@@ -30,8 +30,11 @@ module ComfyWings
         end
       end
 
-      def self.db_find_or_create(entity)
-        Database::Currency.find_or_create(entity.to_attr_hash)
+      def self.create(entity)
+        raise 'currency already exists' if find_code(entity.code)
+        
+        Database::CurrencyOrm.create(entity.to_attr_hash)
+        rebuild_entity(entity)
       end
     end
   end

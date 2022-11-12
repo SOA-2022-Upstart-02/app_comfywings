@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-require_relative 'flight_mapper'
+#require_relative 'flight_mapper'
 
 module ComfyWings
   module Amadeus
@@ -21,11 +21,11 @@ module ComfyWings
       end
 
       def self.build_entity(data, from, to)
-        DataMapper.new(data, from, to).build_entity
+        TripDataMapper.new(data, from, to).build_entity
       end
 
       # Extracts entity specific elements from data structure
-      class DataMapper
+      class TripDataMapper
         def initialize(data, from, to)
           @data = data
           @from = from
