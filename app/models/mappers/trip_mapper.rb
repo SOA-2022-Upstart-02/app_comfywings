@@ -40,8 +40,10 @@ module ComfyWings
             departure_date:,
             arrival_date:,
             is_one_way:
+
             #adult_qty:,
             #children_qty:
+
           )
         end
 

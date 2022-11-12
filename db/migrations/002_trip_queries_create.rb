@@ -13,6 +13,7 @@ Sequel.migration do
       String      :arrival_date
       String      :is_one_way
 
+      # TODO:
       #String      :code, unique: true, null: false # generate by 8 bit uuid
       #Integer     :adult_qty
       #Integer     :children_qty

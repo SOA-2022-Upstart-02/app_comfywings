@@ -69,12 +69,10 @@ flight_results['count']
 response = HTTP.auth("Bearer #{token.obtain_token}").post(version2_url_path('shopping/flight-offers'), json: search)
 flight_info = JSON.parse(response)
 
+
+
 flight_results['flight_num'] = flight_info['meta']['count']
 matched_flights = flight_info['data']
-data_flights = flight_info['dictionaries']
-
-puts data_flights
-
 
 flight_results['flights'] = matched_flights.map do |flight|
   flight_info = {}

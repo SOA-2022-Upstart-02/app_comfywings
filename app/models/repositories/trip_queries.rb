@@ -28,10 +28,12 @@ module ComfyWings
           departure_date: db_record.departure_date,
           arrival_date: db_record.arrival_date,
           is_one_way: db_record.is_one_way,
-          # adult_qty: db_record.adult_qty,
-          # children_qty: db_record.children_qty,
+          
+          #TODO: 
           # code: db_record.code,
           # currency: currency_obj,
+          # adult_qty: db_record.adult_qty,
+          # children_qty: db_record.children_qty,
         )
       end
 

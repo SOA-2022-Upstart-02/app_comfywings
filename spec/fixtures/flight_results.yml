@@ -6,7 +6,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -16,7 +16,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -26,7 +26,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -36,7 +36,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -46,7 +46,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -56,7 +56,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -66,7 +66,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -76,7 +76,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '906.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -86,7 +86,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -96,7 +96,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -106,7 +106,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -116,7 +116,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -126,7 +126,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -136,7 +136,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -146,7 +146,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -156,7 +156,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -166,7 +166,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -176,7 +176,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -186,7 +186,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -196,7 +196,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '921.90'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -206,7 +206,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '963.50'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -216,7 +216,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '963.50'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -226,7 +226,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '978.80'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -236,7 +236,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '978.80'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -246,7 +246,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '978.80'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -256,7 +256,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -266,7 +266,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -276,7 +276,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -286,7 +286,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -296,7 +296,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -306,7 +306,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -316,7 +316,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -326,7 +326,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -336,7 +336,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -346,7 +346,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -356,7 +356,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -366,7 +366,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -376,7 +376,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -386,7 +386,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -396,7 +396,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -406,7 +406,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -416,7 +416,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -426,7 +426,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -436,7 +436,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -446,7 +446,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -456,7 +456,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -466,7 +466,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -476,7 +476,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -486,7 +486,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -496,7 +496,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -506,7 +506,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -516,7 +516,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -526,7 +526,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -536,7 +536,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -546,7 +546,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -556,7 +556,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -566,7 +566,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -576,7 +576,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -586,7 +586,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -596,7 +596,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -606,7 +606,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -616,7 +616,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -626,7 +626,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -636,7 +636,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -646,7 +646,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -656,7 +656,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -666,7 +666,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -676,7 +676,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -686,7 +686,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -696,7 +696,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -706,7 +706,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -716,7 +716,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -726,7 +726,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -736,7 +736,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -746,7 +746,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -756,7 +756,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -766,7 +766,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -776,7 +776,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -786,7 +786,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -796,7 +796,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -806,7 +806,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -816,7 +816,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -826,7 +826,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -836,7 +836,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -846,7 +846,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -856,7 +856,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -866,7 +866,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -876,7 +876,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -886,7 +886,7 @@ flights:
   inbound_duration: PT41H15M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -896,7 +896,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -906,7 +906,7 @@ flights:
   inbound_duration: PT42H50M
   total_price: '1018.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -916,7 +916,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -926,7 +926,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -936,7 +936,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -946,7 +946,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -956,7 +956,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -966,7 +966,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -976,7 +976,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -986,7 +986,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -996,7 +996,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -1006,7 +1006,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1016,7 +1016,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1026,7 +1026,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1036,7 +1036,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -1046,7 +1046,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1056,7 +1056,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1066,7 +1066,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -1076,7 +1076,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1086,7 +1086,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1096,7 +1096,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -1106,7 +1106,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1116,7 +1116,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1126,7 +1126,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -1136,7 +1136,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1146,7 +1146,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1156,7 +1156,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1166,7 +1166,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -1176,7 +1176,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -1186,7 +1186,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -1196,7 +1196,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1206,7 +1206,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -1216,7 +1216,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1226,7 +1226,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -1236,7 +1236,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1246,7 +1246,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1256,7 +1256,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -1266,7 +1266,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1276,7 +1276,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -1286,7 +1286,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1296,7 +1296,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -1306,7 +1306,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1316,7 +1316,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1326,7 +1326,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -1336,7 +1336,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -1346,7 +1346,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1356,7 +1356,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -1366,7 +1366,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1376,7 +1376,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1386,7 +1386,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1396,7 +1396,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1406,7 +1406,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1416,7 +1416,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1426,7 +1426,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1436,7 +1436,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1446,7 +1446,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -1456,7 +1456,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -1466,7 +1466,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1476,7 +1476,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1486,7 +1486,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -1496,7 +1496,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1506,7 +1506,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -1516,7 +1516,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1526,7 +1526,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -1536,7 +1536,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1546,7 +1546,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1556,7 +1556,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -1566,7 +1566,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -1576,7 +1576,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1586,7 +1586,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -1596,7 +1596,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1606,7 +1606,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -1616,7 +1616,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1626,7 +1626,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1636,7 +1636,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1646,7 +1646,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -1656,7 +1656,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1666,7 +1666,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -1676,7 +1676,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1686,7 +1686,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1696,7 +1696,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1706,7 +1706,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1716,7 +1716,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -1726,7 +1726,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1736,7 +1736,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1746,7 +1746,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -1756,7 +1756,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1766,7 +1766,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1776,7 +1776,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -1786,7 +1786,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -1796,7 +1796,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1806,7 +1806,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1816,7 +1816,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1826,7 +1826,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1836,7 +1836,7 @@ flights:
   inbound_duration: PT55H15M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1846,7 +1846,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1856,7 +1856,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1866,7 +1866,7 @@ flights:
   inbound_duration: PT59H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1876,7 +1876,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -1886,7 +1886,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -1896,7 +1896,7 @@ flights:
   inbound_duration: PT56H50M
   total_price: '1034.10'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -1906,7 +1906,7 @@ flights:
   inbound_duration: PT16H35M
   total_price: '1221.90'
   origin: TPE
-  depature_date: '2022-11-21T22:25:00'
+  departure_date: '2022-11-21T22:25:00'
   arrival_Date: '2022-11-22T06:05:00'
   currency_code: USD
   currency_name:
@@ -1916,7 +1916,7 @@ flights:
   inbound_duration: PT16H35M
   total_price: '1221.90'
   origin: TPE
-  depature_date: '2022-11-21T22:25:00'
+  departure_date: '2022-11-21T22:25:00'
   arrival_Date: '2022-11-22T06:05:00'
   currency_code: USD
   currency_name:
@@ -1926,7 +1926,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1226.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -1936,7 +1936,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1226.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -1946,7 +1946,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1226.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -1956,7 +1956,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1226.60'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -1966,7 +1966,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1283.50'
   origin: TPE
-  depature_date: '2022-11-21T13:55:00'
+  departure_date: '2022-11-21T13:55:00'
   arrival_Date: '2022-11-21T16:50:00'
   currency_code: USD
   currency_name:
@@ -1976,7 +1976,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -1986,7 +1986,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -1996,7 +1996,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -2006,7 +2006,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -2016,7 +2016,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -2026,7 +2026,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -2036,7 +2036,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -2046,7 +2046,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -2056,7 +2056,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -2066,7 +2066,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -2076,7 +2076,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -2086,7 +2086,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -2096,7 +2096,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -2106,7 +2106,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -2116,7 +2116,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -2126,7 +2126,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -2136,7 +2136,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -2146,7 +2146,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -2156,7 +2156,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -2166,7 +2166,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T15:50:00'
+  departure_date: '2022-11-21T15:50:00'
   arrival_Date: '2022-11-21T17:55:00'
   currency_code: USD
   currency_name:
@@ -2176,7 +2176,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -2186,7 +2186,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -2196,7 +2196,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -2206,7 +2206,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -2216,7 +2216,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -2226,7 +2226,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -2236,7 +2236,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:40:00'
+  departure_date: '2022-11-21T19:40:00'
   arrival_Date: '2022-11-21T21:45:00'
   currency_code: USD
   currency_name:
@@ -2246,7 +2246,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:30:00'
+  departure_date: '2022-11-21T21:30:00'
   arrival_Date: '2022-11-21T23:30:00'
   currency_code: USD
   currency_name:
@@ -2256,7 +2256,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T21:15:00'
+  departure_date: '2022-11-21T21:15:00'
   arrival_Date: '2022-11-21T23:10:00'
   currency_code: USD
   currency_name:
@@ -2266,7 +2266,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T20:10:00'
+  departure_date: '2022-11-21T20:10:00'
   arrival_Date: '2022-11-21T22:05:00'
   currency_code: USD
   currency_name:
@@ -2276,7 +2276,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T19:30:00'
+  departure_date: '2022-11-21T19:30:00'
   arrival_Date: '2022-11-21T21:30:00'
   currency_code: USD
   currency_name:
@@ -2286,7 +2286,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T18:35:00'
+  departure_date: '2022-11-21T18:35:00'
   arrival_Date: '2022-11-21T20:40:00'
   currency_code: USD
   currency_name:
@@ -2296,7 +2296,7 @@ flights:
   inbound_duration: PT42H55M
   total_price: '1338.80'
   origin: TPE
-  depature_date: '2022-11-21T17:40:00'
+  departure_date: '2022-11-21T17:40:00'
   arrival_Date: '2022-11-21T19:45:00'
   currency_code: USD
   currency_name:
@@ -2306,7 +2306,7 @@ flights:
   inbound_duration: PT38H40M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -2316,7 +2316,7 @@ flights:
   inbound_duration: PT38H40M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -2326,7 +2326,7 @@ flights:
   inbound_duration: PT38H40M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -2336,7 +2336,7 @@ flights:
   inbound_duration: PT40H15M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T14:50:00'
+  departure_date: '2022-11-21T14:50:00'
   arrival_Date: '2022-11-21T16:55:00'
   currency_code: USD
   currency_name:
@@ -2346,7 +2346,7 @@ flights:
   inbound_duration: PT40H15M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T14:15:00'
+  departure_date: '2022-11-21T14:15:00'
   arrival_Date: '2022-11-21T16:15:00'
   currency_code: USD
   currency_name:
@@ -2356,7 +2356,7 @@ flights:
   inbound_duration: PT38H40M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -2366,7 +2366,7 @@ flights:
   inbound_duration: PT40H15M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T13:20:00'
+  departure_date: '2022-11-21T13:20:00'
   arrival_Date: '2022-11-21T15:25:00'
   currency_code: USD
   currency_name:
@@ -2376,7 +2376,7 @@ flights:
   inbound_duration: PT40H15M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T12:25:00'
+  departure_date: '2022-11-21T12:25:00'
   arrival_Date: '2022-11-21T14:25:00'
   currency_code: USD
   currency_name:
@@ -2386,7 +2386,7 @@ flights:
   inbound_duration: PT38H40M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -2396,7 +2396,7 @@ flights:
   inbound_duration: PT38H40M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
@@ -2406,7 +2406,7 @@ flights:
   inbound_duration: PT40H15M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T10:45:00'
+  departure_date: '2022-11-21T10:45:00'
   arrival_Date: '2022-11-21T12:50:00'
   currency_code: USD
   currency_name:
@@ -2416,7 +2416,7 @@ flights:
   inbound_duration: PT40H15M
   total_price: '1480.40'
   origin: TPE
-  depature_date: '2022-11-21T10:00:00'
+  departure_date: '2022-11-21T10:00:00'
   arrival_Date: '2022-11-21T12:00:00'
   currency_code: USD
   currency_name:
