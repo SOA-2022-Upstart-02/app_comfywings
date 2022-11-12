@@ -123,9 +123,9 @@ PLATFORMS
 DEPENDENCIES
   dry-struct (~> 1)
   dry-types (~> 1)
-  figaro
+  figaro (~> 1.2)
   flog
-  hirb
+  hirb (~> 0)
   hirb-unicode (~> 0)
   http (~> 5)
   minitest
@@ -136,7 +136,7 @@ DEPENDENCIES
   reek
   roda (~> 3)
   rubocop
-  sequel
+  sequel (~> 5.49)
   simplecov (~> 0)
   slim (~> 4)
   sqlite3

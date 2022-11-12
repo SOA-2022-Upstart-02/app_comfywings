@@ -7,7 +7,7 @@ require_relative 'flight_info'
 require_relative '../../app/models/gateways/amadeus_api'
 
 # airport token
-AuthToken.new('config/secrets.yml')
+AuthToken.new
 
 # TODO: the following
 # Need depature code to obtain airport information

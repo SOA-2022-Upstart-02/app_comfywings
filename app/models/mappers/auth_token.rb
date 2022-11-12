@@ -7,7 +7,7 @@ require 'json'
 # create auth token class
 class AuthToken
   # open secret yaml file
-  def initialize(config)
+  def initialize
     @config = ComfyWings::App.config
   end
 
@@ -19,7 +19,7 @@ class AuthToken
       client_secret: @config.AMADEUS_SECRET
     }
     response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
-                   .post(version1_url_path('security/oauth2/token'), form: postform)
+      .post(version1_url_path('security/oauth2/token'), form: postform)
     response.parse['access_token']
   end
 end

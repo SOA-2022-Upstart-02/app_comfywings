@@ -22,6 +22,7 @@ module ComfyWings
 
         def build_entity
           ComfyWings::Entity::Flight.new(
+            id: nil,
             origin:,
             destination:,
             duration:
