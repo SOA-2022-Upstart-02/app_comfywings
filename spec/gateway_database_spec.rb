@@ -30,8 +30,8 @@ describe 'Integration Tests of Amadeus API and Database' do
       _(currency_rebuilt.code).must_equal(currency_query.code)
       _(currency_rebuilt.name).must_equal(currency_query.name)
     end
-  end
 
+  end
     it 'HAPPY: should be able to save trip query from amadeus to TripQuery table in database' do
       trip_query = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
         .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
@@ -45,6 +45,5 @@ describe 'Integration Tests of Amadeus API and Database' do
       _(query_rebuilt.is_one_way).must_equal(trip_query[0].is_one_way)
     end
 end
-end
-=end
+
 

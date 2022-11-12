@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 12 Nov 2022 07:17:21 GMT
+      - Sat, 12 Nov 2022 09:51:32 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -43,7 +43,7 @@ http_interactions:
       User-Agent:
       - http.rb/5.1.0
       Ama-Gateway-Request-Id:
-      - rrt-073f098474e19a596-b-de-12549-186216748-1
+      - rrt-025c5d0a4747e557a-b-de-6409-185426532-1
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -59,10 +59,10 @@ http_interactions:
       string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
         \"chiuzubennychilumbu@gmail.com\",\n            \"application_name\": \"Chiuzu\",\n
         \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
-        \"Bearer\",\n            \"access_token\": \"3ZXuPsIIneg7f07ARdIESuh0ihz9\",\n
+        \"Bearer\",\n            \"access_token\": \"nxWB1dzSuL5zDJcixmOSAx4p0FJh\",\n
         \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
         \           \"scope\": \"\"\n        }\n        "
-  recorded_at: Sat, 12 Nov 2022 07:17:21 GMT
+  recorded_at: Sat, 12 Nov 2022 09:51:32 GMT
 - request:
     method: post
     uri: https://test.api.amadeus.com/v2/shopping/flight-offers
@@ -73,7 +73,7 @@ http_interactions:
       Accept:
       - application/vnd.amadeus+json
       Authorization:
-      - Bearer 3ZXuPsIIneg7f07ARdIESuh0ihz9
+      - Bearer nxWB1dzSuL5zDJcixmOSAx4p0FJh
       Connection:
       - close
       Content-Type:
@@ -88,7 +88,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 12 Nov 2022 07:17:27 GMT
+      - Sat, 12 Nov 2022 09:51:37 GMT
       Content-Type:
       - application/vnd.amadeus+json
       Content-Length:
@@ -98,9 +98,9 @@ http_interactions:
       Ama-Internal-Message-Version:
       - '14.1'
       Ama-Request-Id:
-      - 0001PTFMQL848Z
+      - 0001PU6ETL8BDX
       Ama-Gateway-Request-Id:
-      - rrt-073f098474e19a596-b-de-12549-186216872-1
+      - rrt-025c5d0a4747e557a-b-de-6410-185426580-1
       Access-Control-Allow-Headers:
       - origin, x-requested-with, accept, Content-Type, Authorization
       Access-Control-Max-Age:
@@ -119,5 +119,2604 @@ http_interactions:
         A320NEO"},"currencies":{"USD":"US DOLLAR"},"carriers":{"QR":"QATAR AIRWAYS","TG":"THAI
         AIRWAYS INTERNATIONAL","CX":"CATHAY PACIFIC","TK":"TURKISH AIRLINES","2L":"HELVETIC
         AIRWAYS","LH":"LUFTHANSA","LX":"SWISS INTERNATIONAL AIR LINES"}}}'
-  recorded_at: Sat, 12 Nov 2022 07:17:29 GMT
+  recorded_at: Sat, 12 Nov 2022 09:51:39 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer nxWB1dzSuL5zDJcixmOSAx4p0FJh
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:41 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '10215'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001RGWRGL8BE5
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6411-185427031-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "meta" : {
+            "count" : 97,
+            "links" : {
+              "self" : "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE"
+            }
+          },
+          "data" : [ {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AUCKLAND",
+            "iataCode" : "AKL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AMSTERDAM",
+            "iataCode" : "AMS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AOMORI",
+            "iataCode" : "AOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BEIJING",
+            "iataCode" : "BJS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOTA KINABALU",
+            "iataCode" : "BKI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANGKOK",
+            "iataCode" : "BKK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BRISBANE",
+            "iataCode" : "BNE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANDAR SERI BEGAWAN",
+            "iataCode" : "BWN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUANGZHOU",
+            "iataCode" : "CAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CEBU",
+            "iataCode" : "CEB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ZHENGZHOU",
+            "iataCode" : "CGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGCHUN",
+            "iataCode" : "CGQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHICAGO",
+            "iataCode" : "CHI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHONGQING",
+            "iataCode" : "CKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHIANG MAI",
+            "iataCode" : "CNX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ANGELES MABALACAT",
+            "iataCode" : "CRK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGSHA",
+            "iataCode" : "CSX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHENGDU",
+            "iataCode" : "CTU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DA NANG",
+            "iataCode" : "DAD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DELHI",
+            "iataCode" : "DEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DALIAN",
+            "iataCode" : "DLC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DENPASAR-BALI",
+            "iataCode" : "DPS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DUBAI",
+            "iataCode" : "DXB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUZHOU",
+            "iataCode" : "FOC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FRANKFURT",
+            "iataCode" : "FRA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHIZUOKA",
+            "iataCode" : "FSZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUKUOKA",
+            "iataCode" : "FUK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUAM",
+            "iataCode" : "GUM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HAIKOU",
+            "iataCode" : "HAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANOI",
+            "iataCode" : "HAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOHHOT",
+            "iataCode" : "HET"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANGZHOU",
+            "iataCode" : "HGH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HIROSHIMA",
+            "iataCode" : "HIJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONG KONG",
+            "iataCode" : "HKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHUKET",
+            "iataCode" : "HKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONOLULU",
+            "iataCode" : "HNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOUSTON",
+            "iataCode" : "HOU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISHIGAKI",
+            "iataCode" : "ISG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISTANBUL",
+            "iataCode" : "IST"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QUANZHOU",
+            "iataCode" : "JJN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JAKARTA",
+            "iataCode" : "JKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANCHANG",
+            "iataCode" : "KHN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KITAKYUSHU",
+            "iataCode" : "KKJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KALIBO",
+            "iataCode" : "KLO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MIYAZAKI",
+            "iataCode" : "KMI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOMATSU",
+            "iataCode" : "KMQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KAGOSHIMA",
+            "iataCode" : "KOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KUALA LUMPUR",
+            "iataCode" : "KUL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LOS ANGELES",
+            "iataCode" : "LAX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LONDON",
+            "iataCode" : "LON"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MELBOURNE",
+            "iataCode" : "MEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MACAU",
+            "iataCode" : "MFM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MILAN",
+            "iataCode" : "MIL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MANILA",
+            "iataCode" : "MNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MATSUYAMA",
+            "iataCode" : "MYJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NINGBO",
+            "iataCode" : "NGB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NAGOYA",
+            "iataCode" : "NGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANJING",
+            "iataCode" : "NKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANNING",
+            "iataCode" : "NNG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANTONG",
+            "iataCode" : "NTG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NEW YORK",
+            "iataCode" : "NYC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OKINAWA",
+            "iataCode" : "OKA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OSAKA",
+            "iataCode" : "OSA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PARIS",
+            "iataCode" : "PAR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PENANG",
+            "iataCode" : "PEN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHNOM PENH",
+            "iataCode" : "PNH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BUSAN",
+            "iataCode" : "PUS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "YANGON",
+            "iataCode" : "RGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ROME",
+            "iataCode" : "ROM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOROR",
+            "iataCode" : "ROR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SENDAI",
+            "iataCode" : "SDJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEATTLE",
+            "iataCode" : "SEA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEOUL",
+            "iataCode" : "SEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAN FRANCISCO",
+            "iataCode" : "SFO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HO CHI MINH CITY",
+            "iataCode" : "SGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHANGHAI",
+            "iataCode" : "SHA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENYANG",
+            "iataCode" : "SHE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XI AN",
+            "iataCode" : "SIA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SINGAPORE",
+            "iataCode" : "SIN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAPPORO",
+            "iataCode" : "SPK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SYDNEY",
+            "iataCode" : "SYD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SANYA",
+            "iataCode" : "SYX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENZHEN",
+            "iataCode" : "SZX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DAEGU",
+            "iataCode" : "TAE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TAKAMATSU",
+            "iataCode" : "TAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QINGDAO",
+            "iataCode" : "TAO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JINAN",
+            "iataCode" : "TNA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOYAMA",
+            "iataCode" : "TOY"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TIANJIN",
+            "iataCode" : "TSN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOKYO",
+            "iataCode" : "TYO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VIENNA",
+            "iataCode" : "VIE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUHAN",
+            "iataCode" : "WUH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUXI",
+            "iataCode" : "WUX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XIAMEN",
+            "iataCode" : "XMN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XUZHOU",
+            "iataCode" : "XUZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TORONTO",
+            "iataCode" : "YTO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VANCOUVER",
+            "iataCode" : "YVR"
+          } ]
+        }
+  recorded_at: Sat, 12 Nov 2022 09:51:41 GMT
+- request:
+    method: post
+    uri: https://test.api.amadeus.com/v1/security/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:43 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '416'
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      X-Forwarded-For:
+      - 42.72.68.131
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      Accept:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - http.rb/5.1.0
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6409-185427106-1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Server:
+      - Amadeus
+    body:
+      encoding: UTF-8
+      string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
+        \"chiuzubennychilumbu@gmail.com\",\n            \"application_name\": \"Chiuzu\",\n
+        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
+        \"Bearer\",\n            \"access_token\": \"BsKAbSi94ZVznSijCWON685mXOLO\",\n
+        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
+        \           \"scope\": \"\"\n        }\n        "
+  recorded_at: Sat, 12 Nov 2022 09:51:43 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer BsKAbSi94ZVznSijCWON685mXOLO
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:44 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '10215'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001PU6FBL8BE8
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6412-185427161-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "meta" : {
+            "count" : 97,
+            "links" : {
+              "self" : "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE"
+            }
+          },
+          "data" : [ {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AUCKLAND",
+            "iataCode" : "AKL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AMSTERDAM",
+            "iataCode" : "AMS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AOMORI",
+            "iataCode" : "AOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BEIJING",
+            "iataCode" : "BJS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOTA KINABALU",
+            "iataCode" : "BKI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANGKOK",
+            "iataCode" : "BKK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BRISBANE",
+            "iataCode" : "BNE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANDAR SERI BEGAWAN",
+            "iataCode" : "BWN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUANGZHOU",
+            "iataCode" : "CAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CEBU",
+            "iataCode" : "CEB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ZHENGZHOU",
+            "iataCode" : "CGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGCHUN",
+            "iataCode" : "CGQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHICAGO",
+            "iataCode" : "CHI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHONGQING",
+            "iataCode" : "CKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHIANG MAI",
+            "iataCode" : "CNX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ANGELES MABALACAT",
+            "iataCode" : "CRK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGSHA",
+            "iataCode" : "CSX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHENGDU",
+            "iataCode" : "CTU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DA NANG",
+            "iataCode" : "DAD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DELHI",
+            "iataCode" : "DEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DALIAN",
+            "iataCode" : "DLC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DENPASAR-BALI",
+            "iataCode" : "DPS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DUBAI",
+            "iataCode" : "DXB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUZHOU",
+            "iataCode" : "FOC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FRANKFURT",
+            "iataCode" : "FRA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHIZUOKA",
+            "iataCode" : "FSZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUKUOKA",
+            "iataCode" : "FUK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUAM",
+            "iataCode" : "GUM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HAIKOU",
+            "iataCode" : "HAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANOI",
+            "iataCode" : "HAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOHHOT",
+            "iataCode" : "HET"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANGZHOU",
+            "iataCode" : "HGH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HIROSHIMA",
+            "iataCode" : "HIJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONG KONG",
+            "iataCode" : "HKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHUKET",
+            "iataCode" : "HKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONOLULU",
+            "iataCode" : "HNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOUSTON",
+            "iataCode" : "HOU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISHIGAKI",
+            "iataCode" : "ISG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISTANBUL",
+            "iataCode" : "IST"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QUANZHOU",
+            "iataCode" : "JJN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JAKARTA",
+            "iataCode" : "JKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANCHANG",
+            "iataCode" : "KHN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KITAKYUSHU",
+            "iataCode" : "KKJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KALIBO",
+            "iataCode" : "KLO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MIYAZAKI",
+            "iataCode" : "KMI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOMATSU",
+            "iataCode" : "KMQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KAGOSHIMA",
+            "iataCode" : "KOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KUALA LUMPUR",
+            "iataCode" : "KUL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LOS ANGELES",
+            "iataCode" : "LAX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LONDON",
+            "iataCode" : "LON"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MELBOURNE",
+            "iataCode" : "MEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MACAU",
+            "iataCode" : "MFM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MILAN",
+            "iataCode" : "MIL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MANILA",
+            "iataCode" : "MNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MATSUYAMA",
+            "iataCode" : "MYJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NINGBO",
+            "iataCode" : "NGB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NAGOYA",
+            "iataCode" : "NGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANJING",
+            "iataCode" : "NKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANNING",
+            "iataCode" : "NNG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANTONG",
+            "iataCode" : "NTG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NEW YORK",
+            "iataCode" : "NYC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OKINAWA",
+            "iataCode" : "OKA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OSAKA",
+            "iataCode" : "OSA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PARIS",
+            "iataCode" : "PAR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PENANG",
+            "iataCode" : "PEN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHNOM PENH",
+            "iataCode" : "PNH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BUSAN",
+            "iataCode" : "PUS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "YANGON",
+            "iataCode" : "RGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ROME",
+            "iataCode" : "ROM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOROR",
+            "iataCode" : "ROR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SENDAI",
+            "iataCode" : "SDJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEATTLE",
+            "iataCode" : "SEA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEOUL",
+            "iataCode" : "SEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAN FRANCISCO",
+            "iataCode" : "SFO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HO CHI MINH CITY",
+            "iataCode" : "SGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHANGHAI",
+            "iataCode" : "SHA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENYANG",
+            "iataCode" : "SHE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XI AN",
+            "iataCode" : "SIA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SINGAPORE",
+            "iataCode" : "SIN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAPPORO",
+            "iataCode" : "SPK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SYDNEY",
+            "iataCode" : "SYD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SANYA",
+            "iataCode" : "SYX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENZHEN",
+            "iataCode" : "SZX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DAEGU",
+            "iataCode" : "TAE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TAKAMATSU",
+            "iataCode" : "TAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QINGDAO",
+            "iataCode" : "TAO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JINAN",
+            "iataCode" : "TNA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOYAMA",
+            "iataCode" : "TOY"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TIANJIN",
+            "iataCode" : "TSN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOKYO",
+            "iataCode" : "TYO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VIENNA",
+            "iataCode" : "VIE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUHAN",
+            "iataCode" : "WUH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUXI",
+            "iataCode" : "WUX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XIAMEN",
+            "iataCode" : "XMN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XUZHOU",
+            "iataCode" : "XUZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TORONTO",
+            "iataCode" : "YTO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VANCOUVER",
+            "iataCode" : "YVR"
+          } ]
+        }
+  recorded_at: Sat, 12 Nov 2022 09:51:45 GMT
+- request:
+    method: post
+    uri: https://test.api.amadeus.com/v1/security/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '416'
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      X-Forwarded-For:
+      - 42.72.68.131
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      Accept:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - http.rb/5.1.0
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6411-185427206-1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Server:
+      - Amadeus
+    body:
+      encoding: UTF-8
+      string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
+        \"chiuzubennychilumbu@gmail.com\",\n            \"application_name\": \"Chiuzu\",\n
+        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
+        \"Bearer\",\n            \"access_token\": \"qF4Xpba1ezB8SKn8wSiJrv44OmMR\",\n
+        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
+        \           \"scope\": \"\"\n        }\n        "
+  recorded_at: Sat, 12 Nov 2022 09:51:46 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer qF4Xpba1ezB8SKn8wSiJrv44OmMR
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:48 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '10215'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001RGWS7L8BEB
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6411-185427276-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "meta" : {
+            "count" : 97,
+            "links" : {
+              "self" : "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE"
+            }
+          },
+          "data" : [ {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AUCKLAND",
+            "iataCode" : "AKL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AMSTERDAM",
+            "iataCode" : "AMS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AOMORI",
+            "iataCode" : "AOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BEIJING",
+            "iataCode" : "BJS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOTA KINABALU",
+            "iataCode" : "BKI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANGKOK",
+            "iataCode" : "BKK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BRISBANE",
+            "iataCode" : "BNE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANDAR SERI BEGAWAN",
+            "iataCode" : "BWN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUANGZHOU",
+            "iataCode" : "CAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CEBU",
+            "iataCode" : "CEB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ZHENGZHOU",
+            "iataCode" : "CGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGCHUN",
+            "iataCode" : "CGQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHICAGO",
+            "iataCode" : "CHI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHONGQING",
+            "iataCode" : "CKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHIANG MAI",
+            "iataCode" : "CNX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ANGELES MABALACAT",
+            "iataCode" : "CRK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGSHA",
+            "iataCode" : "CSX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHENGDU",
+            "iataCode" : "CTU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DA NANG",
+            "iataCode" : "DAD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DELHI",
+            "iataCode" : "DEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DALIAN",
+            "iataCode" : "DLC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DENPASAR-BALI",
+            "iataCode" : "DPS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DUBAI",
+            "iataCode" : "DXB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUZHOU",
+            "iataCode" : "FOC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FRANKFURT",
+            "iataCode" : "FRA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHIZUOKA",
+            "iataCode" : "FSZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUKUOKA",
+            "iataCode" : "FUK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUAM",
+            "iataCode" : "GUM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HAIKOU",
+            "iataCode" : "HAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANOI",
+            "iataCode" : "HAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOHHOT",
+            "iataCode" : "HET"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANGZHOU",
+            "iataCode" : "HGH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HIROSHIMA",
+            "iataCode" : "HIJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONG KONG",
+            "iataCode" : "HKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHUKET",
+            "iataCode" : "HKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONOLULU",
+            "iataCode" : "HNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOUSTON",
+            "iataCode" : "HOU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISHIGAKI",
+            "iataCode" : "ISG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISTANBUL",
+            "iataCode" : "IST"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QUANZHOU",
+            "iataCode" : "JJN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JAKARTA",
+            "iataCode" : "JKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANCHANG",
+            "iataCode" : "KHN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KITAKYUSHU",
+            "iataCode" : "KKJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KALIBO",
+            "iataCode" : "KLO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MIYAZAKI",
+            "iataCode" : "KMI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOMATSU",
+            "iataCode" : "KMQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KAGOSHIMA",
+            "iataCode" : "KOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KUALA LUMPUR",
+            "iataCode" : "KUL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LOS ANGELES",
+            "iataCode" : "LAX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LONDON",
+            "iataCode" : "LON"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MELBOURNE",
+            "iataCode" : "MEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MACAU",
+            "iataCode" : "MFM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MILAN",
+            "iataCode" : "MIL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MANILA",
+            "iataCode" : "MNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MATSUYAMA",
+            "iataCode" : "MYJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NINGBO",
+            "iataCode" : "NGB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NAGOYA",
+            "iataCode" : "NGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANJING",
+            "iataCode" : "NKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANNING",
+            "iataCode" : "NNG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANTONG",
+            "iataCode" : "NTG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NEW YORK",
+            "iataCode" : "NYC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OKINAWA",
+            "iataCode" : "OKA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OSAKA",
+            "iataCode" : "OSA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PARIS",
+            "iataCode" : "PAR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PENANG",
+            "iataCode" : "PEN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHNOM PENH",
+            "iataCode" : "PNH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BUSAN",
+            "iataCode" : "PUS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "YANGON",
+            "iataCode" : "RGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ROME",
+            "iataCode" : "ROM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOROR",
+            "iataCode" : "ROR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SENDAI",
+            "iataCode" : "SDJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEATTLE",
+            "iataCode" : "SEA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEOUL",
+            "iataCode" : "SEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAN FRANCISCO",
+            "iataCode" : "SFO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HO CHI MINH CITY",
+            "iataCode" : "SGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHANGHAI",
+            "iataCode" : "SHA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENYANG",
+            "iataCode" : "SHE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XI AN",
+            "iataCode" : "SIA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SINGAPORE",
+            "iataCode" : "SIN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAPPORO",
+            "iataCode" : "SPK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SYDNEY",
+            "iataCode" : "SYD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SANYA",
+            "iataCode" : "SYX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENZHEN",
+            "iataCode" : "SZX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DAEGU",
+            "iataCode" : "TAE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TAKAMATSU",
+            "iataCode" : "TAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QINGDAO",
+            "iataCode" : "TAO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JINAN",
+            "iataCode" : "TNA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOYAMA",
+            "iataCode" : "TOY"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TIANJIN",
+            "iataCode" : "TSN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOKYO",
+            "iataCode" : "TYO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VIENNA",
+            "iataCode" : "VIE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUHAN",
+            "iataCode" : "WUH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUXI",
+            "iataCode" : "WUX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XIAMEN",
+            "iataCode" : "XMN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XUZHOU",
+            "iataCode" : "XUZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TORONTO",
+            "iataCode" : "YTO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VANCOUVER",
+            "iataCode" : "YVR"
+          } ]
+        }
+  recorded_at: Sat, 12 Nov 2022 09:51:48 GMT
+- request:
+    method: post
+    uri: https://test.api.amadeus.com/v1/security/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=<AMADEUS_KEY>&client_secret=<AMADEUS_SECRET>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:49 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '416'
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      X-Forwarded-For:
+      - 42.72.68.131
+      X-Forwarded-Port:
+      - '443'
+      X-Forwarded-Proto:
+      - https
+      Accept:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - http.rb/5.1.0
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6409-185427337-1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Server:
+      - Amadeus
+    body:
+      encoding: UTF-8
+      string: "\n        {\n            \"type\": \"amadeusOAuth2Token\",\n            \"username\":
+        \"chiuzubennychilumbu@gmail.com\",\n            \"application_name\": \"Chiuzu\",\n
+        \           \"client_id\": \"<AMADEUS_KEY>\",\n            \"token_type\":
+        \"Bearer\",\n            \"access_token\": \"DjS5LKv7mQpg11I4IXWwoYGvjDxL\",\n
+        \           \"expires_in\": 1799,\n            \"state\": \"approved\",\n
+        \           \"scope\": \"\"\n        }\n        "
+  recorded_at: Sat, 12 Nov 2022 09:51:49 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer DjS5LKv7mQpg11I4IXWwoYGvjDxL
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:51 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '10215'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001RGWSKL8BEF
+      Ama-Gateway-Request-Id:
+      - rrt-025c5d0a4747e557a-b-de-6411-185427375-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "meta" : {
+            "count" : 97,
+            "links" : {
+              "self" : "https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE"
+            }
+          },
+          "data" : [ {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AUCKLAND",
+            "iataCode" : "AKL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AMSTERDAM",
+            "iataCode" : "AMS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "AOMORI",
+            "iataCode" : "AOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BEIJING",
+            "iataCode" : "BJS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOTA KINABALU",
+            "iataCode" : "BKI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANGKOK",
+            "iataCode" : "BKK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BRISBANE",
+            "iataCode" : "BNE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BANDAR SERI BEGAWAN",
+            "iataCode" : "BWN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUANGZHOU",
+            "iataCode" : "CAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CEBU",
+            "iataCode" : "CEB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ZHENGZHOU",
+            "iataCode" : "CGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGCHUN",
+            "iataCode" : "CGQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHICAGO",
+            "iataCode" : "CHI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHONGQING",
+            "iataCode" : "CKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHIANG MAI",
+            "iataCode" : "CNX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ANGELES MABALACAT",
+            "iataCode" : "CRK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHANGSHA",
+            "iataCode" : "CSX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "CHENGDU",
+            "iataCode" : "CTU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DA NANG",
+            "iataCode" : "DAD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DELHI",
+            "iataCode" : "DEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DALIAN",
+            "iataCode" : "DLC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DENPASAR-BALI",
+            "iataCode" : "DPS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DUBAI",
+            "iataCode" : "DXB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUZHOU",
+            "iataCode" : "FOC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FRANKFURT",
+            "iataCode" : "FRA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHIZUOKA",
+            "iataCode" : "FSZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "FUKUOKA",
+            "iataCode" : "FUK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "GUAM",
+            "iataCode" : "GUM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HAIKOU",
+            "iataCode" : "HAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANOI",
+            "iataCode" : "HAN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOHHOT",
+            "iataCode" : "HET"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HANGZHOU",
+            "iataCode" : "HGH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HIROSHIMA",
+            "iataCode" : "HIJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONG KONG",
+            "iataCode" : "HKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHUKET",
+            "iataCode" : "HKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HONOLULU",
+            "iataCode" : "HNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HOUSTON",
+            "iataCode" : "HOU"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISHIGAKI",
+            "iataCode" : "ISG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ISTANBUL",
+            "iataCode" : "IST"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QUANZHOU",
+            "iataCode" : "JJN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JAKARTA",
+            "iataCode" : "JKT"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANCHANG",
+            "iataCode" : "KHN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KITAKYUSHU",
+            "iataCode" : "KKJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KALIBO",
+            "iataCode" : "KLO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MIYAZAKI",
+            "iataCode" : "KMI"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOMATSU",
+            "iataCode" : "KMQ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KAGOSHIMA",
+            "iataCode" : "KOJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KUALA LUMPUR",
+            "iataCode" : "KUL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LOS ANGELES",
+            "iataCode" : "LAX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "LONDON",
+            "iataCode" : "LON"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MELBOURNE",
+            "iataCode" : "MEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MACAU",
+            "iataCode" : "MFM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MILAN",
+            "iataCode" : "MIL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MANILA",
+            "iataCode" : "MNL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "MATSUYAMA",
+            "iataCode" : "MYJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NINGBO",
+            "iataCode" : "NGB"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NAGOYA",
+            "iataCode" : "NGO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANJING",
+            "iataCode" : "NKG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANNING",
+            "iataCode" : "NNG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NANTONG",
+            "iataCode" : "NTG"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "NEW YORK",
+            "iataCode" : "NYC"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OKINAWA",
+            "iataCode" : "OKA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "OSAKA",
+            "iataCode" : "OSA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PARIS",
+            "iataCode" : "PAR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PENANG",
+            "iataCode" : "PEN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "PHNOM PENH",
+            "iataCode" : "PNH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "BUSAN",
+            "iataCode" : "PUS"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "YANGON",
+            "iataCode" : "RGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "ROME",
+            "iataCode" : "ROM"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "KOROR",
+            "iataCode" : "ROR"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SENDAI",
+            "iataCode" : "SDJ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEATTLE",
+            "iataCode" : "SEA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SEOUL",
+            "iataCode" : "SEL"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAN FRANCISCO",
+            "iataCode" : "SFO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "HO CHI MINH CITY",
+            "iataCode" : "SGN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHANGHAI",
+            "iataCode" : "SHA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENYANG",
+            "iataCode" : "SHE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XI AN",
+            "iataCode" : "SIA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SINGAPORE",
+            "iataCode" : "SIN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SAPPORO",
+            "iataCode" : "SPK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SYDNEY",
+            "iataCode" : "SYD"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SANYA",
+            "iataCode" : "SYX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "SHENZHEN",
+            "iataCode" : "SZX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "DAEGU",
+            "iataCode" : "TAE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TAKAMATSU",
+            "iataCode" : "TAK"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "QINGDAO",
+            "iataCode" : "TAO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "JINAN",
+            "iataCode" : "TNA"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOYAMA",
+            "iataCode" : "TOY"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TIANJIN",
+            "iataCode" : "TSN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TOKYO",
+            "iataCode" : "TYO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VIENNA",
+            "iataCode" : "VIE"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUHAN",
+            "iataCode" : "WUH"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "WUXI",
+            "iataCode" : "WUX"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XIAMEN",
+            "iataCode" : "XMN"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "XUZHOU",
+            "iataCode" : "XUZ"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "TORONTO",
+            "iataCode" : "YTO"
+          }, {
+            "type" : "location",
+            "subtype" : "city",
+            "name" : "VANCOUVER",
+            "iataCode" : "YVR"
+          } ]
+        }
+  recorded_at: Sat, 12 Nov 2022 09:51:51 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=Invalid_Length
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer nxWB1dzSuL5zDJcixmOSAx4p0FJh
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:52 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '518'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001RGWSOL8BEG
+      Ama-Gateway-Request-Id:
+      - rrt-085b86030b0e437cf-b-de-18278-185062606-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "errors" : [ {
+            "code" : 477,
+            "title" : "INVALID FORMAT",
+            "detail" : "Format of query parameter 'departureAirportCode' should be Alpha",
+            "source" : {
+              "parameter" : "departureAirportCode",
+              "example" : "BLR"
+            },
+            "status" : 400
+          }, {
+            "code" : 2781,
+            "title" : "INVALID LENGTH",
+            "detail" : "Length of query parameter 'departureAirportCode' should be 3",
+            "source" : {
+              "parameter" : "departureAirportCode",
+              "example" : "BLR"
+            },
+            "status" : 400
+          } ]
+        }
+  recorded_at: Sat, 12 Nov 2022 09:51:53 GMT
+- request:
+    method: post
+    uri: https://test.api.amadeus.com/v1/security/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=BAD_TOKEN&client_secret=BAD_SECRET
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:54 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '255'
+      Connection:
+      - close
+      Ama-Gateway-Request-Id:
+      - rrt-085b86030b0e437cf-b-de-18278-185062670-1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Server:
+      - Amadeus
+    body:
+      encoding: UTF-8
+      string: "\n                {\n                    \"error\":\"invalid_client\",\n
+        \                   \"error_description\": \"Client credentials are invalid\",\n
+        \                   \"code\": 38187,\n                    \"title\": \"Invalid
+        parameters\"\n                }\n            "
+  recorded_at: Sat, 12 Nov 2022 09:51:54 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=TPE
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - 'Bearer '
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:55 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '382'
+      Connection:
+      - close
+      Www-Authenticate:
+      - 'Bearer realm="null",error="invalid_token",error_description="oauth.v2.InvalidAccessToken:
+        Invalid access token"'
+      Ama-Gateway-Request-Id:
+      - rrt-085b86030b0e437cf-b-de-18278-185062720-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: "\n            {\n                \"errors\": [\n                        {\n
+        \                           \"code\": 38191,\n                            \"title\":
+        \"Invalid HTTP header\",\n                            \"detail\": \"Missing
+        or invalid format for mandatory Authorization header\",\n                            \"status\":
+        401\n                        }\n                ]\n            }\n        "
+  recorded_at: Sat, 12 Nov 2022 09:51:55 GMT
+- request:
+    method: get
+    uri: https://test.api.amadeus.com/v1/airport/direct-destinations?departureAirportCode=XYZ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer nxWB1dzSuL5zDJcixmOSAx4p0FJh
+      Connection:
+      - close
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sat, 12 Nov 2022 09:51:57 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '228'
+      Connection:
+      - close
+      Ama-Internal-Message-Version:
+      - '14.1'
+      Ama-Request-Id:
+      - 0001PU6G2L8BEL
+      Ama-Gateway-Request-Id:
+      - rrt-085b86030b0e437cf-b-de-18278-185062777-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "errors" : [ {
+            "code" : 4926,
+            "title" : "INVALID DATA RECEIVED",
+            "detail" : "Departure airport code is not supported",
+            "source" : {
+              "parameter" : "departureAirportCode"
+            },
+            "status" : 400
+          } ]
+        }
+  recorded_at: Sat, 12 Nov 2022 09:51:57 GMT
 recorded_with: VCR 6.1.0
