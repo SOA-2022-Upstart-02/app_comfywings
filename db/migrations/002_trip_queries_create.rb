@@ -12,8 +12,9 @@ Sequel.migration do
       String      :destination
       Date        :departure_date
       Date        :arrival_date
-      String      :price
-      TrueClass   :is_one_way
+      Integer     :adult_qty
+      Integer     :children_qty
+      TrueClass   :one_way
     end
   end
 end
