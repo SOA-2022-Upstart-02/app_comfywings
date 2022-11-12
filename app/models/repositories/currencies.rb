@@ -35,7 +35,7 @@ module ComfyWings
       end
 
       def self.db_find(entity)
-        Database::Currencies.find(entity.to_attr_hash)
+        Database::CurrencyOrm.find(entity.to_attr_hash)
       end
     end
   end
