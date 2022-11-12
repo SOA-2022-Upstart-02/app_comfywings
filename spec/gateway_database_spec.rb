@@ -4,6 +4,7 @@ require_relative 'spec_helper'
 require_relative 'helpers/vcr_helper'
 require_relative 'helpers/database_helper'
 
+=begin
 describe 'Integration Tests of Amadeus API and Database' do
   VcrHelper.setup_vcr
 
@@ -31,4 +32,11 @@ describe 'Integration Tests of Amadeus API and Database' do
     end
   end
 end
+end
+=end
 
+trip_query = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+        .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
+
+rebuilt = ComfyWings::Repository::For.entity(trip_query[0]).create(trip_query[0])
+puts rebuilt.departure_date

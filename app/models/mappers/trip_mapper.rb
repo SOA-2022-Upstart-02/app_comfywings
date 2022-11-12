@@ -30,7 +30,6 @@ module ComfyWings
           @data = data
           @from = from
           @to = to
-          @flight_mapper = FlightMapper.new
         end
 
         def build_entity
@@ -38,10 +37,11 @@ module ComfyWings
             id: nil,
             origin:,
             destination:,
-            duration:,
-            price:,
-            currency:,
-            flights:
+            departure_date:,
+            arrival_date:,
+            is_one_way:
+            #adult_qty:,
+            #children_qty:
           )
         end
 
@@ -53,20 +53,16 @@ module ComfyWings
           @to
         end
 
-        def duration
-          @data['itineraries'][0]['duration']
+        def departure_date
+          @data['itineraries'][0]['segments'][0]["departure"]["at"]
         end
 
-        def price
-          @data['price']['total']
+        def arrival_date
+          @data['itineraries'][0]['segments'][0]["arrival"]["at"]
         end
 
-        def currency
-          @data['price']['currency']
-        end
-
-        def flights
-          @flight_mapper.load_several(@data['itineraries'][0]['segments'])
+        def is_one_way
+          @data['oneWay']
         end
       end
     end

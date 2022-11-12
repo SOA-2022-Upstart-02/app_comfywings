@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'trip_queries'
-# require_relative 'currencies'
+require_relative 'currencies'
+
 
 module ComfyWings
   module Repository

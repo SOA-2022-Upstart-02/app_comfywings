@@ -21,20 +21,17 @@ module ComfyWings
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
-        # currency_repository = Repository::For.entity(Entity::Currencies)
-        # currency_obj = currency_repository.find_id(db_record.currency_id)
-
         Entity::TripQuery.new(
           id: db_record.id,
-          # code: db_record.code,
-          # currency: currency_obj,
           origin: db_record.origin,
-          destination: db_record.destination
-          # departure_date: Date.parse(db_record.departure_date),
-          # arrival_date: Date.parse(db_record.arrival_date),
+          destination: db_record.destination,
+          departure_date: db_record.departure_date,
+          arrival_date: db_record.arrival_date,
+          is_one_way: db_record.is_one_way,
           # adult_qty: db_record.adult_qty,
           # children_qty: db_record.children_qty,
-          # is_one_way: db_record.is_one_way,
+          # code: db_record.code,
+          # currency: currency_obj,
         )
       end
 

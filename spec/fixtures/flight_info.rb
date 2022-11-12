@@ -53,7 +53,7 @@ origin_destinations_from =
     }
   }
 
-serach = {
+search = {
   currencyCode: 'USD',
   originDestinations: [origin_destinations_to, origin_destinations_from],
   travelers: [{ id: '1', travelerType: 'ADULT' }],
@@ -66,14 +66,16 @@ flight_results = {}
 
 flight_results['count']
 
-response = HTTP.auth("Bearer #{token.obtain_token}").post(version2_url_path('shopping/flight-offers'), json: serach)
+response = HTTP.auth("Bearer #{token.obtain_token}").post(version2_url_path('shopping/flight-offers'), json: search)
 flight_info = JSON.parse(response)
-
-puts flight_info
 
 flight_results['flight_num'] = flight_info['meta']['count']
 matched_flights = flight_info['data']
-# puts matched_flights
+data_flights = flight_info['dictionaries']
+
+puts data_flights
+
+
 flight_results['flights'] = matched_flights.map do |flight|
   flight_info = {}
 
@@ -82,6 +84,11 @@ flight_results['flights'] = matched_flights.map do |flight|
   flight_info['inbound_duration'] = flight['itineraries'][1]['duration']
   flight_info['total_price'] = flight['price']['total']
   flight_info['origin'] = flight['itineraries'][0]['segments'][0]['departure']['iataCode']
+  flight_info['departure_date'] = flight['itineraries'][0]['segments'][0]['departure']['at']
+  flight_info['arrival_Date'] = flight['itineraries'][0]['segments'][0]['arrival']['at']
+  flight_info['currency_code'] = flight['price']['currency']
+  flight_info['currency_name'] = flight['dictionaries']
+  flight_info['is_one_way'] = flight['oneWay']
   flight_info
 end
 
