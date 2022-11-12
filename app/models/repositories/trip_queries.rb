@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
+require 'date'
 require_relative 'currencies'
 
 module ComfyWings
   module Repository
     # Repository for Trip Queries
     class TripQueries
-      def self.find_id(id)
-        rebuild_entity Database::TripQueryOrm.first(id:)
+      def self.find(entity)
+        find_code(entity.code)
       end
 
       def self.find_origin(origin)
@@ -18,22 +19,22 @@ module ComfyWings
         find_origin(entity.origin)
       end
 
+      def self.create(entity)
+        raise 'Query is already exists' if find(entity)
+
+        currency = Currencies.db_find(entity.currency)
+        db_trip_query = Database::TripQueryOrm.create(entity.to_attr_hash)
+        db_trip_query.update(currency:)
+        rebuild_entity(db_trip_query)
+      end
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
         Entity::TripQuery.new(
-          id: db_record.id,
-          origin: db_record.origin,
-          destination: db_record.destination,
-          departure_date: db_record.departure_date,
-          arrival_date: db_record.arrival_date,
-          is_one_way: db_record.is_one_way,
-          
-          #TODO: 
-          # code: db_record.code,
-          # currency: currency_obj,
-          # adult_qty: db_record.adult_qty,
-          # children_qty: db_record.children_qty,
+          db_record.to_hash.merge(
+            currency: Currencies.rebuild_entity(db_record.currency)
+          )
         )
       end
 
@@ -41,13 +42,6 @@ module ComfyWings
         db_records.map do |db_member|
           TripQueries.rebuild_entity(db_member)
         end
-      end
-
-      def self.create(entity)
-        raise 'Trip query already exists' if find(entity)
-        
-        Database::TripQueryOrm.create(entity.to_attr_hash)
-        rebuild_entity(entity)
       end
     end
   end

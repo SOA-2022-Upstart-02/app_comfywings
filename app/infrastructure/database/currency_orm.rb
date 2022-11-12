@@ -10,11 +10,9 @@ module ComfyWings
                   class: :'ComfyWings::Database::TripQueryOrm',
                   key: :currency_id
 
-      plugin :timestamps, update_on_create: true
-
-      #def self.find_or_create(query_info)
-      #  first(code: query_info[:code]) || create(query_info)
-      #end
+      def self.find(currency_info)
+        first(code: currency_info[:code])
+      end
     end
   end
 end

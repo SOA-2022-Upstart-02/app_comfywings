@@ -7,24 +7,21 @@ require 'dry-types'
 
 module ComfyWings
   module Entity
-    # class for trip queries
+    # Domain entity for trip query
     class TripQuery < Dry::Struct
       include Dry.Types
 
       attribute :id,             Integer.optional
       attribute :origin,         Strict::String
       attribute :destination,    Strict::String
-      attribute :departure_date, Strict::String
-      attribute :arrival_date,   Strict::String
+      attribute :departure_date, Strict::Date
+      attribute :arrival_date,   Strict::Date
+      attribute :adult_qty,      Strict::Integer
+      attribute :children_qty,   Strict::Integer
       attribute :is_one_way,     Strict::Bool
-      
-      # attribute :adult_qty,      Strict::Integer
-      # attribute :children_qty,   Strict::Integer
-      # attribute :code,           Strict::String
-      # attribute :currency,       Currency
 
       def to_attr_hash
-        to_hash.except(:id) 
+        to_hash.except(:id, :currency)
       end
     end
   end

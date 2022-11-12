@@ -14,6 +14,10 @@ module ComfyWings
         rebuild_entity Database::CurrencyOrm.first(code:)
       end
 
+      def self.all
+        rebuild_many Database::CurrencyOrm.all
+      end
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
@@ -30,11 +34,8 @@ module ComfyWings
         end
       end
 
-      def self.create(entity)
-        raise 'currency already exists' if find_code(entity.code)
-        
-        Database::CurrencyOrm.create(entity.to_attr_hash)
-        rebuild_entity(entity)
+      def self.db_find(entity)
+        Database::CurrencyOrm.find(entity.to_attr_hash)
       end
     end
   end

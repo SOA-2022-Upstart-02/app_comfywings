@@ -6,7 +6,7 @@ Sequel.migration do
   change do
     create_table(:currencies) do
       primary_key :id
-      String      :code
+      String      :code, unique: true, null: false
       String      :name
     end
   end

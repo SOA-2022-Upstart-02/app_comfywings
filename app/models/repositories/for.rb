@@ -3,7 +3,6 @@
 require_relative 'trip_queries'
 require_relative 'currencies'
 
-
 module ComfyWings
   module Repository
     # Finds the right repository for an entity object or class

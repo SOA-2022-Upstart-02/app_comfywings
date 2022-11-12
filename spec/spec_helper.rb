@@ -19,5 +19,4 @@ AMADEUS_KEY = ComfyWings::App.config.AMADEUS_KEY
 AMADEUS_SECRET = ComfyWings::App.config.AMADEUS_SECRET
 
 CORRECT = YAML.safe_load(File.read('spec/fixtures/flight_results.yml'))
-CORRECT_TRIP = CORRECT['flights'][0]
 CORRECT_AIRPORT = YAML.safe_load(File.read('spec/fixtures/airport_results.yml'))
