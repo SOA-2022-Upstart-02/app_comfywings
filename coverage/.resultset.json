@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/java/workspace/soa_project/require_app.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/require_app.rb": {
         "lines": [
           null,
           null,
@@ -21,7 +21,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/config/environment.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -59,7 +59,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/infrastructure/database/currency_orm.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/infrastructure/database/currency_orm.rb": {
         "lines": [
           null,
           null,
@@ -74,14 +74,14 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/infrastructure/database/trip_query_orm.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/infrastructure/database/trip_query_orm.rb": {
         "lines": [
           null,
           null,
@@ -100,7 +100,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
         "lines": [
           null,
           null,
@@ -256,7 +256,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/entities/airport.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/entities/airport.rb": {
         "lines": [
           null,
           null,
@@ -280,7 +280,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/entities/currency.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/entities/currency.rb": {
         "lines": [
           null,
           null,
@@ -298,14 +298,14 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/entities/flight.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/entities/flight.rb": {
         "lines": [
           null,
           null,
@@ -327,7 +327,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/entities/trip.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/entities/trip.rb": {
         "lines": [
           null,
           null,
@@ -348,6 +348,9 @@
           1,
           1,
           1,
+          1,
+          1,
+          null,
           null,
           null,
           null,
@@ -359,7 +362,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/entities/trip_query.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/entities/trip_query.rb": {
         "lines": [
           null,
           null,
@@ -379,19 +382,19 @@
           1,
           1,
           1,
-          1,
-          1,
+          null,
+          null,
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/mappers/airport_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/mappers/airport_mapper.rb": {
         "lines": [
           null,
           null,
@@ -465,7 +468,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/mappers/auth_token.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/mappers/auth_token.rb": {
         "lines": [
           null,
           null,
@@ -502,7 +505,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/mappers/currency_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/mappers/currency_mapper.rb": {
         "lines": [
           null,
           null,
@@ -553,7 +556,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/mappers/flight_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/mappers/flight_mapper.rb": {
         "lines": [
           null,
           null,
@@ -605,7 +608,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/mappers/trip_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -653,6 +656,16 @@
           null,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          242,
+          null,
+          null,
+          1,
+          242,
           null,
           null,
           1,
@@ -680,7 +693,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/repositories/currencies.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/repositories/currencies.rb": {
         "lines": [
           null,
           null,
@@ -695,7 +708,7 @@
           null,
           null,
           1,
-          2,
+          1,
           null,
           null,
           1,
@@ -713,39 +726,11 @@
           null,
           null,
           1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/java/workspace/soa_project/app/models/repositories/for.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
           1,
           4,
           null,
           null,
+          null,
           1,
           0,
           null,
@@ -754,7 +739,35 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/app/models/repositories/trip_queries.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/repositories/for.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/models/repositories/trip_queries.rb": {
         "lines": [
           null,
           null,
@@ -766,171 +779,146 @@
           null,
           1,
           1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/app/controllers/app.rb": {
+        "lines": [
+          null,
+          null,
+          1,
           1,
           null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/spec/helpers/vcr_helper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           1,
           2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          10,
+          530,
+          530,
+          530,
+          530,
+          null,
+          10,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/spec/gateway_database_spec.rb": {
+        "lines": [
           null,
           null,
           1,
           1,
+          1,
+          1,
           null,
           1,
           1,
+          null,
           1,
-          1,
+          null,
+          3,
           null,
           null,
           1,
           3,
           null,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/java/workspace/soa_project/app/controllers/app.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/java/workspace/soa_project/spec/helpers/vcr_helper.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          1,
-          11,
-          739,
-          739,
-          739,
-          739,
-          null,
-          11,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          11,
-          null,
-          null
-        ]
-      },
-      "/home/java/workspace/soa_project/spec/gateway_database_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          4,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           null,
@@ -960,7 +948,7 @@
           null
         ]
       },
-      "/home/java/workspace/soa_project/spec/helpers/database_helper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/soa_project/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -976,6 +964,6 @@
         ]
       }
     },
-    "timestamp": 1668251316
+    "timestamp": 1668263325
   }
 }

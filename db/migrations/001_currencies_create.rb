@@ -9,5 +9,9 @@ Sequel.migration do
       String      :code, unique: true, null: false
       String      :name
     end
+    from(:currencies).insert(code: 'TWD', name: 'Taiwan Dollar')
+    from(:currencies).insert(code: 'USD', name: 'US Dollar')
+    from(:currencies).insert(code: 'EUR', name: 'EURO')
+    from(:currencies).insert(code: 'GBP', name: 'British Pound')
   end
 end

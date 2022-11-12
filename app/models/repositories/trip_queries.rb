@@ -16,7 +16,7 @@ module ComfyWings
       end
 
       def self.create(entity)
-        raise 'Query is already exists' if find(entity)
+        raise 'Query already exists' if find(entity)
 
         currency = Currencies.db_find(entity.currency)
         db_trip_query = Database::TripQueryOrm.create(entity.to_attr_hash)
