@@ -22,6 +22,15 @@ module ComfyWings
         flight_data['data']
       end
 
+      def data_dictionaries(from, to, from_date, to_date)
+        destinations_to = create_destinations(1, from, to, from_date, '10:00:00')
+        destinations_from = create_destinations(2, to, from, to_date, '17:00:00')
+        search = create_filter(destinations_to, destinations_from)
+        response = Request.new(@key, @secret).trip(search)
+        flight_data = JSON.parse(response)
+        flight_data['dictionaries']['currencies']
+      end
+
       def airport(departure)
         response = Request.new(@key, @secret).airport(departure)
         JSON.parse(response)
@@ -72,8 +81,8 @@ module ComfyWings
         def trip(content)
           url = version2_url_path('shopping/flight-offers')
           http_response = HTTP.headers(accept: 'application/vnd.amadeus+json')
-                              .auth("Bearer #{request_amadeus_auth_token}")
-                              .post(url, json: content)
+            .auth("Bearer #{request_amadeus_auth_token}")
+            .post(url, json: content)
 
           Response.new(http_response).tap do |response|
             raise(response.error) unless response.successful?
@@ -83,8 +92,8 @@ module ComfyWings
         def airport(departure)
           url = version1_url_path("airport/direct-destinations?departureAirportCode=#{departure}")
           result = HTTP.headers(accept: 'application/json')
-                       .auth("Bearer #{request_amadeus_auth_token}")
-                       .get(url)
+            .auth("Bearer #{request_amadeus_auth_token}")
+            .get(url)
 
           # Tap is used to create object instances from classes and we can call their methods after initialisation
           Response.new(result).tap do |response|
@@ -110,7 +119,7 @@ module ComfyWings
             client_secret: @secret
           }
           response = HTTP.headers(accept: 'application/x-www-form-urlencoded')
-                         .post(version1_url_path('security/oauth2/token'), form: postform)
+            .post(version1_url_path('security/oauth2/token'), form: postform)
           response.parse['access_token']
         end
       end

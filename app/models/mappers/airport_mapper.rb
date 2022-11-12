@@ -6,7 +6,7 @@ require 'yaml'
 require_relative 'auth_token'
 
 # airport token
-NEW_TOKEN = AuthToken.new('config/secrets.yml')
+NEW_TOKEN = AuthToken.new
 DEPATURE = 'TPE'
 
 module ComfyWings

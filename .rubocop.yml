@@ -4,17 +4,25 @@ AllCops:
   TargetRubyVersion: 3.1
   NewCops: enable
   Exclude:
-    - '_snippets/*'
+    - '_snippets/**/*'
+  Include:
+  - 'Gemfile'
+  - 'Rakefile'
+  - '**/*.rb'
 
 # ignore block length in test code only
 Metrics/BlockLength:
   Enabled: true
   Exclude:
     - 'spec/**/*'
+    - 'Rakefile'
 
-# allow unsafe YAML loading in test code only
-Security/YAMLLoad:
+# See: https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Layout/MultilineMethodCallIndentation
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
+
+Style/HashSyntax:
   Enabled: true
   Exclude:
-  - 'spec/**/*'
-
+    - 'Rakefile'

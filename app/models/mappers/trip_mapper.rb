@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-require_relative 'flight_mapper'
+# require_relative 'flight_mapper'
 
 module ComfyWings
   module Amadeus
@@ -21,26 +21,30 @@ module ComfyWings
       end
 
       def self.build_entity(data, from, to)
-        DataMapper.new(data, from, to).build_entity
+        TripDataMapper.new(data, from, to).build_entity
       end
 
       # Extracts entity specific elements from data structure
-      class DataMapper
+      class TripDataMapper
         def initialize(data, from, to)
           @data = data
           @from = from
           @to = to
-          @flight_mapper = FlightMapper.new
         end
 
         def build_entity
           ComfyWings::Entity::Trip.new(
+            id: nil,
             origin:,
             destination:,
-            duration:,
-            price:,
-            type:,
-            flights:
+            departure_date:,
+            arrival_date:,
+            one_way:,
+            currency:,
+            price:
+            # adult_qty:,
+            # children_qty:
+
           )
         end
 
@@ -52,20 +56,24 @@ module ComfyWings
           @to
         end
 
-        def duration
-          @data['itineraries'][0]['duration']
+        def departure_date
+          @data['itineraries'][0]['segments'][0]['departure']['at']
+        end
+
+        def arrival_date
+          @data['itineraries'][0]['segments'][0]['arrival']['at']
+        end
+
+        def one_way
+          @data['oneWay']
+        end
+
+        def currency
+          @data['price']['currency']
         end
 
         def price
           @data['price']['total']
-        end
-
-        def type
-          @data['git_url']
-        end
-
-        def flights
-          @flight_mapper.load_several(@data['itineraries'][0]['segments'])
         end
       end
     end

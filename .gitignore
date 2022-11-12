@@ -2,3 +2,4 @@ config/secrets.yml
 coverage/*
 !coverage/.resultset.json
 .rake_tasks~
+*.db
