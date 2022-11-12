@@ -3,15 +3,15 @@
 require 'dry-struct'
 require 'dry-types'
 
-#require_relative 'flight'
-
 module ComfyWings
   module Entity
-    # Domain entity for trip query
+    # Domain entity for trip query arg
     class TripQuery < Dry::Struct
       include Dry.Types
 
       attribute :id,             Integer.optional
+      attribute :code,           Strict::String
+      attribute :currency,       Currency
       attribute :origin,         Strict::String
       attribute :destination,    Strict::String
       attribute :departure_date, Strict::Date

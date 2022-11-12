@@ -1,6 +1,5 @@
 # frozen_string_literal: false
 
-
 module ComfyWings
   module Amadeus
     # Data Mapper: Amadeus currencies
@@ -36,13 +35,11 @@ module ComfyWings
         end
 
         def code
-          codes = @data[0].first.to_s
-          codes
+          @data[0].first.to_s
         end
 
         def name
-          names = @data[0].last.to_s
-          names
+          @data[0].last.to_s
         end
       end
     end

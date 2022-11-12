@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-#require_relative 'flight_mapper'
+# require_relative 'flight_mapper'
 
 module ComfyWings
   module Amadeus
@@ -40,9 +40,8 @@ module ComfyWings
             departure_date:,
             arrival_date:,
             is_one_way:
-
-            #adult_qty:,
-            #children_qty:
+            # adult_qty:,
+            # children_qty:
 
           )
         end
@@ -56,11 +55,11 @@ module ComfyWings
         end
 
         def departure_date
-          @data['itineraries'][0]['segments'][0]["departure"]["at"]
+          @data['itineraries'][0]['segments'][0]['departure']['at']
         end
 
         def arrival_date
-          @data['itineraries'][0]['segments'][0]["arrival"]["at"]
+          @data['itineraries'][0]['segments'][0]['arrival']['at']
         end
 
         def is_one_way

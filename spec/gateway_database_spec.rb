@@ -50,10 +50,10 @@ describe 'Integration Tests of AMADEUS API and Database' do
       _(currency.name).must_equal('New Taiwan dollar')
     end
 
-    it 'HAPPY: there should be 3 currencies: TWD USD EUR' do
+    it 'HAPPY: there should be 4 currencies: TWD USD EUR' do
       reposit = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency)
       currencies = reposit.all
-      _(currencies.size).must_equal(3)
+      _(currencies.size).must_equal(4)
     end
 
     it 'HAPPY: should be able to save tripQuery from amadeus to TripQuery table in database' do

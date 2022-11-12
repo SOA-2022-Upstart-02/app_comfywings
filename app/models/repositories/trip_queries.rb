@@ -11,12 +11,8 @@ module ComfyWings
         find_code(entity.code)
       end
 
-      def self.find_origin(origin)
-        rebuild_entity Database::TripQueryOrm.first(origin:)
-      end
-
-      def self.find(entity)
-        find_origin(entity.origin)
+      def self.find_code(code)
+        rebuild_entity Database::TripQueryOrm.first(code:)
       end
 
       def self.create(entity)
