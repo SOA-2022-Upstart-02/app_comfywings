@@ -71,7 +71,6 @@ flight_info = JSON.parse(response)
 
 flight_results['flight_num'] = flight_info['meta']['count']
 matched_flights = flight_info['data']
-dict_flights = flight_info['dictionaries']['currencies']
 
 flight_results['flights'] = matched_flights.map do |flight|
   flight_info = {}
