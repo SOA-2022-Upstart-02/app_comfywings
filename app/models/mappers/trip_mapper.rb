@@ -39,7 +39,7 @@ module ComfyWings
             destination:,
             departure_date:,
             arrival_date:,
-            is_one_way:,
+            one_way:,
             currency:,
             price:
             # adult_qty:,
@@ -64,7 +64,7 @@ module ComfyWings
           @data['itineraries'][0]['segments'][0]['arrival']['at']
         end
 
-        def is_one_way
+        def one_way
           @data['oneWay']
         end
 

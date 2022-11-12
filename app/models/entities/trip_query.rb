@@ -16,9 +16,9 @@ module ComfyWings
       attribute :destination,    Strict::String
       attribute :departure_date, Strict::Date
       attribute :arrival_date,   Strict::Date
-      #attribute :adult_qty,      Strict::Integer
-      #attribute :children_qty,   Strict::Integer
-      attribute :is_one_way,     Strict::Bool
+      # attribute :adult_qty,      Strict::Integer
+      # attribute :children_qty,   Strict::Integer
+      attribute :one_way,        Strict::Bool
 
       def to_attr_hash
         to_hash.except(:id, :currency)

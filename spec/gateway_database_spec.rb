@@ -32,16 +32,16 @@ describe 'Integration Tests of AMADEUS API and Database' do
     end
 
     it 'HAPPY: should be able to save tripQuery from amadeus to TripQuery table in database' do
-      #trip_query = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-       # .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
+      # trip_query = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+      # .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
 
-       #query_rebuilt = ComfyWings::Repository::For.entity(trip_query[0]).create(trip_query[0])
+      # query_rebuilt = ComfyWings::Repository::For.entity(trip_query[0]).create(trip_query[0])
 
-       #_(query_rebuilt.origin).must_equal(trip_query[0].origin)
-       #_(query_rebuilt.destination).must_equal(trip_query[0].destination)
-       #_(query_rebuilt.departure_date).must_equal(trip_query[0].departure_date)
-       #_(query_rebuilt.arrival_date).must_equal(trip_query[0].arrival_date)
-       #_(query_rebuilt.is_one_way).must_equal(trip_query[0].is_one_way)
+      # _(query_rebuilt.origin).must_equal(trip_query[0].origin)
+      # _(query_rebuilt.destination).must_equal(trip_query[0].destination)
+      # _(query_rebuilt.departure_date).must_equal(trip_query[0].departure_date)
+      # _(query_rebuilt.arrival_date).must_equal(trip_query[0].arrival_date)
+      # _(query_rebuilt.is_one_way).must_equal(trip_query[0].is_one_way)
     end
   end
 end
