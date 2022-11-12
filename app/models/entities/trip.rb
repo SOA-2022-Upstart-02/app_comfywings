@@ -14,10 +14,14 @@ module ComfyWings
       attribute :id,            Integer.optional
       attribute :origin,        Strict::String
       attribute :destination,   Strict::String
-      attribute :duration,      Strict::String
-      attribute :price,         Strict::String
-      attribute :currency,      Strict::String
-      attribute :flights,       Strict::Array.of(Flight)
+      #attribute :duration,      Strict::String
+      #attribute :price,         Strict::String
+      #attribute :currency,      Strict::String
+      #attribute :flights,       Strict::Array.of(Flight)
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

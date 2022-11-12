@@ -20,14 +20,15 @@ describe 'Integration Tests of Amadeus API and Database' do
       DatabaseHelper.wipe_database
     end
 
-    it 'HAPPY: should be able to save project from Github to database' do
+    it 'HAPPY: should be able to save project from amadeus to database' do
       trip_query = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
         .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
 
-      rebuilt = ComfyWings::Repository::For.entity(trip_query[0]).rebuild_entity(trip_query[0])
+      rebuilt = ComfyWings::Repository::For.entity(trip_query[0]).create(trip_query[0])
 
       _(rebuilt.origin).must_equal(trip_query[0].origin)
       _(rebuilt.destination).must_equal(trip_query[0].destination)
     end
   end
 end
+

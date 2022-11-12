@@ -31,7 +31,7 @@ module ComfyWings
       end
 
       def self.db_find_or_create(entity)
-        Database::Currencies.find_or_create(entity.to_attr_hash)
+        Database::Currency.find_or_create(entity.to_attr_hash)
       end
     end
   end

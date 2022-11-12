@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'date'
+require_relative 'currencies'
 
 module ComfyWings
   module Repository
@@ -10,8 +10,12 @@ module ComfyWings
         rebuild_entity Database::TripQueryOrm.first(id:)
       end
 
-      def self.find_code(code)
-        rebuild_entity Database::TripQueryOrm.first(code:)
+      def self.find_origin(origin)
+        rebuild_entity Database::TripQueryOrm.first(origin:)
+      end
+
+      def self.find(entity)
+        find_origin(entity.origin)
       end
 
       def self.rebuild_entity(db_record)
@@ -40,9 +44,11 @@ module ComfyWings
         end
       end
 
-      def self.db_find_or_create(entity)
-        Database::CurrencyOrm.find_or_create(entity.currency.to_attr_hash)
-        Database::TripQueryOrm.find_or_create(entity.to_attr_hash)
+      def self.create(entity)
+        raise 'Trip query already exists' if find(entity)
+        
+        Database::TripQueryOrm.create(entity.to_attr_hash)
+        rebuild_entity(entity)
       end
     end
   end
