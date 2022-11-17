@@ -14,7 +14,7 @@ Sequel.migration do
       Date        :arrival_date
       Integer     :adult_qty
       Integer     :children_qty
-      TrueClass   :one_way
+      TrueClass   :is_one_way
     end
   end
 end

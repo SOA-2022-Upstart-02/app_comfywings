@@ -39,7 +39,7 @@ module ComfyWings
             destination:,
             departure_date:,
             arrival_date:,
-            one_way:,
+            is_one_way: one_way,
             currency:,
             price:
             # adult_qty:,
