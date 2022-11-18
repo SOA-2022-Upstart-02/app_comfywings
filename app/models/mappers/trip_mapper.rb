@@ -30,22 +30,27 @@ module ComfyWings
           @data = data
           @from = from
           @to = to
+          @flight_mapper = FlightMapper.new
         end
 
         def build_entity
           ComfyWings::Entity::Trip.new(
             id: nil,
+            query_id: 1,
+            currency:,
             origin:,
             destination:,
-            departure_date:,
-            arrival_date:,
-            is_one_way: one_way,
-            currency:,
-            price:
-            # adult_qty:,
-            # children_qty:
-
+            outbound_duration:,
+            inbound_duration:,
+            price:,
+            is_one_way:,      
+            flights:, 
           )
+        end
+
+        def currency
+          currency_code = @data['price']['currency']
+          ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency).find_code(currency_code)
         end
 
         def origin
@@ -56,24 +61,27 @@ module ComfyWings
           @to
         end
 
-        def departure_date
-          @data['itineraries'][0]['segments'][0]['departure']['at']
+        def outbound_duration
+          @data['itineraries'][0]['duration']
+          #Time.parse(@data['itineraries'][0]['segments'][0]['departure']['at'])
         end
 
-        def arrival_date
-          @data['itineraries'][0]['segments'][0]['arrival']['at']
-        end
-
-        def one_way
-          @data['oneWay']
-        end
-
-        def currency
-          @data['price']['currency']
+        def inbound_duration
+          @data['itineraries'][1]['duration']
         end
 
         def price
-          @data['price']['total']
+          BigDecimal(@data['price']['total'])
+        end
+
+        def is_one_way
+          @data['oneWay']
+        end
+
+        def flights
+          outbound_flights = @flight_mapper.load_several(@data['itineraries'][0]['segments'], @data['travelerPricings'][0]['fareDetailsBySegment'], false)
+          inbound_flights = @flight_mapper.load_several(@data['itineraries'][1]['segments'], @data['travelerPricings'][0]['fareDetailsBySegment'], true)
+          outbound_flights + inbound_flights
         end
       end
     end

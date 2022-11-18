@@ -11,7 +11,7 @@ Sequel.migration do
       String      :destination      # Change to Airport Table
       Time        :departure_time
       Time        :arrival_time
-      String      :airline
+      String      :aircraft
       String      :number
       String      :duration
       String      :cabin_class

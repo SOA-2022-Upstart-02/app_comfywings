@@ -4,19 +4,16 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:trip) do
+    create_table(:trips) do
       primary_key :id
       foreign_key :query_id,    :trip_queries
       foreign_key :currency_id, :currencies
       String      :origin                     # TODO: Change to Airport Table
       String      :destination                # TODO: Change to Airport Table
-      Time        :departure_time
-      Time        :arrival_time
-      String      :duration
+      String      :outbound_duration
+      String      :inbound_duration
       BigDecimal  :price, size: [10, 2]
-      Integer     :adult_qty
-      Integer     :children_qty
-      TrueClass   :one_way
+      TrueClass   :is_one_way
     end
   end
 end
