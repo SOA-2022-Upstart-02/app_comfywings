@@ -112,3 +112,13 @@ desc 'Update fixtures and wipe VCR cassettes'
 task :update_fixtures => 'vcr:wipe' do
   sh 'ruby spec/fixtures/flight_info.rb'
 end
+
+desc 'Generate 64-bit session key for Rack::Session'
+task :new_session_secret do
+  require 'base64'
+  require 'securerandom'
+  secret = SecureRandom.random_bytes(64).then {
+    Base64.urlsafe_encode64(_1)
+  }
+  puts "SESSION_SECRET: #{secret}"
+end

@@ -9,10 +9,15 @@ require 'yaml'
 module ComfyWings
   # Main controller class for ComfyWings
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/views'
-    plugin :assets, css: 'style.css', path: 'app/views/assets'
-    plugin :common_logger, $stderr
     plugin :halt
+    plugin :flash
+    plugin :all_verbs # enable other HTML verbs such as PUT/DELETE
+    plugin :render, engine: 'slim', views: 'app/presentation/views_slim'
+    plugin :assets, path: 'app/presentation/assets',
+                    css: 'style.css'
+    plugin :common_logger, $stderr
+
+    use Rack::MethodOverride # enable other HTML verbs such as PUT/DELETE
 
     route do |routing|
       routing.assets # load CSS
