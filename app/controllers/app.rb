@@ -2,6 +2,7 @@
 
 require 'roda'
 require 'slim'
+require 'slim/include'
 
 # Remove this line once integrated with api
 require 'yaml'
@@ -16,8 +17,6 @@ module ComfyWings
     plugin :assets, path: 'app/presentation/assets',
                     css: 'style.css'
     plugin :common_logger, $stderr
-
-    use Rack::MethodOverride # enable other HTML verbs such as PUT/DELETE
 
     route do |routing|
       routing.assets # load CSS

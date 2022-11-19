@@ -48,7 +48,7 @@ describe 'Integration Tests of AMADEUS API and Database' do
       it 'temp test' do
         code = SecureRandom.uuid
         currency = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency).find_code('TWD')
-  
+
         trip_query = ComfyWings::Entity::TripQuery.new(
           id: nil,
           code:,
@@ -61,9 +61,9 @@ describe 'Integration Tests of AMADEUS API and Database' do
           children_qty: 1,
           one_way: true
         )
-  
+
         repository = ComfyWings::Repository::For.klass(ComfyWings::Entity::TripQuery)
-  
+
         repository.create(trip_query)
         trip_query = repository.find_code(code)
         _(trip_query.origin).must_equal('TPE')

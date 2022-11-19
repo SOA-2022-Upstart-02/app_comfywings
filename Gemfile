@@ -4,10 +4,11 @@ source 'https://rubygems.org'
 
 # configuration and utilities
 gem 'figaro', '~> 1.2'
-gem 'rake'
+gem 'rake', '~> 13.0'
 
 # Web Application
 gem 'puma', '~> 5'
+gem 'rack-session', '~> 0.3'
 gem 'roda', '~> 3'
 gem 'slim', '~> 4'
 
@@ -20,16 +21,21 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg', '~> 1.2'
+end
+
 # Networking
 gem 'http', '~> 5'
 
 # Testing
-gem 'minitest'
-gem 'minitest-rg', '~> 5'
-gem 'simplecov', '~> 0'
-gem 'vcr', '~> 6'
-gem 'webmock', '~> 3'
-
+group :development, :test do
+  gem 'minitest'
+  gem 'minitest-rg', '~> 5'
+  gem 'simplecov', '~> 0'
+  gem 'vcr', '~> 6'
+  gem 'webmock', '~> 3'
+end
 # Validation
 gem 'dry-struct', '~> 1'
 gem 'dry-types', '~> 1'
@@ -38,6 +44,8 @@ gem 'dry-types', '~> 1'
 gem 'pry'
 
 # Code Quality
-gem 'flog'
-gem 'reek'
-gem 'rubocop'
+group :development do
+  gem 'flog'
+  gem 'reek'
+  gem 'rubocop'
+end

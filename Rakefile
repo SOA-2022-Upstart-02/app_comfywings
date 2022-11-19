@@ -117,8 +117,6 @@ desc 'Generate 64-bit session key for Rack::Session'
 task :new_session_secret do
   require 'base64'
   require 'securerandom'
-  secret = SecureRandom.random_bytes(64).then {
-    Base64.urlsafe_encode64(_1)
-  }
+  secret = SecureRandom.random_bytes(64).then { Base64.urlsafe_encode64(_1) }
   puts "SESSION_SECRET: #{secret}"
 end
