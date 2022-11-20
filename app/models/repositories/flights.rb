@@ -18,7 +18,7 @@ module ComfyWings
         raise 'Query already exists' if find(entity)
 
         db_flight = Database::FlightOrm.create(entity.to_attr_hash)
-        db_flight.update(trip: trip)
+        db_flight.update(trip:)
       end
 
       def self.rebuild_entity(db_record)

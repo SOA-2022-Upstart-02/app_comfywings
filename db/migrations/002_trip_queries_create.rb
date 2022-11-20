@@ -16,5 +16,8 @@ Sequel.migration do
       Integer     :children_qty
       TrueClass   :is_one_way
     end
+
+    # TODO: remove below after finish trip query feature
+    from(:trip_queries).insert(currency_id: 2, code: 'temp_for_test', origin: 'TPE', destination: 'MAD')
   end
 end

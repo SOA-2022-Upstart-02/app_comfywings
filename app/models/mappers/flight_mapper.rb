@@ -4,28 +4,29 @@ module ComfyWings
   module Amadeus
     # Data Mapper: Amadeus Flight-offer Segments -> Flight entity
     class FlightMapper
-      def load_several(datas, fareDetails, is_return)
-        datas.map do |data|
-          FlightMapper.build_entity(data, fareDetails, is_return)
+      def load_several(flight_datas, fare_details, aircraft_list, is_return)
+        flight_datas.map do |flight_data|
+          FlightMapper.build_entity(flight_data, fare_details, aircraft_list, is_return)
         end
       end
 
-      def self.build_entity(data, fareDetails, is_return)
-        DataMapper.new(data, fareDetails, is_return).build_entity
+      def self.build_entity(flight_data, fare_details, aircraft_list, is_return)
+        DataMapper.new(flight_data, fare_details, aircraft_list, is_return).build_entity
       end
 
       # Extracts entity specific elements from data structure
       class DataMapper
-        def initialize(data, fareDetails, is_return)
-          @data = data
-          @fareDetails = fareDetails
+        def initialize(flight_data, fare_details, aircraft_list, is_return)
+          @flight_data = flight_data
+          @fare_details = fare_details
+          @aircraft_list = aircraft_list
           @is_return = is_return
         end
 
-        def build_entity
+        def build_entity # rubocop:disable Metrics/MethodLength
           ComfyWings::Entity::Flight.new(
             id: nil,
-            trip_id: 2,
+            trip_id: nil,
             origin:,
             destination:,
             duration:,
@@ -34,43 +35,44 @@ module ComfyWings
             departure_time:,
             arrival_time:,
             cabin_class:,
-            is_return: return?,
+            is_return: return?
           )
         end
 
         private
 
         def origin
-          @data['departure']['iataCode']
+          @flight_data['departure']['iataCode']
         end
 
         def destination
-          @data['arrival']['iataCode']
+          @flight_data['arrival']['iataCode']
         end
 
         def duration
-          @data['duration']
+          @flight_data['duration']
         end
 
         def aircraft
-          @data['aircraft']['code']
+          aircraft_code = @flight_data['aircraft']['code']
+          @aircraft_list[aircraft_code]
         end
 
         def number
-          "#{@data['carrierCode']}-#{@data['number']}"
+          "#{@flight_data['carrierCode']}-#{@flight_data['number']}"
         end
 
         def departure_time
-          Time.parse(@data['departure']['at'])
+          Time.parse(@flight_data['departure']['at'])
         end
 
         def arrival_time
-          Time.parse(@data['arrival']['at'])
+          Time.parse(@flight_data['arrival']['at'])
         end
 
         def cabin_class
-          id = @data['id']         
-          detail = @fareDetails.select { |fareDetail| fareDetail['segmentId'] == id }.first
+          id = @flight_data['id']
+          detail = @fare_details.select { |fare_detail| fare_detail['segmentId'] == id }.first
           detail['cabin']
         end
 

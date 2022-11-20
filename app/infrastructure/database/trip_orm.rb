@@ -15,7 +15,7 @@ module ComfyWings
       plugin :timestamps, update_on_create: true
 
       def self.find(id)
-        first(id: id)
+        first(id:)
       end
     end
   end

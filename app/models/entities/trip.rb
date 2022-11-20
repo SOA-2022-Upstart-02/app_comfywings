@@ -19,41 +19,41 @@ module ComfyWings
       attribute :inbound_duration,    Strict::String
       attribute :outbound_duration,   Strict::String
       attribute :price,               Strict::Decimal   # TODO: Extract as Value Object
-      attribute :is_one_way,          Strict::Bool 
+      attribute :is_one_way,          Strict::Bool
       attribute :flights,             Strict::Array.of(Flight)
 
       def outbound_duration_form
-        ActiveSupport::Duration.parse(duration).parts
+        ActiveSupport::Duration.parse(outbound_duration).parts
       end
 
       def outbound_flights
-        flights.select { |flight| !flight.is_return }
+        flights.reject(&:is_return)
       end
 
       def outbound_departure_time
-        '456'
+        outbound_flights.first.departure_time
       end
 
       def outbound_arrival_time
-        '456'
+        outbound_flights.last.arrival_time
       end
 
       def inbound_duration_form
-        ActiveSupport::Duration.parse(duration).parts
+        ActiveSupport::Duration.parse(inbound_duration).parts
       end
 
       def inbound_flights
-        flights.select { |flight| flight.is_return }
+        flights.select(&:is_return)
       end
 
       def inbound_departure_time
-        '123'
+        inbound_flights.first.departure_time
       end
 
       def inbound_arrival_time
-        '123'
+        inbound_flights.last.arrival_time
       end
-      
+
       def one_way?
         is_one_way
       end

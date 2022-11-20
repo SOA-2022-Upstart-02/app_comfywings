@@ -4,7 +4,7 @@ require_relative 'spec_helper'
 require_relative 'helpers/vcr_helper'
 require_relative 'helpers/database_helper'
 require 'securerandom'
-require "active_support"
+require 'active_support'
 require 'active_support/core_ext/date/calculations'
 
 describe 'Integration Tests of AMADEUS API and Database' do
@@ -31,19 +31,6 @@ describe 'Integration Tests of AMADEUS API and Database' do
       reposit = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency)
       currencies = reposit.all
       _(currencies.size).must_equal(4)
-    end
-
-    it 'HAPPY: should be able to save tripQuery from amadeus to TripQuery table in database' do
-      # trip_query = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-      # .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
-
-      # query_rebuilt = ComfyWings::Repository::For.entity(trip_query[0]).create(trip_query[0])
-
-      # _(query_rebuilt.origin).must_equal(trip_query[0].origin)
-      # _(query_rebuilt.destination).must_equal(trip_query[0].destination)
-      # _(query_rebuilt.departure_date).must_equal(trip_query[0].departure_date)
-      # _(query_rebuilt.arrival_date).must_equal(trip_query[0].arrival_date)
-      # _(query_rebuilt.is_one_way).must_equal(trip_query[0].is_one_way)
     end
   end
 
@@ -74,43 +61,51 @@ describe 'Integration Tests of AMADEUS API and Database' do
     end
   end
 
-  describe 'Test Flight Repository' do
-    it '' do
-      flight = ComfyWings::Entity::Flight.new(
-        id: nil,
-        trip_id: 1,
-        origin: 'TPE',
-        destination: 'MAD',
-        duration: 'PT1H10M',         
-        aircraft: 'BOEING 737-800',       
-        number: 'G3-1093',         
-        departure_time: Time.parse('2001-02-03'),
-        arrival_time: Time.parse('2001-02-03'),
-        cabin_class: 'economy',
-        is_return: true
-      )
+  describe 'Test Trip information' do
+    it 'HAPPY: should provide correct trip attributes' do
+      trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+        .search('TPE', 'MAD', '2022-12-31', '2023-01-29')
 
-      currency = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency).find_code('TWD')
-      flights = []
-      flights.push(flight)
+      trip = trips[0]
+      rebuilt_trips = ComfyWings::Repository::For.entity(trip).create_many(trips)
+      rebuilt_trip = rebuilt_trips[0]
+      _(rebuilt_trips.size).must_equal 33
 
-      trip = ComfyWings::Entity::Trip.new(
-        id: nil,
-        query_id: 1,
-        currency: currency,
-        origin: 'TPE',
-        destination: 'MAD',
-        departure_time: Time.parse('2001-02-03'),
-        arrival_time: Time.parse('2001-02-03'),
-        inbound_duration: 'PT1H10M',
-        outbound_duration: 'PT2H20M',
-        price: BigDecimal('1234.56'),
-        is_one_way: false,      
-        flights: flights,         
-      )      
+      _(rebuilt_trip.currency.code).must_equal 'USD'
+      _(rebuilt_trip.origin).must_equal 'TPE'
+      _(rebuilt_trip.destination).must_equal 'MAD'
+      _(rebuilt_trip.outbound_duration_form[:hours]).must_equal 20
+      _(rebuilt_trip.outbound_duration_form[:minutes]).must_equal 55
+      _(rebuilt_trip.inbound_duration_form[:hours]).must_equal 17
+      _(rebuilt_trip.inbound_duration_form[:minutes]).must_equal 20
+      _(rebuilt_trip.price).must_equal BigDecimal('1345.40')
+      _(rebuilt_trip.outbound_departure_time).must_equal Time.parse('2022-12-31T22:45:00')
+      _(rebuilt_trip.outbound_arrival_time).must_equal Time.parse('2023-01-01T12:40:00')
+      _(rebuilt_trip.inbound_departure_time).must_equal Time.parse('2023-01-29T14:25:00')
+      _(rebuilt_trip.inbound_arrival_time).must_equal Time.parse('2023-01-30T14:45:00')
 
-      repository = ComfyWings::Repository::For.klass(ComfyWings::Entity::Trip)
-      new_trip = repository.create(trip)    
+      outbound_flight = rebuilt_trip.outbound_flights[0]
+      _(outbound_flight.origin).must_equal 'TPE'
+      _(outbound_flight.destination).must_equal 'DXB'
+      _(outbound_flight.aircraft).must_equal 'BOEING 777-300ER'
+      _(outbound_flight.number).must_equal 'EK-367'
+      _(outbound_flight.departure_time).must_equal Time.parse('2022-12-31T22:45:00')
+      _(outbound_flight.arrival_time).must_equal Time.parse('2023-01-01T04:40:00')
+      _(outbound_flight.cabin_class).must_equal 'ECONOMY'
+      _(outbound_flight.duration_form[:hours]).must_equal 9
+      _(outbound_flight.duration_form[:minutes]).must_equal 55
+      refute(outbound_flight.is_return)
+
+      inbound_flight = rebuilt_trip.inbound_flights[0]
+      _(inbound_flight.origin).must_equal 'MAD'
+      _(inbound_flight.destination).must_equal 'DXB'
+      _(inbound_flight.aircraft).must_equal 'AIRBUS A380-800'
+      _(inbound_flight.number).must_equal 'EK-142'
+      _(inbound_flight.departure_time).must_equal Time.parse('2023-01-29 14:25:00')
+      _(inbound_flight.arrival_time).must_equal Time.parse('2023-01-30T00:25:00')
+      _(inbound_flight.cabin_class).must_equal 'ECONOMY'
+      _(inbound_flight.duration_form[:hours]).must_equal 7
+      assert(inbound_flight.is_return)
     end
   end
 end

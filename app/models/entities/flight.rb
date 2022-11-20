@@ -2,7 +2,7 @@
 
 require 'dry-struct'
 require 'dry-types'
-require "active_support"
+require 'active_support'
 require 'active_support/core_ext/date/calculations'
 
 module ComfyWings
@@ -12,14 +12,14 @@ module ComfyWings
       include Dry.Types
 
       attribute :id,                Integer.optional
-      attribute :trip_id,           Strict::Integer
+      attribute :trip_id,           Integer.optional
       attribute :origin,            Strict::String
       attribute :destination,       Strict::String
       attribute :duration,          Strict::String
       attribute :aircraft,          Strict::String
       attribute :number,            Strict::String
       attribute :departure_time,    Strict::Time
-      attribute :arrival_time ,     Strict::Time
+      attribute :arrival_time,      Strict::Time
       attribute :cabin_class,       Strict::String
       attribute :is_return,         Strict::Bool
 
