@@ -13,7 +13,7 @@ module ComfyWings
     plugin :halt
     plugin :flash
     plugin :all_verbs # enable other HTML verbs such as PUT/DELETE
-    plugin :render, engine: 'slim', views: 'app/presentation/views_slim'
+    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :assets, path: 'app/presentation/assets',
                     css: 'style.css'
     plugin :common_logger, $stderr

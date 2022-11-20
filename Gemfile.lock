@@ -58,6 +58,9 @@ GEM
     http-form_data (2.3.0)
     ice_nine (0.11.2)
     kwalify (0.7.2)
+    listen (3.7.1)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
@@ -69,6 +72,7 @@ GEM
     parser (3.1.2.1)
       ast (~> 2.4.1)
     path_expander (1.1.1)
+    pg (1.4.5)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -80,10 +84,15 @@ GEM
       rack (>= 3.0.0.beta1)
     rainbow (3.1.1)
     rake (13.0.6)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.10.1)
+      ffi (~> 1.0)
     reek (6.1.1)
       kwalify (~> 0.7.0)
       parser (~> 3.1.0)
       rainbow (>= 2.0, < 4.0)
+    rerun (0.13.1)
+      listen (~> 3.0)
     rexml (3.2.5)
     roda (3.61.0)
       rack
@@ -132,11 +141,13 @@ DEPENDENCIES
   http (~> 5)
   minitest
   minitest-rg (~> 5)
+  pg (~> 1.2)
   pry
   puma (~> 5)
   rack-session (~> 0.3)
-  rake
+  rake (~> 13.0)
   reek
+  rerun (~> 0)
   roda (~> 3)
   rubocop
   sequel (~> 5.49)

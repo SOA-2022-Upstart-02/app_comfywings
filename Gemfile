@@ -17,6 +17,10 @@ gem 'hirb', '~> 0'
 gem 'hirb-unicode', '~> 0'
 gem 'sequel', '~> 5.49'
 
+group :development do
+  gem 'rerun', '~> 0'
+end
+
 group :development, :test do
   gem 'sqlite3'
 end

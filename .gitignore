@@ -3,3 +3,4 @@ coverage/*
 !coverage/.resultset.json
 .rake_tasks~
 *.db
+.bundle/*
