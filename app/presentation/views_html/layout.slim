@@ -32,9 +32,10 @@ html
           .col-12
             h1
               a.text-underline-hover href="/" ComfyWings
-      
-      section 
-       == yield
+
+      section
+        include :flash_bar
+        == yield
 
       footer 
         = "This iteration of ComfyWings is purely for demonstration purposes. We cannot guarantee the correctness of the contents and results therein. We may use cookies for the purposes of this service, but we do not track users."

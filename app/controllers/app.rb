@@ -30,10 +30,20 @@ module ComfyWings
       routing.is 'flight' do
         # POST /flight
         routing.post do
+          if routing.params['airport-origin'].empty? ||
+             routing.params['airport-destination'].empty? ||
+             routing.params['date-start'].empty? ||
+             routing.params['date-end'].empty?
+            flash[:error] = 'Input field must not be empty'
+            response.status = 400
+            routing.redirect '/'
+          end
+
           from = routing.params['airport-origin']
           to = routing.params['airport-destination']
           from_date = routing.params['date-start']
           to_date = routing.params['date-end']
+
           trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
             .search(from, to, from_date, to_date)
           view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date } }
