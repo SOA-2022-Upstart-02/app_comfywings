@@ -43,17 +43,16 @@ module ComfyWings
           to = routing.params['airport-destination']
           from_date = routing.params['date-start']
           to_date = routing.params['date-end']
-          origin = routing.params['airport-origin']
-          destination = routing.params['airport-destination']
+          # origin = routing.params['airport-origin']
+          # destination = routing.params['airport-destination']
 
           trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
             .search(from, to, from_date, to_date)
 
-          #TODO : Viewable object 
-          
-          
+          # TODO : Viewable object
+
           view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date },
-          origin_destination: {origin: from, destination: to}}
+          origin_destination: { origin: from, destination: to } }
         end
       end
     end

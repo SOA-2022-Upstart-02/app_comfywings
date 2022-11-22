@@ -2716,4 +2716,59 @@ http_interactions:
           } ]
         }
   recorded_at: Sun, 20 Nov 2022 08:39:05 GMT
+- request:
+    method: post
+    uri: https://test.api.amadeus.com/v2/shopping/flight-offers
+    body:
+      encoding: UTF-8
+      string: '{"currencyCode":"USD","originDestinations":[{"id":1,"originLocationCode":"TPE","destinationLocationCode":"MAD","departureDateTimeRange":{"date":"2022-12-31"}},{"id":2,"originLocationCode":"MAD","destinationLocationCode":"TPE","departureDateTimeRange":{"date":"2023-01-29"}}],"travelers":[{"id":"1","travelerType":"ADULT"}],"sources":["GDS"],"searchCriteria":{"flightFilters":{"cabinRestrictions":[{"cabin":"ECONOMY","originDestinationIds":["1"]}]}}}'
+    headers:
+      Accept:
+      - application/vnd.amadeus+json
+      Authorization:
+      - Bearer AzEfAFkjfAWqGS2GchLM6hJMYYUx
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - test.api.amadeus.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 22 Nov 2022 09:10:21 GMT
+      Content-Type:
+      - application/vnd.amadeus+json
+      Content-Length:
+      - '350'
+      Connection:
+      - close
+      Www-Authenticate:
+      - 'Bearer realm="null",error="invalid_token",error_description="keymanagement.service.access_token_expired:
+        Access Token expired"'
+      Ama-Gateway-Request-Id:
+      - rrt-0ccf8e5d584802658-b-de-1694-221751538-1
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept, Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3628800'
+      Access-Control-Allow-Methods:
+      - "*"
+      Server:
+      - Amadeus
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: "\n            {\n                \"errors\": [\n                        {\n
+        \                           \"code\": 38192,\n                            \"title\":
+        \"Access token expired\",\n                            \"detail\": \"The access
+        token is expired\",\n                            \"status\": 401\n                        }\n
+        \               ]\n            }\n        "
+  recorded_at: Tue, 22 Nov 2022 09:10:21 GMT
 recorded_with: VCR 6.1.0
