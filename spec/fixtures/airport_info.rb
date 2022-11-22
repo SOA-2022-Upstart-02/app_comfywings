@@ -11,7 +11,7 @@ new_t = AuthToken.new('config/secrets.yml')
 DEPATURE = 'TPE'
 
 request_response = HTTP.auth("Bearer #{new_t.obtain_token}")
-                       .get(version1_url_path("airport/direct-destinations?departureAirportCode=#{DEPATURE}"))
+  .get(version1_url_path("airport/direct-destinations?departureAirportCode=#{DEPATURE}"))
 airport_info = JSON.parse(request_response)
 
 airport_results = {}

@@ -17,17 +17,6 @@ describe 'Tests AMADEUS API library' do
     VcrHelper.eject_vcr
   end
 
-  describe 'Trip information' do
-    it 'HAPPY: should provide correct trip attributes' do
-      trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-        .search('TPE', 'MAD', '2022-11-21', '2022-11-28')
-      trip = trips[0]
-      _(trips.size).must_equal CORRECT['flight_num']
-      _(trip.price).must_equal CORRECT_TRIP['total_price']
-      _(trip.origin).must_equal CORRECT_TRIP['origin']
-    end
-  end
-
   describe 'Token generator' do
     before do
       @token = AuthToken.new

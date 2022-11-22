@@ -1,6 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (7.0.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
@@ -56,6 +61,8 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     kwalify (0.7.2)
     llhttp-ffi (0.4.0)
@@ -105,6 +112,8 @@ GEM
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.11)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
@@ -121,6 +130,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activesupport (~> 7.0.4)
   dry-struct (~> 1)
   dry-types (~> 1)
   figaro (~> 1.2)

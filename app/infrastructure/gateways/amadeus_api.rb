@@ -14,21 +14,11 @@ module ComfyWings
       end
 
       def trip_data(from, to, from_date, to_date)
-        destinations_to = create_destinations(1, from, to, from_date, '10:00:00')
-        destinations_from = create_destinations(2, to, from, to_date, '17:00:00')
+        destinations_to = create_destinations(1, from, to, from_date)
+        destinations_from = create_destinations(2, to, from, to_date)
         search = create_filter(destinations_to, destinations_from)
         response = Request.new(@key, @secret).trip(search)
-        flight_data = JSON.parse(response)
-        flight_data['data']
-      end
-
-      def data_dictionaries(from, to, from_date, to_date)
-        destinations_to = create_destinations(1, from, to, from_date, '10:00:00')
-        destinations_from = create_destinations(2, to, from, to_date, '17:00:00')
-        search = create_filter(destinations_to, destinations_from)
-        response = Request.new(@key, @secret).trip(search)
-        flight_data = JSON.parse(response)
-        flight_data['dictionaries']['currencies']
+        JSON.parse(response)
       end
 
       def airport(departure)
@@ -48,14 +38,13 @@ module ComfyWings
 
       private
 
-      def create_destinations(id, from, to, date, time)
+      def create_destinations(id, from, to, date)
         {
           id:,
           originLocationCode: from,
           destinationLocationCode: to,
           departureDateTimeRange: {
-            date:,
-            time:
+            date:
           }
         }
       end
