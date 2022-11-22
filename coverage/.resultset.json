@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/java/Desktop/SOA/soa_project/require_app.rb": {
+      "/home/drainvers/SOA_2022/soa_project/require_app.rb": {
         "lines": [
           null,
           null,
@@ -21,7 +21,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/config/environment.rb": {
+      "/home/drainvers/SOA_2022/soa_project/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -29,19 +29,8 @@
           1,
           1,
           1,
-          null,
-          1,
-          null,
           1,
           1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
           1,
           null,
           1,
@@ -49,6 +38,26 @@
           1,
           1,
           null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           1,
@@ -59,7 +68,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/infrastructure/database/currency_orm.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/currency_orm.rb": {
         "lines": [
           null,
           null,
@@ -145,7 +154,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
         "lines": [
           null,
           null,
@@ -299,7 +308,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/entities/airport.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/entities/airport.rb": {
         "lines": [
           null,
           null,
@@ -323,7 +332,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/entities/currency.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/entities/currency.rb": {
         "lines": [
           null,
           null,
@@ -348,7 +357,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/entities/flight.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/entities/flight.rb": {
         "lines": [
           null,
           null,
@@ -387,7 +396,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/entities/trip.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/entities/trip.rb": {
         "lines": [
           null,
           null,
@@ -457,7 +466,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/entities/trip_query.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/entities/trip_query.rb": {
         "lines": [
           null,
           null,
@@ -489,7 +498,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/mappers/airport_mapper.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/airport_mapper.rb": {
         "lines": [
           null,
           null,
@@ -563,7 +572,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/mappers/auth_token.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/auth_token.rb": {
         "lines": [
           null,
           null,
@@ -689,7 +698,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/mappers/trip_mapper.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -797,7 +806,7 @@
           null
         ]
       },
-      "/home/java/Desktop/SOA/soa_project/app/models/repositories/currencies.rb": {
+      "/home/drainvers/SOA_2022/soa_project/app/models/repositories/currencies.rb": {
         "lines": [
           null,
           null,
@@ -945,6 +954,7 @@
           1,
           0,
           null,
+          0,
           null,
           null,
           null

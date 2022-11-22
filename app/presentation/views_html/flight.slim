@@ -1,0 +1,14 @@
+.container
+  h2
+    = "Flights between #{date_range[:from]} and #{date_range[:to]}"
+  .card
+    ul.list-group.list-group-flush
+    - trips.each do |res|
+      li.flex-column.flex-sm-row.list-group-item.d-flex.justify-content-between.align-items-sm-center
+        .flex-column.flex-1.m-2.d-flex
+          span.fw-bold
+            = "#{res[:origin]} → #{res[:destination]}" 
+          div
+            = "Depart at #{res[:departure_date]}, arrive at #{res[:arrival_date]}"
+        span.bg-primary.rounded-pill.m-2.badge.fs-6
+          = "#{res[:currency]}#{res[:price]}"
