@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
-require_relative 'helpers/vcr_helper'
-require_relative 'helpers/database_helper'
+require_relative '../../spec_helper'
+require_relative '../../helpers/vcr_helper'
+require_relative '../../helpers/database_helper'
 require 'securerandom'
 require 'active_support'
 require 'active_support/core_ext/date/calculations'

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
-require_relative 'helpers/vcr_helper'
+require_relative '../../spec_helper'
+require_relative '../../helpers/vcr_helper'
 
 CORRECT_TRIP = CORRECT['flights'][0]
 
