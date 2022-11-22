@@ -10,9 +10,9 @@ module ComfyWings
     module For
       ENTITY_REPOSITORY = {
         Entity::TripQuery => TripQueries,
-        Entity::Currency => Currencies,
-        Entity::Flight => Flights,
-        Entity::Trip => Trips
+        Entity::Currency  => Currencies,
+        Entity::Flight    => Flights,
+        Entity::Trip      => Trips
       }.freeze
 
       def self.klass(entity_klass)

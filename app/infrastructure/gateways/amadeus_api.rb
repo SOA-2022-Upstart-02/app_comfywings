@@ -55,6 +55,9 @@ module ComfyWings
           originDestinations: [origin_destinations_to, origin_destinations_from],
           travelers: [{ id: '1', travelerType: 'ADULT' }],
           sources: ['GDS']
+          # searchCriteria: {
+          # flightFilters: { cabinRestrictions: [{ cabin: 'ECONOMY', originDestinationIds: ['1'] }] }
+          # }
         }
       end
 
