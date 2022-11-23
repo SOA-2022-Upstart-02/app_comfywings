@@ -18,7 +18,7 @@ module ComfyWings
                     css: 'style.css'
     plugin :common_logger, $stderr
 
-    route do |routing| # rubocop:disable Metrics/BlockLength
+    route do |routing|
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -30,23 +30,18 @@ module ComfyWings
       routing.is 'flight' do
         # POST /flight
         routing.post do
-          puts routing.params
-          trip_request = ComfyWings::Forms::NewTripQuery.new.call(routing.params)
-          if routing.params['airport-origin'].empty? ||
-             routing.params['airport-destination'].empty? ||
-             routing.params['date-start'].empty? ||
-             routing.params['date-end'].empty?
-            flash[:error] = 'Input field must not be empty'
+          trip_request = Forms::NewTripQuery.new.call(routing.params)
+          if trip_request.failure?
+            flash[:error] = trip_request.errors.messages.first
             response.status = 400
             routing.redirect '/'
-          end
+          else
+            # save or find trip_query
+            puts trip_request.values[:airport_origin]
+            # find and create trips by trip query
 
-          from = routing.params['airport-origin']
-          to = routing.params['airport-destination']
-          from_date = routing.params['date-start']
-          to_date = routing.params['date-end']
-          # origin = routing.params['airport-origin']
-          # destination = routing.params['airport-destination']
+            # return view
+          end
 
           # trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
           #   .search(from, to, from_date, to_date)

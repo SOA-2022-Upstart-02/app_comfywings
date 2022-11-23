@@ -23,7 +23,8 @@ module ComfyWings
       def create_amadeus_flight_offers
         {
           currencyCode: currency.code,
-          originDestinations: [create_outbound_destinations, create_inbound_destinations],
+          originDestinations:
+            is_one_way ? [create_outbound_destinations] : [create_outbound_destinations, create_inbound_destinations],
           travelers: create_travelers,
           sources: ['GDS']
         }
