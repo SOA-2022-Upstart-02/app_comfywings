@@ -18,7 +18,7 @@ module ComfyWings
                     css: 'style.css'
     plugin :common_logger, $stderr
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -30,6 +30,8 @@ module ComfyWings
       routing.is 'flight' do
         # POST /flight
         routing.post do
+          puts routing.params
+          trip_request = ComfyWings::Forms::NewTripQuery.new.call(routing.params)
           if routing.params['airport-origin'].empty? ||
              routing.params['airport-destination'].empty? ||
              routing.params['date-start'].empty? ||
@@ -46,13 +48,13 @@ module ComfyWings
           # origin = routing.params['airport-origin']
           # destination = routing.params['airport-destination']
 
-          trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
-            .search(from, to, from_date, to_date)
+          # trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
+          #   .search(from, to, from_date, to_date)
 
-          # TODO : Viewable object
+          # # TODO : Viewable object
 
-          view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date },
-          origin_destination: { origin: from, destination: to } }
+          # view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date },
+          # origin_destination: { origin: from, destination: to } }
         end
       end
     end

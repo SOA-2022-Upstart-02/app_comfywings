@@ -14,25 +14,24 @@ module ComfyWings
       end
 
       # TODO: change args to TripQuery
-      def search(from, to, from_date, to_date)
-        trip_data = @gateway.trip_data(from, to, from_date, to_date)
+      def search(trip_query)
+        trip_data = @gateway.trip_data(trip_query)
         aircraft_data = trip_data['dictionaries']['aircraft']
         trip_data['data'].map do |data|
-          TripMapper.build_entity(data, aircraft_data, from, to)
+          TripMapper.build_entity(data, aircraft_data, trip_query)
         end
       end
 
-      def self.build_entity(data, aircraft_data, from, to)
-        TripDataMapper.new(data, aircraft_data, from, to).build_entity
+      def self.build_entity(data, aircraft_data, trip_query)
+        TripDataMapper.new(data, aircraft_data, trip_query).build_entity
       end
 
       # Extracts entity specific elements from data structure
       class TripDataMapper
-        def initialize(data, aircraft_data, from, to)
+        def initialize(data, aircraft_data, trip_query)
           @data = data
           @aircraft_data = aircraft_data
-          @from = from
-          @to = to
+          @trip_query = trip_query
           @flight_mapper = FlightMapper.new
         end
 
@@ -61,11 +60,11 @@ module ComfyWings
         end
 
         def origin
-          @from
+          @trip_query.origin
         end
 
         def destination
-          @to
+          @trip_query.destination
         end
 
         def outbound_duration
