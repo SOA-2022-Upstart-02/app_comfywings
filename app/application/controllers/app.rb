@@ -31,25 +31,17 @@ module ComfyWings
         # POST /flight
         routing.post do
           trip_request = Forms::NewTripQuery.new.call(routing.params)
-          if trip_request.failure?
-            flash[:error] = trip_request.errors.messages.first
+          trips = Service::FindTrips.new.call(trip_request)
+          if trips.failure?
+            flash[:error] = trips.failure
             response.status = 400
             routing.redirect '/'
-          else
-            # save or find trip_query
-            puts trip_request.values[:airport_origin]
-            # find and create trips by trip query
-
-            # return view
           end
-
-          # trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
-          #   .search(from, to, from_date, to_date)
-
-          # # TODO : Viewable object
-
-          # view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date },
-          # origin_destination: { origin: from, destination: to } }
+          view 'flight', locals:
+          {
+            trips: trips.value!,
+            trip_request: trip_request.values
+          }
         end
       end
     end

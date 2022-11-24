@@ -1,8 +1,8 @@
 .container
   h2
-    = "Flights between #{date_range[:from]} and #{date_range[:to]}"
+    = "Flights between #{trip_request[:date_start]} and #{trip_request[:date_end]}"
   h3 
-    = "Departing: #{origin_destination[:origin]} Arriving: #{origin_destination[:destination]}"
+    = "Departing: #{trip_request[:airport_origin]} Arriving: #{trip_request[:airport_destination]}"
   .card
     ul.list-group.list-group-flush
     - trips.each do |res|
@@ -13,4 +13,4 @@
           div
             = "Depart at #{res[:inbound_duration]}, arrive at #{res[:outbound_duration]}"
         span.bg-primary.rounded-pill.m-2.badge.fs-6
-          = "#{res[:currency]}#{res[:price]}"
+          = "#{res[:currency][:code]}#{res[:price]}"

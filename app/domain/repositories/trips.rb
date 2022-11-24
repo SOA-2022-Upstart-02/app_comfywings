@@ -15,6 +15,10 @@ module ComfyWings
         rebuild_entity Database::TripOrm.first(id:)
       end
 
+      def self.find_query_id(query_id)
+        rebuild_many Database::TripOrm.where(query_id:).all
+      end
+
       def self.create(entity)
         raise 'Trip already exists' if find(entity)
 
@@ -46,6 +50,12 @@ module ComfyWings
             flights: Flights.rebuild_many(db_record.flights)
           )
         )
+      end
+
+      def self.rebuild_many(db_records)
+        db_records.map do |db_member|
+          Trips.rebuild_entity(db_member)
+        end
       end
 
       def self.db_find_id(id)

@@ -38,7 +38,7 @@ module ComfyWings
         def build_entity # rubocop:disable Metrics/MethodLength
           ComfyWings::Entity::Trip.new(
             id: nil,
-            query_id: 1,
+            query_id:,
             currency:,
             origin:,
             destination:,
@@ -56,7 +56,7 @@ module ComfyWings
         end
 
         def query_id
-          1 # TODO: get query_id from search condition
+          @trip_query.id
         end
 
         def origin
