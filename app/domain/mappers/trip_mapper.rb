@@ -69,11 +69,10 @@ module ComfyWings
 
         def outbound_duration
           @data['itineraries'][0]['duration']
-          # Time.parse(@data['itineraries'][0]['segments'][0]['departure']['at'])
         end
 
         def inbound_duration
-          @data['itineraries'][1]['duration']
+          one_way? ? '' : @data['itineraries'][1]['duration']
         end
 
         def price
@@ -81,12 +80,12 @@ module ComfyWings
         end
 
         def one_way?
-          @data['oneWay']
+          @trip_query.is_one_way
         end
 
         def flights
           outbound_flights = map_flights(false)
-          inbound_flights = map_flights(true)
+          inbound_flights = one_way? ? [] : map_flights(true)
           outbound_flights + inbound_flights
         end
 
