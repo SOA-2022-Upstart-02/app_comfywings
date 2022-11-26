@@ -5,6 +5,7 @@ require 'dry-validation'
 module ComfyWings
   module Forms
     MAX_TRAVELERS = 9
+    MIN_TRAVELERS = 1
 
     # From Object for Trip Query from frontend user
     class NewTripQuery < Dry::Validation::Contract
@@ -34,6 +35,8 @@ module ComfyWings
       rule(:adult_qty, :children_qty) do
         if values[:adult_qty] + values[:children_qty] > MAX_TRAVELERS
           key.failure("Maximum number of passengers is #{MAX_TRAVELERS}")
+        elsif values[:adult_qty] + values[:children_qty] < MIN_TRAVELERS
+          key.failure("Minimum number of passengers is #{MIN_TRAVELERS}")
         end
       end
     end

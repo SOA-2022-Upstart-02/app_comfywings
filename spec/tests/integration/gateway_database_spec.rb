@@ -65,7 +65,7 @@ describe 'Integration Tests of AMADEUS API and Database' do
     it 'HAPPY: should provide correct trip attributes' do
       repository = ComfyWings::Repository::For.klass(ComfyWings::Entity::TripQuery)
       trip_query = repository.find_code('temp_for_test')
-      rebuilt_trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
+      trips = ComfyWings::Amadeus::TripMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
         .search(trip_query)
 
       trip = trips[0]
