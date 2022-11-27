@@ -14,8 +14,8 @@ module ComfyWings
       attribute :id,                  Integer.optional
       attribute :query_id,            Strict::Integer
       attribute :currency,            Currency
-      attribute :origin,              Strict::String
-      attribute :destination,         Strict::String
+      attribute :origin,              Airport
+      attribute :destination,         Airport
       attribute :inbound_duration,    Strict::String
       attribute :outbound_duration,   Strict::String
       attribute :price,               Strict::Decimal   # TODO: Extract as Value Object
@@ -59,7 +59,7 @@ module ComfyWings
       end
 
       def to_attr_hash
-        to_hash.except(:id, :currency, :flights)
+        to_hash.except(:id, :currency, :flights, :origin, :destination)
       end
     end
   end

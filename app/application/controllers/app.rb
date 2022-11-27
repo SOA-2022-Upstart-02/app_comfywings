@@ -24,35 +24,25 @@ module ComfyWings
 
       # GET /
       routing.root do
-        view 'home'
+        currency_list = Repository::For.klass(Entity::Currency).all
+        view 'home', locals: { currencies: currency_list }
       end
 
       routing.is 'flight' do
         # POST /flight
         routing.post do
-          if routing.params['airport-origin'].empty? ||
-             routing.params['airport-destination'].empty? ||
-             routing.params['date-start'].empty? ||
-             routing.params['date-end'].empty?
-            flash[:error] = 'Input field must not be empty'
+          trip_request = Forms::NewTripQuery.new.call(routing.params)
+          trips = Service::FindTrips.new.call(trip_request)
+          if trips.failure?
+            flash[:error] = trips.failure
             response.status = 400
             routing.redirect '/'
           end
-
-          from = routing.params['airport-origin']
-          to = routing.params['airport-destination']
-          from_date = routing.params['date-start']
-          to_date = routing.params['date-end']
-          # origin = routing.params['airport-origin']
-          # destination = routing.params['airport-destination']
-
-          trip_results = ComfyWings::Amadeus::TripMapper.new(App.config.AMADEUS_KEY, App.config.AMADEUS_SECRET)
-            .search(from, to, from_date, to_date)
-
-          # TODO : Viewable object
-
-          view 'flight', locals: { trips: trip_results, date_range: { from: from_date, to: to_date },
-          origin_destination: { origin: from, destination: to } }
+          view 'flight', locals:
+          {
+            trips: trips.value!,
+            trip_request: trip_request.values
+          }
         end
       end
     end

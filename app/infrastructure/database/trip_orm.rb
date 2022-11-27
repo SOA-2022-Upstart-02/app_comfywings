@@ -11,6 +11,10 @@ module ComfyWings
                   key: :trip_id
       many_to_one :currency,
                   class: :'ComfyWings::Database::CurrencyOrm'
+      many_to_one :origin,
+                  class: :'ComfyWings::Database::AirportOrm'
+      many_to_one :destination,
+                  class: :'ComfyWings::Database::AirportOrm'
 
       plugin :timestamps, update_on_create: true
 

@@ -12,6 +12,7 @@ class AuthToken
   end
 
   # return the auth token
+  # Deliberately :reek:DuplicateMethodCall on App.DB
   def obtain_token
     postform = {
       grant_type: 'client_credentials',

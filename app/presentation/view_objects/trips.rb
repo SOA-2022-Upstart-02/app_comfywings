@@ -1,30 +1,24 @@
 # frozen_string_literal: true
 
+require_relative 'flight'
+
 module Views
-  # class for flight infomation
-  class Flight
-    def initialize(flight)
-      @flight = flight
+  # class for trip info
+  class Trips
+    def initialize(trip)
+      @trip = trip
     end
 
     def origin
-      @flight.origin
+      @trip.origin
     end
 
     def destination
       @flight.destination
     end
 
-    def departure_time
-      @flight.departure_time
-    end
-
-    def arrival_date
-      @flight.arrival_data
-    end
-
-    def flight
-      @flight.duration
+    def flights
+      Flight.new(@trip.flights)
     end
   end
 end

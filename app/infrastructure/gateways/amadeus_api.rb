@@ -13,11 +13,8 @@ module ComfyWings
         @secret = secret
       end
 
-      def trip_data(from, to, from_date, to_date)
-        destinations_to = create_destinations(1, from, to, from_date)
-        destinations_from = create_destinations(2, to, from, to_date)
-        search = create_filter(destinations_to, destinations_from)
-        response = Request.new(@key, @secret).trip(search)
+      def trip_data(trip_query)
+        response = Request.new(@key, @secret).trip(trip_query.create_amadeus_flight_offers)
         JSON.parse(response)
       end
 
@@ -34,31 +31,6 @@ module ComfyWings
       def airport_data(depart)
         airports_data = airport(depart)
         airports_data['data']
-      end
-
-      private
-
-      def create_destinations(id, from, to, date)
-        {
-          id:,
-          originLocationCode: from,
-          destinationLocationCode: to,
-          departureDateTimeRange: {
-            date:
-          }
-        }
-      end
-
-      def create_filter(origin_destinations_to, origin_destinations_from)
-        {
-          currencyCode: 'USD',
-          originDestinations: [origin_destinations_to, origin_destinations_from],
-          travelers: [{ id: '1', travelerType: 'ADULT' }],
-          sources: ['GDS']
-          # searchCriteria: {
-          # flightFilters: { cabinRestrictions: [{ cabin: 'ECONOMY', originDestinationIds: ['1'] }] }
-          # }
-        }
       end
 
       # class to make HTTP request
