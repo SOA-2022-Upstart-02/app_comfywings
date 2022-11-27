@@ -2,6 +2,7 @@
 
 require_relative 'currencies'
 require_relative 'flights'
+require_relative 'airports'
 
 module ComfyWings
   module Repository
@@ -25,7 +26,12 @@ module ComfyWings
         db_trip = Database::TripOrm.create(entity.to_attr_hash)
 
         currency = Currencies.db_find(entity.currency)
+        origin = Airports.db_find(entity.origin)
+        destination = Airports.db_find(entity.destination)
+
         db_trip.update(currency:)
+        db_trip.update(origin:)
+        db_trip.update(destination:)
 
         entity.flights.each do |flight|
           new_flight = Flights.create(flight, db_trip)
@@ -46,6 +52,8 @@ module ComfyWings
 
         Entity::Trip.new(
           db_record.to_hash.merge(
+            origin: Airports.rebuild_entity(db_record.origin),
+            destination: Airports.rebuild_entity(db_record.destination),
             currency: Currencies.rebuild_entity(db_record.currency),
             flights: Flights.rebuild_many(db_record.flights)
           )

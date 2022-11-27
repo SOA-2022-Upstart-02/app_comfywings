@@ -4,17 +4,18 @@ require 'dry-types'
 require 'dry-struct'
 
 module ComfyWings
-  # Domain entity for aiport info
   module Entity
-    # class for airport entities
+    # Domain entity for aiport info
     class Airport < Dry::Struct
       include Dry.Types
 
-      attribute :id,        Integer.optional
-      attribute :type,      String.optional
-      attribute :subtype,   Strict::String
-      attribute :name,      Strict::String
-      attribute :iata_code, Strict::String
+      attribute :id,         Integer.optional
+      attribute :iata_code,  Strict::String
+      attribute :city_name,  Strict::String
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

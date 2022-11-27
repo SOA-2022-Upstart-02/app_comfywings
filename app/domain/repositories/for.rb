@@ -11,6 +11,7 @@ module ComfyWings
       ENTITY_REPOSITORY = {
         Entity::TripQuery => TripQueries,
         Entity::Currency  => Currencies,
+        Entity::Airport   => Airports,
         Entity::Flight    => Flights,
         Entity::Trip      => Trips
       }.freeze

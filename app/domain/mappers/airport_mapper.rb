@@ -19,12 +19,6 @@ module ComfyWings
       @gateway = @gateway_class.new(@api_key, @api_secret)
     end
 
-    # def airport_data(departure)
-    #   @gateway.airport_data(departure).map do |data|
-    #     AirportMapper.build_entity(data)
-    #   end
-    # end
-
     def airport_size(departure)
       @gateway.airport_size(departure)
     end
@@ -45,26 +39,19 @@ module ComfyWings
 
       def build_entity
         Entity::Airport.new(
-          type: nil,
-          subtype:,
-          name:,
+          city_name:,
           iata_code:
         )
-      end
-
-      def subtype
-        @data['subtype']
-      end
-
-      def name
-        @data['name']
       end
 
       def iata_code
         @data['iataCode']
       end
+
+      def city_name
+        @data['name']
+      end
     end
   end
 end
 
-# File.write('spec/fixtures/airport_results.yml', airport_results.to_yaml)

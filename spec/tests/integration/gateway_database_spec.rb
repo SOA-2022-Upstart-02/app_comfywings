@@ -74,8 +74,8 @@ describe 'Integration Tests of AMADEUS API and Database' do
       _(rebuilt_trips.size).must_equal 58
 
       _(rebuilt_trip.currency.code).must_equal 'USD'
-      _(rebuilt_trip.origin).must_equal 'TPE'
-      _(rebuilt_trip.destination).must_equal 'MAD'
+      _(rebuilt_trip.origin.iata_code).must_equal 'TPE'
+      _(rebuilt_trip.destination.iata_code).must_equal 'MAD'
       _(rebuilt_trip.outbound_duration_form[:hours]).must_equal 47
       _(rebuilt_trip.outbound_duration_form[:minutes]).must_equal 10
       _(rebuilt_trip.inbound_duration_form[:hours]).must_equal 18
