@@ -20,11 +20,8 @@ module ComfyWings
         rebuild_many Database::TripOrm.where(query_id:).all
       end
 
-      def self.create(entity)
-        raise 'Trip already exists' if find(entity)
-
-        db_trip = Database::TripOrm.create(entity.to_attr_hash)
-
+      # deliberately :reek:TooManyStatements calling method self.update
+      def self.update(entity, db_trip)
         currency = Currencies.db_find(entity.currency)
         origin = Airports.db_find(entity.origin)
         destination = Airports.db_find(entity.destination)
@@ -32,6 +29,15 @@ module ComfyWings
         db_trip.update(currency:)
         db_trip.update(origin:)
         db_trip.update(destination:)
+      end
+
+      # deliberately :reek:TooManyStatements calling method self.create
+      def self.create(entity)
+        raise 'Trip already exists' if find(entity)
+
+        db_trip = Database::TripOrm.create(entity.to_attr_hash)
+
+        update(entity, db_trip)
 
         entity.flights.each do |flight|
           new_flight = Flights.create(flight, db_trip)
