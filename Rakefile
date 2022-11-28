@@ -7,9 +7,15 @@ task :default do
   puts `rake -T`
 end
 
-desc 'Run tests once'
+desc 'Run unit and integration test'
 Rake::TestTask.new(:spec) do |t|
-  t.pattern = 'spec/*_spec.rb'
+  t.pattern = 'spec/tests/{integration, unit}/**/*_spec.rb'
+  t.warning = false
+end
+
+desc 'Run unit and integration tests'
+Rake::TestTask.new(:spec_all) do |t|
+  t.pattern = 'spec/tests/**/*_spec.rb'
   t.warning = false
 end
 
@@ -25,10 +31,10 @@ end
 
 desc 'Reruns web app upon changes'
 task :rerun do
-  sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
+  sh "rerun -c --ignore 'coverage/*' --ignore 'repostore/*' -- bundle exec puma"
 end
 
-namespace :db do
+namespace :db do # rubocop:disable Metrics/BlockLength
   task :config do
     require 'sequel'
     require_relative 'config/environment' # load config info
@@ -111,4 +117,12 @@ end
 desc 'Update fixtures and wipe VCR cassettes'
 task :update_fixtures => 'vcr:wipe' do
   sh 'ruby spec/fixtures/flight_info.rb'
+end
+
+desc 'Generate 64-bit session key for Rack::Session'
+task :new_session_secret do
+  require 'base64'
+  require 'securerandom'
+  secret = SecureRandom.random_bytes(64).then { Base64.urlsafe_encode64(_1) }
+  puts "SESSION_SECRET: #{secret}"
 end

@@ -1,0 +1,77 @@
+.container
+  form role="form" action="/flight" method="POST"
+    .row.vertical-align.query-bar
+      .col-lg-1.col-md-3.col-sm-4
+        .text-right From:
+      .col-lg-2.col-md-3.col-sm-8
+        input { 
+          type='text' name='airport_origin'
+          id='airport_origin_input' class="form-control"
+          placeholder="e.g. TPE"
+        }
+
+      .col-lg-1.col-md-3.col-sm-4
+        .text-right To:
+      .col-lg-2.col-md-3.col-sm-8
+        input { 
+          type='text' name='airport_destination'
+          id='airport_destination_input' class="form-control"
+          placeholder="e.g. CGK"
+        }
+
+      .col-lg-1.col-md-3.col-sm-4
+        .text-right Between
+      .col-lg-2.col-md-3.col-sm-8
+        input { 
+          type='date' name='date_start'
+          id='date_start_input' class="form-control"
+        }
+
+      .col-lg-1.col-md-3.col-sm-4
+        .text-right and
+      .col-lg-2.col-md-3.col-sm-8
+        input { 
+          type='date' name='date_end'
+          id='date_end_input' class="form-control"
+        }
+
+      .col-lg-1.col-md-3.col-sm-4
+        .text-right Adults:
+      .col-lg-2.col-md-3.col-sm-8
+        input { 
+          type='text' name='adult_qty'
+          id='adult_qty_input' class="form-control"
+        }
+
+      .col-lg-1.col-md-3.col-sm-4
+        .text-right Children:
+      .col-lg-2.col-md-3.col-sm-8
+        input { 
+          type='text' name='children_qty'
+          id='children_qty_input' class="form-control"
+        }
+
+      .col-lg-1.col-md-3.col-sm-4 
+        .text-right Currency:
+      .col-lg-2.col-md-3.col-sm-4 
+        select.form-select name="currency"
+          option value="" selected="selected" - Select a currency -
+          - currencies.each do |res|
+            option value="#{res.code}" #{res.name}
+      
+      .col-lg.col-md-6.col-sm-12
+        .form-check.form-switch
+          input { 
+            type='checkbox' id='oneWaySwitch' name='is-one-way'
+            class="form-check-input" 
+          }
+          label class="form-check-label" for="oneWaySwitch"
+          | One Way Flight
+      
+      col-lg.col-md-6.col-sm-12
+        button { 
+          type='submit' id='flight-form-submit' class='submit' 
+          value='submit' class="btn btn-success" 
+        } Find Flights
+    .row
+      .col-md-12.blank-row
