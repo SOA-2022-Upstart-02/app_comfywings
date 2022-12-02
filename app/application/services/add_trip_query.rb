@@ -5,7 +5,7 @@ require 'digest'
 
 module ComfyWings
   module Service
-    # Retrieves array of all listed project entities
+    # Retrieves or creates trips
     class FindTrips
       include Dry::Transaction
 

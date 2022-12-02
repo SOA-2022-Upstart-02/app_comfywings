@@ -27,6 +27,15 @@ describe 'Integration Tests of AMADEUS API and Database' do
       _(currency.name).must_equal('New Taiwan dollar')
     end
 
+    it 'HAPPY: should be able to save airports in database' do
+      airport = ComfyWings::Repository::For.klass(ComfyWings::Entity::Airport).find_code('MAG')
+
+      _(airport.airport_name).must_equal('Madang')
+      _(airport.city_airport_name).must_equal('Madang')
+      _(airport.country).must_equal('Papua New Guinea')
+      _(airport.iata_code).must_equal('MAG')
+    end 
+
     it 'HAPPY: there should be 4 currencies: TWD USD EUR GBP' do
       reposit = ComfyWings::Repository::For.klass(ComfyWings::Entity::Currency)
       currencies = reposit.all

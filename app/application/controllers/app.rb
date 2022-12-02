@@ -18,7 +18,7 @@ module ComfyWings
                     css: 'style.css'
     plugin :common_logger, $stderr
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -43,6 +43,13 @@ module ComfyWings
             trips: trips.value!,
             trip_request: trip_request.values
           }
+        end
+      end
+
+      routing.is 'airport' do
+        # GET /airports
+        routing.on do
+          view 'airport', locals: {}
         end
       end
     end
