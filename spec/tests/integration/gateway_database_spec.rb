@@ -87,8 +87,8 @@ describe 'Integration Tests of AMADEUS API and Database' do
       _(rebuilt_trip.inbound_arrival_time).must_equal Time.parse('2023-01-30T20:15:00')
 
       outbound_flight = rebuilt_trip.outbound_flights[0]
-      _(outbound_flight.origin).must_equal 'TPE'
-      _(outbound_flight.destination).must_equal 'HKG'
+      _(outbound_flight.origin.iata_code).must_equal 'TPE'
+      _(outbound_flight.destination.iata_code).must_equal 'HKG'
       _(outbound_flight.aircraft).must_equal 'AIRBUS A330-300'
       _(outbound_flight.number).must_equal 'CX-479'
       _(outbound_flight.departure_time).must_equal Time.parse('2022-12-31T21:15:00')
@@ -99,8 +99,8 @@ describe 'Integration Tests of AMADEUS API and Database' do
       refute(outbound_flight.is_return)
 
       inbound_flight = rebuilt_trip.inbound_flights[0]
-      _(inbound_flight.origin).must_equal 'MAD'
-      _(inbound_flight.destination).must_equal 'MUC'
+      _(inbound_flight.origin.iata_code).must_equal 'MAD'
+      _(inbound_flight.destination.iata_code).must_equal 'MUC'
       _(inbound_flight.aircraft).must_equal 'AIRBUS A321'
       _(inbound_flight.number).must_equal 'LH-1805'
       _(inbound_flight.departure_time).must_equal Time.parse('2023-01-29T18:25:00"')

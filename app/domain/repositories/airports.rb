@@ -21,8 +21,10 @@ module ComfyWings
 
         Entity::Airport.new(
           id: db_record.id,
-          iata_code: db_record.iata_code,
-          city_name: db_record.city_name
+          airport_name: db_record.airport_name,
+          city_airport_name: db_record.city_airport_name,
+          country: db_record.country,
+          iata_code: db_record.iata_code
         )
       end
 
