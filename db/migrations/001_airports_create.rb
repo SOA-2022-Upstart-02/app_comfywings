@@ -6,7 +6,6 @@ require 'json'
 airports = File.read('spec/fixtures/airports.json')
 parsed = JSON.parse(airports)
 
-
 Sequel.migration do
   change do
     create_table(:airports) do
