@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/drainvers/SOA_2022/soa_project/require_app.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/require_app.rb": {
         "lines": [
           null,
           null,
@@ -16,12 +16,12 @@
           1,
           null,
           1,
-          26,
+          28,
           null,
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/config/environment.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -57,6 +57,7 @@
           null,
           null,
           1,
+          null,
           1,
           null,
           null,
@@ -68,7 +69,30 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/currency_orm.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/infrastructure/database/airport_orm.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          620,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/infrastructure/database/currency_orm.rb": {
         "lines": [
           null,
           null,
@@ -90,7 +114,60 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/flight_orm.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/infrastructure/database/flight_orm.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/infrastructure/database/trip_orm.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/infrastructure/database/trip_query_orm.rb": {
         "lines": [
           null,
           null,
@@ -109,52 +186,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/trip_orm.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/database/trip_query_orm.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/drainvers/SOA_2022/soa_project/app/infrastructure/gateways/amadeus_api.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/infrastructure/gateways/amadeus_api.rb": {
         "lines": [
           null,
           null,
@@ -274,7 +306,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/entities/airport.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/entities/airport.rb": {
         "lines": [
           null,
           null,
@@ -282,7 +314,6 @@
           1,
           null,
           1,
-          null,
           1,
           null,
           1,
@@ -293,12 +324,16 @@
           1,
           1,
           1,
+          null,
+          1,
+          620,
+          null,
           null,
           null,
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/entities/currency.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/entities/currency.rb": {
         "lines": [
           null,
           null,
@@ -323,7 +358,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/entities/flight.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/entities/flight.rb": {
         "lines": [
           null,
           null,
@@ -362,7 +397,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/entities/trip.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/entities/trip.rb": {
         "lines": [
           null,
           null,
@@ -432,7 +467,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/entities/trip_query.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/entities/trip_query.rb": {
         "lines": [
           null,
           null,
@@ -510,7 +545,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/mappers/airport_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/mappers/airport_mapper.rb": {
         "lines": [
           null,
           null,
@@ -533,12 +568,6 @@
           0,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           0,
           null,
@@ -564,27 +593,19 @@
           null,
           null,
           null,
-          null,
-          null,
           1,
           0,
           null,
           null,
           1,
           0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
           null,
           null,
           null,
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/mappers/auth_token.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/mappers/auth_token.rb": {
         "lines": [
           null,
           null,
@@ -621,7 +642,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/mappers/flight_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/mappers/flight_mapper.rb": {
         "lines": [
           null,
           null,
@@ -668,9 +689,11 @@
           null,
           1,
           252,
+          252,
           null,
           null,
           1,
+          252,
           252,
           null,
           null,
@@ -710,7 +733,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/mappers/trip_mapper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -775,9 +798,11 @@
           null,
           1,
           58,
+          58,
           null,
           null,
           1,
+          58,
           58,
           null,
           null,
@@ -817,7 +842,53 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/repositories/currencies.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/repositories/airports.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          620,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1240,
+          null,
+          1240,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          620,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/repositories/currencies.rb": {
         "lines": [
           null,
           null,
@@ -863,7 +934,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/repositories/flights.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/repositories/flights.rb": {
         "lines": [
           null,
           null,
@@ -885,6 +956,12 @@
           252,
           null,
           252,
+          null,
+          252,
+          252,
+          null,
+          252,
+          252,
           252,
           null,
           null,
@@ -892,6 +969,9 @@
           504,
           null,
           252,
+          null,
+          null,
+          null,
           null,
           null,
           null,
@@ -906,10 +986,11 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/repositories/trips.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/repositories/trips.rb": {
         "lines": [
           null,
           null,
+          1,
           1,
           1,
           null,
@@ -929,12 +1010,23 @@
           0,
           null,
           null,
+          null,
+          1,
+          58,
+          58,
+          58,
+          null,
+          58,
+          58,
+          58,
+          null,
+          null,
+          null,
           1,
           58,
           null,
           58,
           null,
-          58,
           58,
           null,
           58,
@@ -962,6 +1054,8 @@
           null,
           null,
           null,
+          null,
+          null,
           1,
           0,
           0,
@@ -976,7 +1070,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/repositories/for.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -995,8 +1089,9 @@
           null,
           null,
           null,
+          null,
           1,
-          63,
+          683,
           null,
           null,
           1,
@@ -1007,7 +1102,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/domain/repositories/trip_queries.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/domain/repositories/trip_queries.rb": {
         "lines": [
           null,
           null,
@@ -1055,33 +1150,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/presentation/view_objects/flights.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/drainvers/SOA_2022/soa_project/app/presentation/view_objects/trips.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/presentation/view_objects/flight.rb": {
         "lines": [
           null,
           null,
@@ -1115,7 +1184,35 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/application/controllers/app.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/presentation/view_objects/trips.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/application/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -1169,7 +1266,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/application/forms/init.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/application/forms/init.rb": {
         "lines": [
           null,
           null,
@@ -1178,7 +1275,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/application/forms/new_trip_query.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/application/forms/new_trip_query.rb": {
         "lines": [
           null,
           null,
@@ -1226,7 +1323,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/app/application/services/add_trip_query.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/app/application/services/add_trip_query.rb": {
         "lines": [
           null,
           null,
@@ -1303,7 +1400,7 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/spec/helpers/vcr_helper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -1324,15 +1421,20 @@
           null,
           1,
           4,
-          56,
-          56,
-          56,
-          56,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          4,
+          17,
+          17,
+          17,
+          17,
           null,
           4,
-          null,
-          null,
-          null,
           null,
           null,
           1,
@@ -1341,12 +1443,13 @@
           null
         ]
       },
-      "/home/drainvers/SOA_2022/soa_project/spec/helpers/database_helper.rb": {
+      "/Users/chiuzuchilumbu/Documents/project/comfywings_monolith/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
           null,
           1,
+          null,
           1,
           null,
           0,
@@ -1359,6 +1462,6 @@
         ]
       }
     },
-    "timestamp": 1669452032
+    "timestamp": 1669984935
   }
 }

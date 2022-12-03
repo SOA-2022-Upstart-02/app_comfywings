@@ -13,8 +13,8 @@ module ComfyWings
 
       attribute :id,                Integer.optional
       attribute :trip_id,           Integer.optional
-      attribute :origin,            Strict::String
-      attribute :destination,       Strict::String
+      attribute :origin,            Airport
+      attribute :destination,       Airport
       attribute :duration,          Strict::String
       attribute :aircraft,          Strict::String
       attribute :number,            Strict::String
@@ -24,7 +24,7 @@ module ComfyWings
       attribute :is_return,         Strict::Bool
 
       def to_attr_hash
-        to_hash.except(:id, :trip_id)
+        to_hash.except(:id, :trip_id, :origin, :destination)
       end
 
       def duration_form

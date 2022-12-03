@@ -26,23 +26,6 @@ describe 'Tests AMADEUS API library' do
     end
   end
 
-  describe 'amadeus information' do
-    before do
-      @obtained_airports = ComfyWings::AirportMapper.new(AMADEUS_KEY, AMADEUS_SECRET)
-    end
-
-    it 'Happy: should provide correct attributes' do
-      _(@obtained_airports.airport_size(DEPATURE)).must_equal CORRECT_AIRPORT['num_of_airport']
-    end
-
-    it 'Happy: should provide correct airport data' do
-      _(@obtained_airports.airport_data(DEPATURE)[0]['type']).must_equal CORRECT_AIRPORT['airports'][0]['info_type']
-      _(@obtained_airports.airport_data(DEPATURE)[0]['subtype']).must_equal CORRECT_AIRPORT['airports'][0]['area']
-      _(@obtained_airports.airport_data(DEPATURE)[0]['name']).must_equal CORRECT_AIRPORT['airports'][0]['city_name']
-      _(@obtained_airports.airport_data(DEPATURE)[0]['iataCode']).must_equal CORRECT_AIRPORT['airports'][0]['city_code']
-    end
-  end
-
   describe 'Error responses' do
     it 'Bad: should raise exception when unauthorised' do
       _(proc do

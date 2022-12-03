@@ -18,7 +18,7 @@ module ComfyWings
                     css: 'style.css'
     plugin :common_logger, $stderr
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -44,6 +44,22 @@ module ComfyWings
             trip_request: trip_request.values
           }
         end
+      end
+
+      routing.is 'airport' do
+        # GET /airports
+        routing.is do
+          first_airport = Repository::For.klass(Entity::Airport).first
+          view 'airport', locals: { airport: first_airport }
+        end
+        #  TODO: fix code to ensure all airports are obtained through search
+        # routing.is aiport_search do
+        # routing.post do
+        #  airport_code = Forms::SearchAirport.new.call(routing.params)
+        #  airport = Service::FindAirports.new.call(airport_code)
+        # view 'airport_search', locals: { airport_info: airport.value! }
+        # end
+        #  end
       end
     end
   end
