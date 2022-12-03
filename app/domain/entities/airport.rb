@@ -9,9 +9,11 @@ module ComfyWings
     class Airport < Dry::Struct
       include Dry.Types
 
-      attribute :id,         Integer.optional
-      attribute :iata_code,  Strict::String
-      attribute :city_name,  Strict::String
+      attribute :id,                 Integer.optional
+      attribute :airport_name,       Strict::String
+      attribute :city_airport_name,  Strict::String
+      attribute :country,            Strict::String
+      attribute :iata_code,          Strict::String
 
       def to_attr_hash
         to_hash.except(:id)

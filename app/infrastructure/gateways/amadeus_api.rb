@@ -18,21 +18,6 @@ module ComfyWings
         JSON.parse(response)
       end
 
-      def airport(departure)
-        response = Request.new(@key, @secret).airport(departure)
-        JSON.parse(response)
-      end
-
-      def airport_size(depart)
-        airports_size = airport(depart)
-        airports_size['meta']['count']
-      end
-
-      def airport_data(depart)
-        airports_data = airport(depart)
-        airports_data['data']
-      end
-
       # class to make HTTP request
       class Request
         AMADEUS_API_ROOT = 'https://test.api.amadeus.com'

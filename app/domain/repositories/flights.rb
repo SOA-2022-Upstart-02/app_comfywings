@@ -18,14 +18,23 @@ module ComfyWings
         raise 'Query already exists' if find(entity)
 
         db_flight = Database::FlightOrm.create(entity.to_attr_hash)
+
+        origin = Airports.db_find(entity.origin)
+        destination = Airports.db_find(entity.destination)
+
         db_flight.update(trip:)
+        db_flight.update(origin:)
+        db_flight.update(destination:)
       end
 
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
         Entity::Flight.new(
-          db_record.to_hash
+          db_record.to_hash.merge(
+            origin: Airports.rebuild_entity(db_record.origin),
+            destination: Airports.rebuild_entity(db_record.destination)
+          )
         )
       end
 

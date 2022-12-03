@@ -16,13 +16,19 @@ module ComfyWings
         rebuild_many Database::AirportOrm.all
       end
 
+      def self.first
+        Database::AirportOrm.first
+      end
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 
         Entity::Airport.new(
           id: db_record.id,
-          iata_code: db_record.iata_code,
-          city_name: db_record.city_name
+          airport_name: db_record.airport_name,
+          city_airport_name: db_record.city_airport_name,
+          country: db_record.country,
+          iata_code: db_record.iata_code
         )
       end
 

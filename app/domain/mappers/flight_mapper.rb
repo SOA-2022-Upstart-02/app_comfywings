@@ -42,11 +42,13 @@ module ComfyWings
         private
 
         def origin
-          @flight_data['departure']['iataCode']
+          iata_code = @flight_data['departure']['iataCode']
+          ComfyWings::Repository::For.klass(ComfyWings::Entity::Airport).find_code(iata_code)
         end
 
         def destination
-          @flight_data['arrival']['iataCode']
+          iata_code = @flight_data['arrival']['iataCode']
+          ComfyWings::Repository::For.klass(ComfyWings::Entity::Airport).find_code(iata_code)
         end
 
         def duration
