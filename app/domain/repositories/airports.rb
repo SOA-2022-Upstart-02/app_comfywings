@@ -16,6 +16,10 @@ module ComfyWings
         rebuild_many Database::AirportOrm.all
       end
 
+      def self.first
+        Database::AirportOrm.first
+      end
+
       def self.rebuild_entity(db_record)
         return nil unless db_record
 

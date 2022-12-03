@@ -7,11 +7,11 @@ module ComfyWings
     # Form object for aiport query from user
     class SearchAirport < Dry::Validation::Contract
       params do
-        required(:iata_code).filled(:string)
+        required(:airport_code).filled(:string)
       end
 
-      rule(:iata_code) do
-        key.failure('Must be of type string') unless is_string?
+      rule(:airport_code) do
+        key.failure('must be of type string')
       end
     end
   end
