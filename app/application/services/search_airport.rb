@@ -4,23 +4,28 @@ require 'dry/transaction'
 
 module ComfyWings
   module Service
-    # retrieves queried airport entitiy
-    class FindAirports
+    # Transaction to store project from Github API to database
+    class SearchAirport
       include Dry::Transaction
 
-      step :find_airport
+      step :validate_input
+      step :request_airport
 
-      def find_airport(input)
-        airport =
-          airport_in_database(input)
-        Success(airport)
-      rescue StandardError => e
-        App.logger.error e.backtrace.join("\n")
-        Failure('Having trouble with airports')
+      private
+
+      def validate_input(input)
+        if input.success?
+          Success(airport_iata_code:)
+        else
+          Failure(input.errors.values.join('; '))
+        end
       end
 
-      def airport_in_database(iata_code)
-        Repository::For.klass(Entity::Airport).find_code(iata_code)
+      def request_airport(input)
+        result = Gateway::Api.new(CodePraise::App.config)
+          .get_airport(input)
+
+        result.success? ? Success(result.payload) : Failure(result.message)
       end
     end
   end
