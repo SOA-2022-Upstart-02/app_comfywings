@@ -39,14 +39,6 @@ group :development do
   gem 'rerun', '~> 0'
 end
 
-group :development, :test do
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg', '~> 1.2'
-end
-
 # Testing
 group :development, :test do
   gem 'minitest', '~> 5'
