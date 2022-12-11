@@ -27,9 +27,16 @@ module ComfyWings
         view 'home', locals: {}
       end
 
-      routing.on 'airport' do
-        # GET /airports
-        view 'airport', locals: {}
+      routing.is 'airport' do
+        # GET /airport
+          view 'airport', locals: {}
+      end
+      routing.get do
+        routing.on do
+          searched_airport = Views::Airport.new(routing.params)
+          puts searched_airport.iata_code
+          view 'individual_airport', locals: { airport_request: searched_airport }
+        end
       end
     end
   end

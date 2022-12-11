@@ -8,11 +8,11 @@ module Views
     end
 
     def airport_name
-      @org_iata_code.last
+      @org_iata_code
     end
 
     def city_airport_name
-      @org_iata_code.first
+      @org_iata_code
     end
 
     def country
