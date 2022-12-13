@@ -24,25 +24,23 @@ module ComfyWings
 
       # GET /
       routing.root do
-        currency_list = Repository::For.klass(Entity::Currency).all
-        view 'home', locals: { currencies: currency_list }
+        # currency_list = Repository::For.klass(Entity::Currency).all
+        # view 'home', locals: { currencies: currency_list }
       end
 
-      routing.is 'flight' do
-        # POST /flight
-        routing.post do
-          trip_request = Forms::NewTripQuery.new.call(routing.params)
-          trips = Service::FindTrips.new.call(trip_request)
-          if trips.failure?
-            flash[:error] = trips.failure
-            response.status = 400
-            routing.redirect '/'
+      routing.is 'trips' do
+        routing.get do
+          result = Service::SearchTrips.new.call('QUERY_CODE')
+
+          if result.failure?
+            flash[:error] = result.failure
+            trips = []
+          else
+            trips = result.value!.trips
+            # viewable_projects = Views::ProjectsList.new(trips)
           end
-          view 'flight', locals:
-          {
-            trips: trips.value!,
-            trip_request: trip_request.values
-          }
+
+          view 'flight', locals: { trips: }
         end
       end
 
