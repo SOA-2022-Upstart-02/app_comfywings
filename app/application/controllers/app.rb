@@ -24,8 +24,8 @@ module ComfyWings
 
       # GET /
       routing.root do
-        currency_list = Repository::For.klass(Entity::Currency).all
-        view 'home', locals: { currencies: currency_list }
+        # currency_list = Repository::For.klass(Entity::Currency).all
+        view 'home', locals: { currencies: [] }
       end
 
       routing.is 'flight' do

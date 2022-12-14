@@ -24,7 +24,7 @@ module ComfyWings
       use Rack::Session::Cookie, secret: config.SESSION_SECRET
 
       # Logger setup
-      LOGGER = Logger.new(stderr)
+      LOGGER = Logger.new($stderr)
       def self.logger = LOGGER
 
       configure :development, :test, :app_test do

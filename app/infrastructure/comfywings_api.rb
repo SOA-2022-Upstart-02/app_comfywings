@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'http'
+
 module ComfyWings
   module Gateway
     # Infrastructure to call ComfyWings API
@@ -22,6 +24,10 @@ module ComfyWings
 
         def get_root # rubocop:disable Naming/AccessorMethodName
           call_api('get')
+        end
+
+        def get_currencies
+          call_api('currency/all')
         end
 
         def params_str(params)
@@ -56,6 +62,7 @@ module ComfyWings
         def payload
           body.to_s
         end
+      end
     end
   end
 end
