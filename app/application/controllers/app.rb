@@ -25,7 +25,12 @@ module ComfyWings
       # GET /
       routing.root do
         # currency_list = Repository::For.klass(Entity::Currency).all
-        view 'home', locals: { currencies: [] }
+        currency_list = Gateway::Api.new(ComfyWings::App.config).get_currencies
+        puts currency_list
+        currency_list = Representer::CurrenciesList.new(OpenStruct.new).from_json(currency_list)
+        puts currency_list
+        
+        view 'home', locals: { currencies: currency_list['currencies'] }
       end
 
       routing.is 'flight' do
@@ -48,10 +53,10 @@ module ComfyWings
 
       routing.is 'airport' do
         # GET /airports
-        routing.is do
-          first_airport = Repository::For.klass(Entity::Airport).first
-          view 'airport', locals: { airport: first_airport }
-        end
+        # routing.is do
+        #   first_airport = Repository::For.klass(Entity::Airport).first
+        #   view 'airport', locals: { airport: first_airport }
+        # end
         #  TODO: fix code to ensure all airports are obtained through search
         # routing.is aiport_search do
         # routing.post do

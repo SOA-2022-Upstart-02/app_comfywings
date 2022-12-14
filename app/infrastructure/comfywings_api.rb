@@ -15,11 +15,15 @@ module ComfyWings
         @request.get_root_success?
       end
 
+      def get_currencies
+        @request.get_currencies
+      end
+
       # HTTP request transmitter
       class Request
         def initialize(config)
           @api_host = config.API_HOST
-          @api_root = config.API_HOST + '/api/v1'
+          @api_root = config.API_HOST + '/api'
         end
 
         def get_root # rubocop:disable Naming/AccessorMethodName
@@ -27,12 +31,12 @@ module ComfyWings
         end
 
         def get_currencies
-          call_api('currency/all')
+          call_api('get', ['currency/all'])
         end
 
         def params_str(params)
           params.map { |key, value| "#{key}=#{value}" }.join('&')
-                .then { |str| str ? '?' + str : '' }
+                .then { |str| str.empty? ? '' : '?' + str }
         end
 
         def call_api(method, resources = [], params = {})
