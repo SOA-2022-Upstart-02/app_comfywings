@@ -17,13 +17,17 @@ module ComfyWings
 
       def get_currencies
         @request.get_currencies
+      end 
+      
+      def get_trips(code)
+        @request.get_trips(code)
       end
 
       # HTTP request transmitter
       class Request
         def initialize(config)
           @api_host = config.API_HOST
-          @api_root = config.API_HOST + '/api'
+          @api_root = "#{config.API_HOST}/api"
         end
 
         def get_root # rubocop:disable Naming/AccessorMethodName
@@ -31,19 +35,23 @@ module ComfyWings
         end
 
         def get_currencies
-          call_api('get', ['currency/all'])
+          call_api('get', ['currency', 'all'])
+        end
+        
+        def get_trips(code)
+          call_api('get', ['trips', code])
         end
 
         def params_str(params)
           params.map { |key, value| "#{key}=#{value}" }.join('&')
-                .then { |str| str.empty? ? '' : '?' + str }
+            .then { |str| str.empty? ? '' : "?#{str}" }
         end
 
         def call_api(method, resources = [], params = {})
           api_path = resources.empty? ? @api_host : @api_root
           url = [api_path, resources].flatten.join('/') + params_str(params)
           HTTP.headers('Accept' => 'application/json').send(method, url)
-              .then { |http_response| Response.new(http_response) }
+            .then { |http_response| Response.new(http_response) }
         rescue StandardError
           raise "Invalid URL request: #{url}"
         end

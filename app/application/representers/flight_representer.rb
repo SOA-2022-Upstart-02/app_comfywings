@@ -2,6 +2,7 @@
 
 require 'roar/decorator'
 require 'roar/json'
+require_relative 'airport_representers'
 
 module ComfyWings
   module Representer
@@ -9,8 +10,8 @@ module ComfyWings
     class Flight < Roar::Decorator
       include Roar::JSON
 
-      property :origin
-      property :destination
+      property :origin, extend: Representer::Airport, class: OpenStruct
+      property :destination, extend: Representer::Airport, class: OpenStruct
       property :duration_form
       property :aircraft
       property :number

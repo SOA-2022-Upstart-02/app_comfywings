@@ -4,6 +4,7 @@ require 'roar/decorator'
 require 'roar/json'
 
 require_relative 'flight_representer'
+require_relative 'airport_representers'
 
 module ComfyWings
   module Representer
@@ -16,8 +17,8 @@ module ComfyWings
       property :id
       property :query_id
       property :currency, extend: Representer::Currency, class: OpenStruct
-      property :origin                   # TODO: extend: Representer::Airport, class: OpenStruct
-      property :destination              # TODO: extend: Representer::Airport, class: OpenStruct
+      property :origin, extend: Representer::Airport, class: OpenStruct
+      property :destination, extend: Representer::Airport, class: OpenStruct
       property :outbound_duration_form
       property :outbound_departure_time
       property :outbound_arrival_time
