@@ -17,8 +17,8 @@ module ComfyWings
 
       def get_currencies
         @request.get_currencies
-      end 
-      
+      end
+
       def get_trips(code)
         @request.get_trips(code)
       end
@@ -34,11 +34,11 @@ module ComfyWings
           call_api('get')
         end
 
-        def get_currencies
-          call_api('get', ['currency', 'all'])
+        def get_currencies # rubocop:disable Naming/AccessorMethodName
+          call_api('get', %w[currency all])
         end
-        
-        def get_trips(code)
+
+        def get_trips(code) # rubocop:disable Naming/AccessorMethodName
           call_api('get', ['trips', code])
         end
 
@@ -61,7 +61,7 @@ module ComfyWings
       class Response < SimpleDelegator
         NotFound = Class.new(StandardError)
 
-        SUCCESS_CODES = (200..299).freeze
+        SUCCESS_CODES = (200..299)
 
         def success?
           code.between?(SUCCESS_CODES.first, SUCCESS_CODES.last)

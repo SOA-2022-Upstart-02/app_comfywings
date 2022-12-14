@@ -25,12 +25,16 @@ module ComfyWings
       # GET /
       routing.root do
         # currency_list = Repository::For.klass(Entity::Currency).all
-        currency_list = Gateway::Api.new(ComfyWings::App.config).get_currencies
-        puts currency_list
-        currency_list = Representer::CurrenciesList.new(OpenStruct.new).from_json(currency_list)
-        puts currency_list
-        
-        view 'home', locals: { currencies: currency_list['currencies'] }
+        currency_list = Service::RetrieveCurrencies.new.call
+
+        if currency_list.failure?
+          flash[:error] = currency_list.failure
+          currencies = []
+        else
+          currencies = currency_list.value!.currencies
+        end
+
+        view 'home', locals: { currencies: }
       end
 
       routing.is 'trips' do
