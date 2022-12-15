@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'http'
 
 module ComfyWings
@@ -14,8 +15,12 @@ module ComfyWings
         @request.get_root_success?
       end
 
-      def get_trips(code)
-        @request.get_trips(code)
+      def get_airport_list(iata_code)
+        @request.obtain_airport(iata_code)
+      end
+
+      def get_airport(iata_code)
+        @request.obtain_airport(iata_code)
       end
 
       # HTTP request transmitter
@@ -29,8 +34,13 @@ module ComfyWings
           call_api('get')
         end
 
-        def get_trips(code)
-          call_api('get', ['trips', code])
+        def obtain_airport(code)
+          new_code = code['iata_code']
+          call_api('get', ['airport', new_code])
+        end
+
+        def obtain_airport_list(code_letter)
+          call_api('get', ['airportlist', code_letter])
         end
 
         def params_str(params)
@@ -52,7 +62,7 @@ module ComfyWings
       class Response < SimpleDelegator
         NotFound = Class.new(StandardError)
 
-        SUCCESS_CODES = (200..299).freeze
+        SUCCESS_CODES = (200..299)
 
         def success?
           code.between?(SUCCESS_CODES.first, SUCCESS_CODES.last)
