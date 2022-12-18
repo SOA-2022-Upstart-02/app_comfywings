@@ -23,6 +23,10 @@ module ComfyWings
         @request.get_trips(code)
       end
 
+      def create_trip_query(trip_query)
+        @request.create_trip_query(trip_query)
+      end
+
       # HTTP request transmitter
       class Request
         def initialize(config)
@@ -34,12 +38,16 @@ module ComfyWings
           call_api('get')
         end
 
-        def get_currencies # rubocop:disable Naming/AccessorMethodName
+        def get_currencies
           call_api('get', %w[currency all])
         end
 
-        def get_trips(code) # rubocop:disable Naming/AccessorMethodName
+        def get_trips(code)
           call_api('get', ['trips', code])
+        end
+
+        def create_trip_query(trip_query)
+          call_api('post', ['trip_query'], trip_query)
         end
 
         def params_str(params)

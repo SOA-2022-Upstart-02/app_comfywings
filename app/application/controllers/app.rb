@@ -53,7 +53,22 @@ module ComfyWings
 
             view 'trip', locals: { trips: }
           end
-        end 
+        end
+      end
+
+      routing.is 'trip_query' do
+        routing.post do
+          routing.params['is_one_way'] = routing.params['is_one_way'] ? true : false
+          trip_request = Forms::NewTripQuery.new.call(routing.params)
+          result = Service::CreateTripQuery.new.call(trip_request)
+          if result.failure?
+            flash[:error] = result.failure
+            response.status = 400
+            routing.redirect '/'
+          else
+            routing.redirect "trips/#{result.value!['code']}"
+          end
+        end
       end
 
       routing.is 'airport' do
