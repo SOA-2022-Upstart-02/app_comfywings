@@ -32,8 +32,8 @@ module ComfyWings
         Representer::TripsList.new(OpenStruct.new)
           .from_json(trips_json)
           .then { |trips| Success(trips) }
-      # rescue StandardError
-      #   Failure('Could not parse response from API')
+      rescue StandardError
+        Failure('Could not parse response from API')
       end
     end
   end

@@ -14,6 +14,7 @@ module ComfyWings
     plugin :flash
     plugin :all_verbs # enable other HTML verbs such as PUT/DELETE
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    plugin :public, root: 'app/presentation/public'
     plugin :assets, path: 'app/presentation/assets',
                     css: 'style.css'
     plugin :common_logger, $stderr
@@ -21,6 +22,7 @@ module ComfyWings
     route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
+      routing.public
 
       # GET /
       routing.root do
@@ -28,20 +30,21 @@ module ComfyWings
         # view 'home', locals: { currencies: currency_list }
       end
 
-      routing.is 'trips' do
-        routing.get do
-          result = Service::SearchTrips.new.call('QUERY_CODE')
+      routing.on 'trips' do
+        routing.on String do |code|
+          routing.get do
+            result = Service::SearchTrips.new.call(code)
 
-          if result.failure?
-            flash[:error] = result.failure
-            trips = []
-          else
-            trips = result.value!.trips
-            # viewable_projects = Views::ProjectsList.new(trips)
+            if result.failure?
+              flash[:error] = result.failure
+              trips = []
+            else
+              trips = result.value!.trips
+            end
+
+            view 'trip', locals: { trips: }
           end
-
-          view 'flight', locals: { trips: }
-        end
+        end 
       end
 
       routing.is 'airport' do
