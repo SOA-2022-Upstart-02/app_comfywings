@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'http'
 
 module ComfyWings
@@ -12,6 +13,10 @@ module ComfyWings
 
       def alive?
         @request.get_root_success?
+      end
+
+      def get_currencies
+        @request.get_currencies
       end
 
       def get_trips(code)
@@ -29,7 +34,11 @@ module ComfyWings
           call_api('get')
         end
 
-        def get_trips(code)
+        def get_currencies # rubocop:disable Naming/AccessorMethodName
+          call_api('get', %w[currency all])
+        end
+
+        def get_trips(code) # rubocop:disable Naming/AccessorMethodName
           call_api('get', ['trips', code])
         end
 
@@ -52,7 +61,7 @@ module ComfyWings
       class Response < SimpleDelegator
         NotFound = Class.new(StandardError)
 
-        SUCCESS_CODES = (200..299).freeze
+        SUCCESS_CODES = (200..299)
 
         def success?
           code.between?(SUCCESS_CODES.first, SUCCESS_CODES.last)

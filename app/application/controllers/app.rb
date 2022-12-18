@@ -27,7 +27,16 @@ module ComfyWings
       # GET /
       routing.root do
         # currency_list = Repository::For.klass(Entity::Currency).all
-        # view 'home', locals: { currencies: currency_list }
+        currency_list = Service::RetrieveCurrencies.new.call
+
+        if currency_list.failure?
+          flash[:error] = currency_list.failure
+          currencies = []
+        else
+          currencies = currency_list.value!.currencies
+        end
+
+        view 'home', locals: { currencies: }
       end
 
       routing.on 'trips' do
@@ -49,10 +58,10 @@ module ComfyWings
 
       routing.is 'airport' do
         # GET /airports
-        routing.is do
-          first_airport = Repository::For.klass(Entity::Airport).first
-          view 'airport', locals: { airport: first_airport }
-        end
+        # routing.is do
+        #   first_airport = Repository::For.klass(Entity::Airport).first
+        #   view 'airport', locals: { airport: first_airport }
+        # end
         #  TODO: fix code to ensure all airports are obtained through search
         # routing.is aiport_search do
         # routing.post do
