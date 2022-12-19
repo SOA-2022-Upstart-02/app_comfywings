@@ -11,24 +11,22 @@ module ComfyWings
   class App < Roda
     plugin :environments
 
-    configure do
-      # Environment variables setup
-      Figaro.application = Figaro::Application.new(
-        environment:,
-        path: File.expand_path('config/secrets.yml')
-      )
-      Figaro.load
+    # Environment variables setup
+    Figaro.application = Figaro::Application.new(
+      environment:,
+       path: File.expand_path('config/secrets.yml')
+    )
+    Figaro.load
+    def self.config = Figaro.env
 
-      def self.config = Figaro.env
+    use Rack::Session::Cookie, secret: config.SESSION_SECRET
 
-      use Rack::Session::Cookie, secret: config.SESSION_SECRET
+    # Setup for logger
+    LOGGER = Logger.new($stderr)
+    def self.logger = LOGGER
 
-      # Logger setup
-      def self.logger = Logger.new($stderr)
-
-      configure :development, :test, :app_test do
-        require 'pry'
-      end
+    configure :development, :test, :app_test do
+      require 'pry'; # for breakpoints
     end
   end
 end
