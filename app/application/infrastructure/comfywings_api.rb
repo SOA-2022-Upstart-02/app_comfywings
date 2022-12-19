@@ -16,7 +16,8 @@ module ComfyWings
       end
 
       def get_airport_list(iata_code)
-        @request.obtain_airport(iata_code)
+        @request.obtain_airport_list(iata_code)
+
       end
 
       def get_airport(iata_code)
@@ -49,8 +50,6 @@ module ComfyWings
 
         def call_api(method, resources = [], params = {})
           api_path = resources.empty? ? @api_host : @api_root
-          api_path = "http://localhost:9090" + api_path
-          #puts "api_path #{api_path}"
           url = [api_path, resources].flatten.join('/') + params_str(params)
 
           HTTP.headers('Accept' => 'application/json').send(method, url)

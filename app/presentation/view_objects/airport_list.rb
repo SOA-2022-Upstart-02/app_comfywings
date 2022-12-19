@@ -6,12 +6,12 @@ module Views
   # class for list of arrays
   class AirportList
     def initialize(airport_list)
-      @list = airport_list
+      @list = airport_list.map { |airport_data| Airport.new(airport_data) }
     end
 
-    def airports(list)
-      list.map do |airport|
-        Airport.new(airport)
+    def each
+      @list.each do |airport|
+        yield airport
       end
     end
   end

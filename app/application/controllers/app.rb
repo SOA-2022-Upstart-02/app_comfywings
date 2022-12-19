@@ -33,11 +33,12 @@ module ComfyWings
       end
       routing.get do
         routing.on do
-          searched_airport = Service::RetrieveAirport.new.call(routing.params["iata_code"])
-          puts "result:", searched_airport
-          single_airport = searched_airport.value!
-          airport = Views::Airport.new(single_airport)
-          view 'individual_airport', locals: { airport_request: airport }
+          searched_airports = Service::RetrieveAirportsList.new.call(routing.params["iata_code"])
+          list_airport = searched_airports.value!
+
+          airportlist = Views::AirportList.new(list_airport["airports"])
+
+          view 'individual_airport', locals: { airportlist: }
         end
       end
     end

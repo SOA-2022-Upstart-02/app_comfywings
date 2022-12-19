@@ -17,9 +17,9 @@ module ComfyWings
       DB_ERR = 'We encountered an issue accessing the database.'
 
       def retrieve_airport(iata_code)
-        puts "config: #{ComfyWings::App.config.API_HOST}"
+        # puts "config: #{ComfyWings::App.config.API_HOST}"
         result = Gateway::Api.new(ComfyWings::App.config).get_airport(iata_code)
-        puts "api url: ", result
+        # puts "api url: ", result
         result.success? ? Success(result.payload) : Failure(result.message)
       rescue StandardError
         Failure('could not access our API')
