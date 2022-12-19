@@ -4,6 +4,7 @@ require 'roar/decorator'
 require 'roar/json'
 
 require_relative 'flight_representer'
+require_relative 'airport_representers'
 
 module ComfyWings
   module Representer

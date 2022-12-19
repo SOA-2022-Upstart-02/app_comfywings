@@ -24,8 +24,34 @@ module ComfyWings
 
       # GET /
       routing.root do
-        view 'home', locals: {}
+        # currency_list = Repository::For.klass(Entity::Currency).all
+        currency_list = Service::RetrieveCurrencies.new.call
+
+        if currency_list.failure?
+          flash[:error] = currency_list.failure
+          currencies = []
+        else
+          currencies = currency_list.value!.currencies
+        end
+
+        view 'home', locals: { currencies: }
       end
+
+      routing.is 'trips' do
+        routing.get do
+          result = Service::SearchTrips.new.call('QUERY_CODE')
+
+          if result.failure?
+            flash[:error] = result.failure
+            trips = []
+          else
+            trips = result.value!.trips
+            # viewable_projects = Views::ProjectsList.new(trips)
+          end
+          view 'flight', locals: { trips: }
+        end
+      end
+
 
       routing.is 'airport' do
         # GET /airport

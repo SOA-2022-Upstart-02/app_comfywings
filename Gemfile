@@ -12,8 +12,10 @@ gem 'slim', '~> 4'
 
 # APPLICATION LAYER
 # Web application related
+gem 'multi_json', '~> 1.15'
 gem 'puma', '~> 5'
 gem 'rack-session', '~> 0.3'
+gem 'roar', '~> 1.1'
 gem 'roda', '~> 3'
 gem 'multi_json', '~> 1.15'
 gem 'roar', '~> 1.1'
@@ -40,14 +42,6 @@ gem 'sequel', '~> 5.49'
 
 group :development do
   gem 'rerun', '~> 0'
-end
-
-group :development, :test do
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg', '~> 1.2'
 end
 
 # Testing

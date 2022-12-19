@@ -50,6 +50,15 @@
           type='text' name='children_qty'
           id='children_qty_input' class="form-control"
         }
+
+      .col-lg-1.col-md-3.col-sm-4 
+        .text-right Currency:
+      .col-lg-2.col-md-3.col-sm-4 
+        select.form-select name="currency"
+          option value="" selected="selected" - Select a currency -
+          - currencies.each do |res|
+            option value="#{res['code']}" #{res['name']}
+      
       .col-lg.col-md-6.col-sm-12
         .form-check.form-switch
           input { 

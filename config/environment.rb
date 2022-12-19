@@ -2,7 +2,6 @@
 
 require 'figaro'
 require 'roda'
-require 'yaml'
 require 'logger'
 require 'rack/session'
 require 'delegate'
@@ -11,6 +10,7 @@ module ComfyWings
   # Configuration for the App
   class App < Roda
     plugin :environments
+
     # Environment variables setup
     Figaro.application = Figaro::Application.new(
       environment:,
