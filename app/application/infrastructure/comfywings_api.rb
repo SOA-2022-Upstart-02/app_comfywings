@@ -35,8 +35,7 @@ module ComfyWings
         end
 
         def obtain_airport(code)
-          new_code = code['iata_code']
-          call_api('get', ['airport', new_code])
+          call_api('get', ['airport', code])
         end
 
         def obtain_airport_list(code_letter)
@@ -50,9 +49,13 @@ module ComfyWings
 
         def call_api(method, resources = [], params = {})
           api_path = resources.empty? ? @api_host : @api_root
+          api_path = "http://localhost:9090" + api_path
+          #puts "api_path #{api_path}"
           url = [api_path, resources].flatten.join('/') + params_str(params)
+
           HTTP.headers('Accept' => 'application/json').send(method, url)
             .then { |http_response| Response.new(http_response) }
+
         rescue StandardError
           raise "Invalid URL request: #{url}"
         end
