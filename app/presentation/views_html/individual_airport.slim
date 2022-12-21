@@ -1,0 +1,12 @@
+.container
+  h2
+    = "Airport List"
+  .card
+    ul.list-group.list-group-flush
+    - airportlist.each do |airport_data|
+      li.flex-column.flex-sm-row.list-group-item.d-flex.justify-content-between.align-items-sm-center
+        .flex-column.flex-1.m-2.d-flex
+          span.fw-bold
+            = "iata code: #{airport_data.iata_code}" 
+          div
+            = "name: #{airport_data.airport_name}"

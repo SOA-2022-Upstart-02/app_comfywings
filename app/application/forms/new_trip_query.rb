@@ -4,7 +4,6 @@ require 'dry-validation'
 
 module ComfyWings
   module Forms
-
     # From Object for Trip Query from frontend user
     class NewTripQuery < Dry::Validation::Contract
       params do

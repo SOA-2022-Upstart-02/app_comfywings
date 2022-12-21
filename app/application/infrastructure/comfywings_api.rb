@@ -17,7 +17,6 @@ module ComfyWings
 
       def get_airport_list(iata_code)
         @request.obtain_airport_list(iata_code)
-
       end
 
       def get_airport(iata_code)
@@ -47,6 +46,14 @@ module ComfyWings
           call_api('get')
         end
 
+        def obtain_airport(code)
+          call_api('get', ['airport', code])
+        end
+
+        def obtain_airport_list(code_letter)
+          call_api('get', ['airportlist', code_letter])
+        end
+
         def get_currencies
           call_api('get', %w[currency all])
         end
@@ -59,14 +66,6 @@ module ComfyWings
           call_api('post', ['trip_query'], trip_query)
         end
 
-        def obtain_airport(code)
-          call_api('get', ['airport', code])
-        end
-
-        def obtain_airport_list(code_letter)
-          call_api('get', ['airportlist', code_letter])
-        end
-
         def params_str(params)
           params.map { |key, value| "#{key}=#{value}" }.join('&')
             .then { |str| str.empty? ? '' : "?#{str}" }
@@ -75,6 +74,7 @@ module ComfyWings
         def call_api(method, resources = [], params = {})
           api_path = resources.empty? ? @api_host : @api_root
           url = [api_path, resources].flatten.join('/') + params_str(params)
+
           HTTP.headers('Accept' => 'application/json').send(method, url)
             .then { |http_response| Response.new(http_response) }
         rescue StandardError
