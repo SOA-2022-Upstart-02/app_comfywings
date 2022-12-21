@@ -9,10 +9,8 @@ module Views
       @list = airport_list.map { |airport_data| Airport.new(airport_data) }
     end
 
-    def each
-      @list.each do |airport|
-        yield airport
-      end
+    def each(&)
+      @list.each(&)
     end
   end
 end

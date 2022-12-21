@@ -17,11 +17,22 @@ module ComfyWings
 
       def get_airport_list(iata_code)
         @request.obtain_airport_list(iata_code)
-
       end
 
       def get_airport(iata_code)
         @request.obtain_airport(iata_code)
+      end
+
+      def get_currencies
+        @request.get_currencies
+      end
+
+      def get_trips(code)
+        @request.get_trips(code)
+      end
+
+      def create_trip_query(trip_query)
+        @request.create_trip_query(trip_query)
       end
 
       # HTTP request transmitter
@@ -43,6 +54,18 @@ module ComfyWings
           call_api('get', ['airportlist', code_letter])
         end
 
+        def get_currencies
+          call_api('get', %w[currency all])
+        end
+
+        def get_trips(code)
+          call_api('get', ['trips', code])
+        end
+
+        def create_trip_query(trip_query)
+          call_api('post', ['trip_query'], trip_query)
+        end
+
         def params_str(params)
           params.map { |key, value| "#{key}=#{value}" }.join('&')
             .then { |str| str.empty? ? '' : "?#{str}" }
@@ -54,7 +77,6 @@ module ComfyWings
 
           HTTP.headers('Accept' => 'application/json').send(method, url)
             .then { |http_response| Response.new(http_response) }
-
         rescue StandardError
           raise "Invalid URL request: #{url}"
         end

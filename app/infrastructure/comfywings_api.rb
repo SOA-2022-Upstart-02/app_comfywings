@@ -15,6 +15,15 @@ module ComfyWings
         @request.get_root_success?
       end
 
+      def get_airport_list(iata_code)
+        @request.obtain_airport_list(iata_code)
+
+      end
+
+      def get_airport(iata_code)
+        @request.obtain_airport(iata_code)
+      end
+
       def get_currencies
         @request.get_currencies
       end
@@ -48,6 +57,14 @@ module ComfyWings
 
         def create_trip_query(trip_query)
           call_api('post', ['trip_query'], trip_query)
+        end
+
+        def obtain_airport(code)
+          call_api('get', ['airport', code])
+        end
+
+        def obtain_airport_list(code_letter)
+          call_api('get', ['airportlist', code_letter])
         end
 
         def params_str(params)
