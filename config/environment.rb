@@ -2,8 +2,6 @@
 
 require 'figaro'
 require 'roda'
-require 'sequel'
-require 'yaml'
 require 'logger'
 require 'rack/session'
 require 'delegate'
@@ -13,7 +11,6 @@ module ComfyWings
   class App < Roda
     plugin :environments
 
-    # rubocop:disable Lint/ConstantDefinitionInBlock
     configure do
       # Environment variables setup
       Figaro.application = Figaro::Application.new(
@@ -26,19 +23,12 @@ module ComfyWings
 
       use Rack::Session::Cookie, secret: config.SESSION_SECRET
 
-      configure :development, :test do
-        ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
+      # Logger setup
+      def self.logger = Logger.new($stderr)
+
+      configure :development, :test, :app_test do
+        require 'pry'
       end
-
-      # Database Setup
-      DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
-      # deliberately :reek:UncommunicativeMethodName calling method DB
-      def self.DB = DB # rubocop:disable Naming/MethodName
-
-      # Setup for logger
-      LOGGER = Logger.new($stderr)
-      def self.logger = LOGGER
     end
-    # rubocop:enable Lint/ConstantDefinitionInBlock
   end
 end

@@ -1,5 +1,5 @@
 .container
-  form role="form" action="/flight" method="POST"
+  form role="form" action="/trip_query" method="POST"
     .row.vertical-align.query-bar
       .col-lg-1.col-md-3.col-sm-4
         .text-right From:
@@ -57,13 +57,13 @@
         select.form-select name="currency"
           option value="" selected="selected" - Select a currency -
           - currencies.each do |res|
-            option value="#{res.code}" #{res.name}
+            option value="#{res['code']}" #{res['name']}
       
       .col-lg.col-md-6.col-sm-12
         .form-check.form-switch
           input { 
-            type='checkbox' id='oneWaySwitch' name='is-one-way'
-            class="form-check-input" 
+            type='checkbox' id='oneWaySwitch' name='is_one_way'
+            class="form-check-input" value='true'
           }
           label class="form-check-label" for="oneWaySwitch"
           | One Way Flight
