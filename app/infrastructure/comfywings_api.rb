@@ -17,7 +17,6 @@ module ComfyWings
 
       def get_airport_list(iata_code)
         @request.obtain_airport_list(iata_code)
-
       end
 
       def get_airport(iata_code)
