@@ -1,13 +1,19 @@
 .container
-  form role="form" action="#" method="POST"
-  .row.vertical-align.query-bar
-    .col-lg-4.col-md-4.col-sm-4
-      .text-right Airport Code
-    .col-lg-1.col-md-3.col-sm-4 
-      .text-right Airport Code:
-    .col-lg-2.col-md-3.col-sm-4 
-      select.form-select name="airport"
-        option value="" selected="selected" - Select an airport -
-          option value="#{airport.city_name}" #{airport.city_name}
-  .row
-    .col-md-12.blank-row
+  form role="form" action="/individual_airport" method="GET"
+    .row.vertical-align.query-bar
+      .col-lg-4.col-md-4.col-sm-4
+        .text-right Airport Code
+      .col-lg-4.col-md-3.col-sm-4
+        input { 
+          type='text' name='iata_code'
+          id='airport_code' class="form-control"
+          placeholder="e.g. TPE"
+        }
+
+      .col-lg.col-md-4.col-sm-4
+        button { 
+          type='submit' id='flight-form-submit' class='submit' 
+          value='submit' class="btn btn-success" 
+        } Find Airport
+    .row
+      .col-md-12.blank-row
