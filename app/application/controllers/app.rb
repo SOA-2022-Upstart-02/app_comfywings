@@ -14,6 +14,7 @@ module ComfyWings
     plugin :flash
     plugin :all_verbs # enable other HTML verbs such as PUT/DELETE
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    plugin :public, root: 'app/presentation/public'
     plugin :assets, path: 'app/presentation/assets',
                     css: 'style.css'
     plugin :common_logger, $stderr
@@ -21,37 +22,61 @@ module ComfyWings
     route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
+      routing.public
 
       # GET /
       routing.root do
-        currency_list = Repository::For.klass(Entity::Currency).all
-        view 'home', locals: { currencies: currency_list }
+        # currency_list = Repository::For.klass(Entity::Currency).all
+        currency_list = Service::RetrieveCurrencies.new.call
+
+        if currency_list.failure?
+          flash[:error] = currency_list.failure
+          currencies = []
+        else
+          currencies = currency_list.value!.currencies
+        end
+
+        view 'home', locals: { currencies: }
       end
 
-      routing.is 'flight' do
-        # POST /flight
+      routing.on 'trips' do
+        routing.on String do |code|
+          routing.get do
+            result = Service::SearchTrips.new.call(code)
+
+            if result.failure?
+              flash[:error] = result.failure
+              trips = []
+            else
+              trips = result.value!.trips
+            end
+
+            view 'trip', locals: { trips: }
+          end
+        end
+      end
+
+      routing.is 'trip_query' do
         routing.post do
+          routing.params['is_one_way'] = routing.params['is_one_way'] ? true : false
           trip_request = Forms::NewTripQuery.new.call(routing.params)
-          trips = Service::FindTrips.new.call(trip_request)
-          if trips.failure?
-            flash[:error] = trips.failure
+          result = Service::CreateTripQuery.new.call(trip_request)
+          if result.failure?
+            flash[:error] = result.failure
             response.status = 400
             routing.redirect '/'
+          else
+            routing.redirect "trips/#{result.value!['code']}"
           end
-          view 'flight', locals:
-          {
-            trips: trips.value!,
-            trip_request: trip_request.values
-          }
         end
       end
 
       routing.is 'airport' do
         # GET /airports
-        routing.is do
-          first_airport = Repository::For.klass(Entity::Airport).first
-          view 'airport', locals: { airport: first_airport }
-        end
+        # routing.is do
+        #   first_airport = Repository::For.klass(Entity::Airport).first
+        #   view 'airport', locals: { airport: first_airport }
+        # end
         #  TODO: fix code to ensure all airports are obtained through search
         # routing.is aiport_search do
         # routing.post do
