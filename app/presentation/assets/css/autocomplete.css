@@ -1,0 +1,36 @@
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.autocomplete-results {
+  color: #000;
+  position: absolute;
+  background: white;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border: solid 1px #ddd;
+  border-top-width: 0;
+  border-bottom-color: #ccc;
+  box-shadow: 
+    0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.autocomplete-result {
+  padding: 12px 15px;
+  border-bottom: solid 1px #ccc;
+  cursor: pointer;
+}
+
+.autocomplete-result:hover {
+  background-color: darkred;
+}
+
+.autocomplete-result:last-child {
+  border-bottom-width: 0;
+}
+
+.autocomplete-location {
+  opacity: .8;
+  font-size: smaller;
+}
