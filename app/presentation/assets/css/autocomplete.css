@@ -8,6 +8,8 @@
   background: white;
   z-index: 1;
   top: 100%;
+  width: 125%;
+  font-size: 13px;
   left: 0;
   border: solid 1px #ddd;
   border-top-width: 0;
@@ -17,13 +19,15 @@
 }
 
 .autocomplete-result {
-  padding: 12px 15px;
+  width: 100%;
+  padding: 8px 10px;
   border-bottom: solid 1px #ccc;
   cursor: pointer;
 }
 
 .autocomplete-result:hover {
-  background-color: darkred;
+  background-color: #000;
+  color: #fff;
 }
 
 .autocomplete-result:last-child {

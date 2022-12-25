@@ -72,15 +72,17 @@ module ComfyWings
       end
 
       routing.is 'airport' do
-        # GET /airport
-        view 'airport', locals: {}
-      end
-      routing.get do
-        routing.on do
-          searched_airports = Service::RetrieveAirportsList.new.call(routing.params['iata_code'])
-          list_airport = searched_airports.value!
-          # airportlist = Views::AirportList.new(list_airport['airports'])
-          list_airport['airports']
+        routing.get do
+          routing.on do
+            result = Service::RetrieveAirportsList.new.call(routing.params['iata_code'])
+          
+            if result.failure?
+              flash[:error] = result.failure
+            else
+              puts result.value!.class
+              result.value!.to_json
+            end          
+          end
         end
       end
     end

@@ -1,85 +1,74 @@
-var ac = $('#airport_code')
-  .on('click', function(e) {
-    e.stopPropagation();
-  })
-  .on('focus keyup', search);
-
-var wrap = $('<div>')
-  .addClass('autocomplete-wrapper')
-  .insertBefore(ac)
-  .append(ac);
-
-var list = $('<div>')
-  .addClass('autocomplete-results')
-  .on('click', '.autocomplete-result', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    selectIndex($(this).data('index'));
-  })
-  .appendTo(wrap);
-
-$(document)
-  .on('mouseover', '.autocomplete-result', function(e) {
-    var index = parseInt($(this).data('index'), 10);
-    if (!isNaN(index)) {
-      list.attr('data-highlight', index);
-    }
-  })
-  .on('click', clearResults);
-
-function clearResults() {
-  results = [];
-  numResults = 0;
-  list.empty();
-}
-
-function selectIndex(index) {
-  if (results.length >= index + 1) {
-    ac.val(results[index].iata);
-    clearResults();
-  }
-}
-
 var results = [];
 var numResults = 0;
 var selectedIndex = -1;
 
-function search(e) {
+$(function() {
+  bind_airport_autocomplete('airport_origin_input');
+  bind_airport_autocomplete('airport_destination_input');
+}).on('click', clearResults);;
+
+
+function bind_airport_autocomplete(autocomplete_id) {
+
+  var ac = $(`#${autocomplete_id}`);
+  var wrap = $('<div>')
+    .addClass('autocomplete-wrapper')
+    .insertBefore(ac)
+    .append(ac);
+
+  var list = $('<div>')
+    .addClass('autocomplete-results')
+    .appendTo(wrap);
+
+  ac.on('click', function(e) {
+    e.stopPropagation();
+  }).on('focus keyup', e => search(e, list));
+
+  list.on('click', '.autocomplete-result', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    selectIndex($(this).data('index'), ac);
+  })
+}
+
+
+function clearResults() {
+  results = [];
+  numResults = 0;
+  $('.autocomplete-results').empty();
+}
+
+function selectIndex(index, ac) {
+  if (results.length >= index + 1) {
+    code = results[index].iata_code;
+    ac.val(code);
+    clearResults();
+  }
+}
+
+function search(e, list) {
   if (e.which === 38 || e.which === 13 || e.which === 40) {
     return;
   }
 
+  ac = $(e.target);
   if (ac.val().length > 0) {
-    results = [{
-      iata: 'MAD',
-      name: 'abcd',
-      city: 'fsadfas',
-      country: 'adfssafgawegwew'
-    }, {
-      iata: 'TPE',
-      name: 'abcd',
-      city: 'fsadfas',
-      country: 'adfssafgawegwew'
-    }]
-    numResults = results.length;
+    $.get(`airport?iata_code=${ac.val()}`, function(data) {
+      results = JSON.parse(JSON.parse(data)).airports;
+      numResults = results.length;
+      var divs = results.map(function(r, i) {
+        return `<div class="autocomplete-result" data-index="${i}">
+                  <div><b>${r.iata_code}</b> - ${r.airport_name}</div>
+                  <div class="autocomplete-location">${r.city_airport_name}, ${r.country}</div>
+                </div>`;
+      });
 
-    var divs = results.map(function(r, i) {
-      return '<div class="autocomplete-result" data-index="' + i + '">' +
-        '<div><b>' + r.iata + '</b> - ' + r.name + '</div>' +
-        '<div class="autocomplete-location">' + r.city + ', ' + r.country + '</div>' +
-        '</div>';
+      selectedIndex = -1;
+      list.html(divs.join(''))
+        .attr('data-highlight', selectedIndex);
     });
 
-    selectedIndex = -1;
-    list.html(divs.join(''))
-      .attr('data-highlight', selectedIndex);
-
   } else {
-    numResults = 0;
-    list.empty();
+    clearResults()
   }
 }
-
-$.get("individual_airport?iata_code=TP", function(data) {
-    console.log(data)
-  });
