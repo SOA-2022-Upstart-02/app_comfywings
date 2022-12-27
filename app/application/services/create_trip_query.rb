@@ -78,7 +78,7 @@ module ComfyWings
           origin: trip_request[:airport_origin],
           destination: trip_request[:airport_destination],
           departure_date: trip_request[:date_start],
-          arrival_date: trip_request[:date_end],
+          # arrival_date: trip_request[:date_end],
           adult_qty: trip_request[:adult_qty],
           children_qty: trip_request[:children_qty],
           currency: trip_request[:currency],

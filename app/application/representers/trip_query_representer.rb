@@ -19,7 +19,7 @@ module ComfyWings
       property :origin, extend: Representer::Airport, class: OpenStruct
       property :destination, extend: Representer::Airport, class: OpenStruct
       property :departure_date
-      property :arrival_date
+      # property :arrival_date
       property :adult_qty
       property :children_qty
       property :is_one_way
