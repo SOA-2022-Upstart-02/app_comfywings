@@ -4,7 +4,7 @@ require 'roar/decorator'
 require 'roar/json'
 
 require_relative 'openstruct_with_links'
-require_relative 'trip_representer'
+require_relative 'single_trip_representer'
 
 module ComfyWings
   module Representer
