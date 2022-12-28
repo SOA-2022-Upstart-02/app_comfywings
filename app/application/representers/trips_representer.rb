@@ -9,10 +9,10 @@ require_relative 'trip_representer'
 module ComfyWings
   module Representer
     # Represents list of Trip for API output
-    class TripsList < Roar::Decorator
+    class SingleTripsList < Roar::Decorator
       include Roar::JSON
 
-      collection :trips, extend: Representer::Trip, class: Representer::OpenStructWithLinks
+      collection :trips, extend: Representer::SingleTrip, class: Representer::OpenStructWithLinks
     end
   end
 end

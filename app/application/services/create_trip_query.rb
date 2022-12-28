@@ -7,7 +7,7 @@ require 'json'
 module ComfyWings
   module Service
     # Retrieves or creates trips
-    class CreateTripQuery
+    class CreateSingleTripQuery
       include Dry::Transaction
 
       MAX_TRAVELERS = 9
@@ -66,7 +66,7 @@ module ComfyWings
       end
 
       def reify_trip_query(trip_query_json)
-        Representer::TripQuery.new(OpenStruct.new)
+        Representer::SingleTripQuery.new(OpenStruct.new)
           .from_json(trip_query_json)
           .then { |trip_query| Success(trip_query) }
       rescue StandardError
@@ -78,7 +78,6 @@ module ComfyWings
           origin: trip_request[:airport_origin],
           destination: trip_request[:airport_destination],
           departure_date: trip_request[:date_start],
-          # arrival_date: trip_request[:date_end],
           adult_qty: trip_request[:adult_qty],
           children_qty: trip_request[:children_qty],
           currency: trip_request[:currency],
