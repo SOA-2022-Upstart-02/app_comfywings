@@ -44,7 +44,7 @@ module ComfyWings
           routing.get do
 
             # searches
-            # result = Service::SearchReturnTrips.new.call(code)
+            result = Service::SearchReturnTrips.new.call(code)
             # result = Service::SearchSingleTrips.new.call(code)
 
             if result.failure?
@@ -56,6 +56,7 @@ module ComfyWings
 
             # change trips and trip
             view 'trips', locals: { trips: }
+            # view 'trip', locals: { trips: }
           end
         end
       end
@@ -66,7 +67,7 @@ module ComfyWings
           trip_request = Forms::NewTripQuery.new.call(routing.params)
 
           # creaters 
-          # result = Service::CreateReturnTripQuery.new.call(trip_request)
+          result = Service::CreateReturnTripQuery.new.call(trip_request)
           # result = Service::CreateSingleTripQuery.new.call(trip_request)
 
           if result.failure?
