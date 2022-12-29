@@ -5,7 +5,11 @@ require 'dry/transaction'
 module ComfyWings
   module Service
     # Retrieves array of trips by tripQuery code
+<<<<<<< HEAD
     class SearchReturnTrips
+=======
+    class SearchSingleTrips
+>>>>>>> single_trip_app
       include Dry::Transaction
 
       step :request_trips
@@ -29,7 +33,11 @@ module ComfyWings
       end
 
       def reify_trips(trips_json)
+<<<<<<< HEAD
         Representer::ReturnTripsList.new(OpenStruct.new)
+=======
+        Representer::SingleTripsList.new(OpenStruct.new)
+>>>>>>> single_trip_app
           .from_json(trips_json)
           .then { |trips| Success(trips) }
       rescue StandardError

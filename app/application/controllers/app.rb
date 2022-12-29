@@ -42,7 +42,10 @@ module ComfyWings
       routing.on 'trips' do
         routing.on String do |code|
           routing.get do
-            result = Service::SearchReturnTrips.new.call(code)
+
+            # searches
+            # result = Service::SearchReturnTrips.new.call(code)
+            # result = Service::SearchSingleTrips.new.call(code)
 
             if result.failure?
               flash[:error] = result.failure
@@ -61,7 +64,11 @@ module ComfyWings
         routing.post do
           routing.params['is_one_way'] = routing.params['is_one_way'] ? true : false
           trip_request = Forms::NewTripQuery.new.call(routing.params)
-          result = Service::CreateReturnTripQuery.new.call(trip_request)
+
+          # creaters 
+          # result = Service::CreateReturnTripQuery.new.call(trip_request)
+          # result = Service::CreateSingleTripQuery.new.call(trip_request)
+
           if result.failure?
             flash[:error] = result.failure
             response.status = 400

@@ -77,6 +77,6 @@
       /                 = "#{DateTime.parse(inbound_flight[:arrival_time]).strftime("%Y-%m-%d %H:%M")}"
       /               p.flight-name-text
       /                 = "#{inbound_flight[:destination][:iata_code]}"
-      / div
-      /   span.bg-primary.rounded-pill.m-2.badge.fs-6
-      /     = "#{trip[:currency][:code]}  $#{trip[:price_form]}"
+      div
+        span.bg-primary.rounded-pill.m-2.badge.fs-6
+          = "#{trip[:currency][:code]}  $#{trip[:price_form]}"
