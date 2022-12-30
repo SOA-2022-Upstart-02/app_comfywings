@@ -79,7 +79,6 @@ module ComfyWings
             if result.failure?
               flash[:error] = result.failure
             else
-              puts result.value!.class
               result.value!.to_json
             end          
           end
