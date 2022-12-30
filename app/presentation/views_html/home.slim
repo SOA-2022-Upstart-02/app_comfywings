@@ -1,3 +1,5 @@
+== assets(:js, defer: true)
+
 .container
   form role="form" action="/trip_query" method="POST"
     .row.vertical-align.query-bar
@@ -7,6 +9,7 @@
         input { 
           type='text' name='airport_origin'
           id='airport_origin_input' class="form-control"
+          autocomplete="off"
           placeholder="e.g. TPE"
         }
 
@@ -16,6 +19,7 @@
         input { 
           type='text' name='airport_destination'
           id='airport_destination_input' class="form-control"
+          autocomplete="off"
           placeholder="e.g. CGK"
         }
 
