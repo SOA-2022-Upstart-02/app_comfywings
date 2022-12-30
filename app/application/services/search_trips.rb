@@ -5,11 +5,12 @@ require 'dry/transaction'
 module ComfyWings
   module Service
     # Retrieves array of trips by tripQuery code
-    class SearchReturnTrips
+    class SearchTrips
       include Dry::Transaction
 
       step :request_trips
-      step :reify_trips
+      step :reify_kind_of_trips
+
 
       private
 
@@ -28,7 +29,26 @@ module ComfyWings
         Failure('Cannot get trips')
       end
 
-      def reify_trips(trips_json)
+      def reify_kind_of_trips(trips_json)
+        response = Representer::SingleTripsList.new(OpenStruct.new)
+        .from_json(trips_json)
+
+        if response['trips'].first['inbound_flights'].nil?
+          return reify_single_trips(trips_json)
+        else
+          return reify_return_trips(trips_json)
+        end
+      end
+
+      def reify_single_trips(trips_json)
+        Representer::SingleTripsList.new(OpenStruct.new)
+          .from_json(trips_json)
+          .then { |trips| Success(trips) }
+      rescue StandardError
+        Failure('Could not parse response from API')
+      end
+
+      def reify_return_trips(trips_json)
         Representer::ReturnTripsList.new(OpenStruct.new)
           .from_json(trips_json)
           .then { |trips| Success(trips) }

@@ -24,8 +24,7 @@ module ComfyWings
       property :outbound_arrival_time
       property :price_form
       collection :outbound_flights, extend: Representer::Flight, class: OpenStruct
-      #collection :inbound_flights, extend: Representer::Flight, class: OpenStruct
-
+      
       # link :self do
       # end
     end

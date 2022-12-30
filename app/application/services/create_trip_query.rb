@@ -7,7 +7,7 @@ require 'json'
 module ComfyWings
   module Service
     # Retrieves or creates trips
-    class CreateReturnTripQuery
+    class CreateTripQuery
       include Dry::Transaction
 
       MAX_TRAVELERS = 9
@@ -18,7 +18,7 @@ module ComfyWings
       step :validate_date_end
       step :validate_qty
       step :create_trip_query
-      step :reify_trip_query
+      step :reify_trip_query_kind
 
       def validate_trip_query(input)
         if input.success?
@@ -56,7 +56,8 @@ module ComfyWings
       end
 
       def create_trip_query(input)
-        new_trip_query = create_new_trip_query(input)
+        new_trip_query = input['is_one_way'] == true ? create_new_single_trip_query(input) : create_new_return_trip_query(input)
+
         result = Gateway::Api.new(ComfyWings::App.config).create_trip_query(new_trip_query)
 
         result.success? ? Success(result.payload) : Failure(result.message)
@@ -65,7 +66,39 @@ module ComfyWings
         Failure('123')
       end
 
-      def reify_trip_query(trip_query_json)
+      def reify_trip_query_kind(trip_query_json)
+        # check trip kind
+        if trip_query_json['is_one_way'] == true
+          return reify_single_trip_query(trip_query_json)
+        else
+          return reify_return_trip_query(trip_query_json)
+        end
+      end
+
+      # Single trip
+      def reify_single_trip_query(trip_query_json)
+        #puts "reify trip #{trip_query_json}"
+        Representer::SingleTripQuery.new(OpenStruct.new)
+          .from_json(trip_query_json)
+          .then { |trip_query| Success(trip_query) }
+      rescue StandardError
+        Failure('Could not parse response from API')
+      end
+
+      def create_new_single_trip_query(trip_request)
+        {
+          origin: trip_request[:airport_origin],
+          destination: trip_request[:airport_destination],
+          departure_date: trip_request[:date_start],
+          adult_qty: trip_request[:adult_qty],
+          children_qty: trip_request[:children_qty],
+          currency: trip_request[:currency],
+          is_one_way: trip_request[:is_one_way]
+        }
+      end
+
+      # Return trip
+      def reify_return_trip_query(trip_query_json)
         Representer::ReturnTripQuery.new(OpenStruct.new)
           .from_json(trip_query_json)
           .then { |trip_query| Success(trip_query) }
@@ -73,7 +106,7 @@ module ComfyWings
         Failure('Could not parse response from API')
       end
 
-      def create_new_trip_query(trip_request)
+      def create_new_return_trip_query(trip_request)
         {
           origin: trip_request[:airport_origin],
           destination: trip_request[:airport_destination],
