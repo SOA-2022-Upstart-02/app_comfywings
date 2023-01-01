@@ -30,7 +30,7 @@ module ComfyWings
       end
 
       def reify_kind_of_trips(trips_json)
-        response = Representer::SingleTripsList.new(OpenStruct.new)
+        response = Representer::ReturnTripsList.new(OpenStruct.new)
         .from_json(trips_json)
 
         if response['trips'].first['inbound_flights'].nil?
