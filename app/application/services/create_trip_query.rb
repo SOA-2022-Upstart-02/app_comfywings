@@ -57,6 +57,8 @@ module ComfyWings
 
       def create_trip_query(input)
         new_trip_query = create_new_trip_query(input)
+        puts "new trip query #{new_trip_query}"
+
         result = Gateway::Api.new(ComfyWings::App.config).create_trip_query(new_trip_query)
 
         result.success? ? Success(result.payload) : Failure(result.message)

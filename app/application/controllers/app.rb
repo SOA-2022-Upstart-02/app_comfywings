@@ -51,7 +51,13 @@ module ComfyWings
               trips = result.value!.trips
             end
 
-            view 'trips', locals: { trips: }
+            #view 'trips', locals: { trips: }
+            # decide what to view
+            if trips.first[:inbound_flights].nil?
+              view 'trip', locals: { trips: }
+            else
+              view 'trips', locals: { trips: }
+            end
           end
         end
       end
