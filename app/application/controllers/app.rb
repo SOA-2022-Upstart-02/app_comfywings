@@ -66,7 +66,6 @@ module ComfyWings
           routing.params['is_one_way'] = routing.params['is_one_way'] ? true : false
 
           trip_request = Forms::NewTripQuery.new.call(routing.params)
-
           result = Service::CreateTripQuery.new.call(trip_request)
 
           if result.failure?
