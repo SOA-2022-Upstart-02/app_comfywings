@@ -10,7 +10,7 @@ module ComfyWings
         required(:airport_origin).filled(:string)
         required(:airport_destination).filled(:string)
         required(:date_start).filled(:date)
-        # required(:date_end)
+        required(:date_end)
         required(:adult_qty).filled(:integer)
         required(:children_qty).filled(:integer)
         required(:currency).filled(:string)

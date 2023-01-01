@@ -22,9 +22,9 @@ module ComfyWings
       property :outbound_duration_form
       property :outbound_departure_time
       property :outbound_arrival_time
-      # property :inbound_duration_form
-      # property :inbound_departure_time
-      # property :inbound_arrival_time
+      property :inbound_duration_form
+      property :inbound_departure_time
+      property :inbound_arrival_time
       property :price_form
       collection :outbound_flights, extend: Representer::Flight, class: OpenStruct
       collection :inbound_flights, extend: Representer::Flight, class: OpenStruct

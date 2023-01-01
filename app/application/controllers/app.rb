@@ -51,7 +51,7 @@ module ComfyWings
               trips = result.value!.trips
             end
 
-            view 'trip', locals: { trips: }
+            view 'trips', locals: { trips: }
           end
         end
       end
