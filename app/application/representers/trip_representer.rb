@@ -9,7 +9,7 @@ require_relative 'airport_representers'
 module ComfyWings
   module Representer
     # Represent Trip as Json
-    class SingleTrip < Roar::Decorator
+    class Trip < Roar::Decorator
       include Roar::JSON
       include Roar::Hypermedia
       include Roar::Decorator::HypermediaConsumer
@@ -22,9 +22,13 @@ module ComfyWings
       property :outbound_duration_form
       property :outbound_departure_time
       property :outbound_arrival_time
+      property :inbound_duration_form
+      property :inbound_departure_time
+      property :inbound_arrival_time
       property :price_form
       collection :outbound_flights, extend: Representer::Flight, class: OpenStruct
-      
+      collection :inbound_flights, extend: Representer::Flight, class: OpenStruct
+
       # link :self do
       # end
     end
