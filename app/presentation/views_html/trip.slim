@@ -9,7 +9,7 @@
               span.bold-date-text
                 = "#{DateTime.parse(trip[:outbound_departure_time]).strftime("%H:%M")}"
               span.trip-subtitle
-                = "#{trip[:origin][:iata_code]}#{trip.one_way?}"
+                = "#{trip[:origin][:iata_code]}"
             p.trip-arrow
               span
                 = "#{trip[:outbound_duration_form]["hours"]}h#{trip[:outbound_duration_form]["minutes"]}m"
