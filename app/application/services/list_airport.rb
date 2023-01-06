@@ -10,7 +10,6 @@ module ComfyWings
       include Dry::Transaction
 
       step :retrieve_airportlist
-      step :reify_airportlist
 
       private
 
@@ -23,12 +22,6 @@ module ComfyWings
         puts e.inspect
         puts e.backtrace
         Failure('Cannot get list of airports')
-      end
-
-      def reify_airportlist(airportslist_json)
-        Representer::AirportList.new(OpenStruct.new)
-          .from_json(airportslist_json)
-          .then { |airports| Success(airports) }
       end
     end
   end
