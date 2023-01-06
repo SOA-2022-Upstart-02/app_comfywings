@@ -41,7 +41,6 @@ module ComfyWings
       routing.on 'trips' do
         routing.on String do |code|
           routing.get do
-
             result = Service::SearchTrips.new.call(code)
 
             if result.failure?
@@ -51,12 +50,7 @@ module ComfyWings
               trips = result.value!.trips
             end
 
-            # decide what to view
-            if trips.first[:inbound_flights].nil?
-              view 'trip', locals: { trips: }
-            else
-              view 'trips', locals: { trips: }
-            end
+            view 'trip', locals: { trips: }
           end
         end
       end
@@ -82,12 +76,12 @@ module ComfyWings
         routing.get do
           routing.on do
             result = Service::RetrieveAirportsList.new.call(routing.params['iata_code'])
-          
+
             if result.failure?
               flash[:error] = result.failure
             else
               result.value!.to_json
-            end          
+            end
           end
         end
       end
