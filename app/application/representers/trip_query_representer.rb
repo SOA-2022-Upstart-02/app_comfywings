@@ -16,8 +16,8 @@ module ComfyWings
       property :id
       property :code
       property :currency, extend: Representer::Currency, class: OpenStruct
-      property :origin
-      property :destination
+      property :origin, extend: Representer::Airport, class: OpenStruct
+      property :destination, extend: Representer::Airport, class: OpenStruct
       property :departure_date
       property :arrival_date
       property :adult_qty

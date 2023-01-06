@@ -26,7 +26,6 @@ module ComfyWings
 
       # GET /
       routing.root do
-        # currency_list = Repository::For.klass(Entity::Currency).all
         currency_list = Service::RetrieveCurrencies.new.call
 
         if currency_list.failure?
@@ -42,6 +41,7 @@ module ComfyWings
       routing.on 'trips' do
         routing.on String do |code|
           routing.get do
+
             result = Service::SearchTrips.new.call(code)
 
             if result.failure?
@@ -51,7 +51,12 @@ module ComfyWings
               trips = result.value!.trips
             end
 
-            view 'trip', locals: { trips: }
+            # decide what to view
+            if trips.first[:inbound_flights].nil?
+              view 'trip', locals: { trips: }
+            else
+              view 'trips', locals: { trips: }
+            end
           end
         end
       end
@@ -59,8 +64,10 @@ module ComfyWings
       routing.is 'trip_query' do
         routing.post do
           routing.params['is_one_way'] = routing.params['is_one_way'] ? true : false
+
           trip_request = Forms::NewTripQuery.new.call(routing.params)
           result = Service::CreateTripQuery.new.call(trip_request)
+
           if result.failure?
             flash[:error] = result.failure
             response.status = 400
