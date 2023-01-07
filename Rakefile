@@ -44,6 +44,7 @@ namespace :run do
   task :test do
     sh "rerun -c --ignore 'coverage/*' --ignore 'repostore/*' -- RACK_ENV=test bundle exec puma -p 9000"
   end
+
 end
 
 desc 'Run application console'
