@@ -260,3 +260,17 @@ footer {
 .blue-text {
 	color: #2a9fd6;
 }
+
+.top-solutions {
+	border-radius: 8px;
+	margin-bottom: 20px;
+	display: flex;
+	width: 350px;
+}
+
+.solution-text {
+	font-size: 1.75rem;
+    line-height: 1.25;
+    font-weight: 700;
+	margin: 0px 10px 0px 5px;
+}

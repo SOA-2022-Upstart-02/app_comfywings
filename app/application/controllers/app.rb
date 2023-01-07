@@ -41,8 +41,7 @@ module ComfyWings
       routing.on 'trips' do
         routing.on String do |code|
           routing.get do
-            result = Service::SearchTrips.new.call(code)
-
+            result = Service::SearchTrips.new.call(code:, sort: routing.params['sorting'])
             if result.failure?
               flash[:error] = result.failure
               trips = []

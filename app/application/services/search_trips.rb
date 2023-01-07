@@ -17,9 +17,9 @@ module ComfyWings
       EXPIRED_MSG = 'This query is expired'
       NOT_FOUND_MSG = 'Undefined query'
 
-      def request_trips(code)
+      def request_trips(input)
         result = Gateway::Api.new(ComfyWings::App.config)
-          .get_trips(code)
+          .get_trips(input[:code], input[:sort])
 
         result.success? ? Success(result.payload) : Failure(result.message)
       rescue StandardError => e

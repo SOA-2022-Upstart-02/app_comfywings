@@ -27,8 +27,8 @@ module ComfyWings
         @request.get_currencies
       end
 
-      def get_trips(code)
-        @request.get_trips(code)
+      def get_trips(code, sort)
+        @request.get_trips(code, sort)
       end
 
       def create_trip_query(trip_query)
@@ -50,8 +50,8 @@ module ComfyWings
           call_api('get', %w[currency all])
         end
 
-        def get_trips(code)
-          call_api('get', ['trips', code])
+        def get_trips(code, sorting)
+          call_api('get', ['trips', code], { sorting: })
         end
 
         def create_trip_query(trip_query)
