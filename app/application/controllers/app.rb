@@ -16,7 +16,7 @@ module ComfyWings
     plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :public, root: 'app/presentation/public'
     plugin :assets, path: 'app/presentation/assets',
-                    css: 'style.css'
+                    css: ['style.css', 'autocomplete.css'], js: 'airport-autocomplete.js'
     plugin :common_logger, $stderr
 
     route do |routing| # rubocop:disable Metrics/BlockLength
@@ -26,7 +26,6 @@ module ComfyWings
 
       # GET /
       routing.root do
-        # currency_list = Repository::For.klass(Entity::Currency).all
         currency_list = Service::RetrieveCurrencies.new.call
 
         if currency_list.failure?
@@ -59,8 +58,10 @@ module ComfyWings
       routing.is 'trip_query' do
         routing.post do
           routing.params['is_one_way'] = routing.params['is_one_way'] ? true : false
+
           trip_request = Forms::NewTripQuery.new.call(routing.params)
           result = Service::CreateTripQuery.new.call(trip_request)
+
           if result.failure?
             flash[:error] = result.failure
             response.status = 400
@@ -72,15 +73,16 @@ module ComfyWings
       end
 
       routing.is 'airport' do
-        # GET /airport
-        view 'airport', locals: {}
-      end
-      routing.get do
-        routing.on do
-          searched_airports = Service::RetrieveAirportsList.new.call(routing.params['iata_code'])
-          list_airport = searched_airports.value!
-          airportlist = Views::AirportList.new(list_airport['airports'])
-          view 'individual_airport', locals: { airportlist: }
+        routing.get do
+          routing.on do
+            result = Service::RetrieveAirportsList.new.call(routing.params['iata_code'])
+
+            if result.failure?
+              flash[:error] = result.failure
+            else
+              result.value!.to_json
+            end
+          end
         end
       end
     end

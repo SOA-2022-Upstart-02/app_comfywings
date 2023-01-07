@@ -12,7 +12,7 @@ module ComfyWings
       end
 
       def alive?
-        @request.get_root_success?
+        @request.get_root.success?
       end
 
       def get_airport_list(iata_code)
