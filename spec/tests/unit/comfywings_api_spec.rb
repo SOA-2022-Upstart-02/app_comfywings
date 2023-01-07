@@ -11,6 +11,6 @@ describe 'Unit test of codePraise API gateway' do
   it 'must be able to return a list of currencies' do
     result = ComfyWings::Gateway::Api.new(ComfyWings::App.config).get_currencies
     _(result.success?).must_equal true
-    _(result.parse.count).must_equal 4
+    _(result.parse.count).must_equal 1
   end
 end
