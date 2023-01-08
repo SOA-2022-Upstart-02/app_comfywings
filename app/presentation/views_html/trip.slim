@@ -97,7 +97,7 @@ javascript:
       $("#top-solution").val(urlParams.get('sorting'));
     }
 
-    $("#top-solution").on( "click", function() {
+    $("#top-solution").on( "change", function() {
       if($(this).val()) {
         url = window.location.href.substring(0, location.href.indexOf("?"));
         window.location.replace(`${url}?sorting=${$(this).val()}`);
